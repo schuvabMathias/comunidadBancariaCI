@@ -1,0 +1,12 @@
+CRITICAL - 2022-09-30 21:50:29 --> The framework needs the following extension(s) installed and loaded: curl, intl, mbstring.
+#0 C:\Apache24\htdocs\CodeIgniter4-4.1.9\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension()
+#1 C:\Apache24\htdocs\CodeIgniter4-4.1.9\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\Apache24\htdocs\CodeIgniter4-4.1.9\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\Apache24\htdocs\CodeIgniter4-4.1.9\index.php(28): require('C:\\Apache24\\htd...')
+#4 {main}
+CRITICAL - 2022-09-30 23:03:18 --> The framework needs the following extension(s) installed and loaded: curl, intl, mbstring.
+#0 C:\Apache24\htdocs\CodeIgniter4-4.1.9\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension()
+#1 C:\Apache24\htdocs\CodeIgniter4-4.1.9\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\Apache24\htdocs\CodeIgniter4-4.1.9\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\Apache24\htdocs\CodeIgniter4-4.1.9\index.php(28): require('C:\\Apache24\\htd...')
+#4 {main}
