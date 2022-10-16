@@ -800,3 +800,536 @@ LINE 3: WHERE &quot;dni&quot; = ''
 #10 C:\Apache24\htdocs\comunidadBancaria\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
 #11 C:\Apache24\htdocs\comunidadBancaria\index.php(37): CodeIgniter\CodeIgniter->run()
 #12 {main}
+ERROR - 2022-10-16 16:10:39 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^ in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-16 16:10:39 --> pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-10-16 16:11:16 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^ in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-16 16:11:16 --> pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-10-16 16:11:21 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^ in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-16 16:11:21 --> pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-10-16 16:12:07 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^ in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-16 16:12:07 --> pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-10-16 16:12:20 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^ in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-16 16:12:20 --> pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-10-16 16:13:53 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^ in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-16 16:13:53 --> pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-10-16 16:13:56 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^ in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-16 16:13:56 --> pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-10-16 16:14:20 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^ in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-16 16:14:20 --> pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-10-16 16:14:26 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^ in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-16 16:14:26 --> pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-10-16 16:15:06 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^ in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-16 16:15:06 --> pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-10-16 16:15:10 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^ in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-16 16:15:10 --> pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-10-16 16:15:52 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^ in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-16 16:15:52 --> pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-10-16 16:15:55 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^ in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-16 16:15:55 --> pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-16 16:18:03 --> Undefined variable: clientes
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Views\clienteView\mostrarClienteView.php(42): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(210): include('C:\\Apache24\\htd...')
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Common.php(1089): CodeIgniter\View\View->render()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(115): view()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-10-16 16:20:26 --> Undefined variable: clientes
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Views\clienteView\mostrarClienteView.php(42): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(210): include('C:\\Apache24\\htd...')
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Common.php(1089): CodeIgniter\View\View->render()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(81): view()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->delete()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-10-16 16:23:17 --> Class 'App\Models\usuarioModel' not found
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->create()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-10-16 16:23:45 --> pg_last_error() expects parameter 1 to be resource, bool given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(377): pg_last_error()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(411): CodeIgniter\Database\Postgre\Connection->error()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(1059): CodeIgniter\Model->doErrors()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(69): CodeIgniter\BaseModel->errors()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->create()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-10-16 16:25:00 --> Call to a member function listErrors() on null
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(210): include()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Common.php(1089): CodeIgniter\View\View->render()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(71): view()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->create()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-10-16 16:25:24 --> Call to a member function listErrors() on array
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(210): include()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Common.php(1089): CodeIgniter\View\View->render()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(71): view()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->create()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-10-16 16:25:27 --> Call to a member function listErrors() on array
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(210): include()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Common.php(1089): CodeIgniter\View\View->render()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(71): view()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->create()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2022-10-16 16:26:25 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «Mathias Schuvab»
+LINE 2: WHERE &quot;id_usuario&quot; IN ('Mathias Schuvab','121212',1)
+                               ^ in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Builder.php(204): CodeIgniter\Database\BaseBuilder->delete()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(359): CodeIgniter\Database\Postgre\Builder->delete()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(963): CodeIgniter\Model->doDelete()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(63): CodeIgniter\BaseModel->delete()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->create()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2022-10-16 16:26:25 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «Mathias Schuvab»
+LINE 2: WHERE &quot;id_usuario&quot; IN ('Mathias Schuvab','121212',1)
+                               ^
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Builder.php(204): CodeIgniter\Database\BaseBuilder->delete()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(359): CodeIgniter\Database\Postgre\Builder->delete()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(963): CodeIgniter\Model->doDelete()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(63): CodeIgniter\BaseModel->delete()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->create()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
