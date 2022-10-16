@@ -24,22 +24,19 @@ class ClienteController extends BaseController
 
     public function create()
     {
+        $usuarioModel = new usuarioModel($db);
+        $clienteModel = new clienteModel($db);
         if (strtolower($this->request->getMethod()) !== 'post') {
             return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', [
                 'validation' => Services::validation(),
             ]);
         }
-        // $rules = [
-        //     'nombre_apellido' => 'required',
-        //     'dni' => 'required'
-        // ];
-        // if (!$this->validate($rules)) {
-        //     return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', [
-        //         'validation' => $this->validator,
-        //     ]);
-        // }
-        $usuarioModel = new usuarioModel($db);
-        $clienteModel = new clienteModel($db);
+        $rules = $clienteModel->getValidationRules();
+        if (!$this->validate($rules)) {
+            return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', [
+                'validation' => $this->validator,
+            ]);
+        }
         $request = \Config\Services::request();
         $user = array(
             'usuario' => $request->getPost('inputNomyApe'),
@@ -58,7 +55,6 @@ class ClienteController extends BaseController
                 'id_usuario' => (int)$u[0]["id_usuario"],
             );
             if (!$clienteModel->insert($data)) {
-                var_dump($usuarioModel->errors());
                 var_dump($clienteModel->errors());
                 $usuarioModel->delete($user);
                 return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', [
@@ -66,9 +62,9 @@ class ClienteController extends BaseController
                 ]);
             }
         } else {
-            var_dump($clienteModel->errors());
+            var_dump($usuarioModel->errors());
             return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', [
-                'validation' => $this->validator,
+                'validation' => Services::validation(),
             ]);
         }
         return view('components\header') . view('components\navbar') . view('components\operacionExitosa');
@@ -118,13 +114,13 @@ class ClienteController extends BaseController
                 'clientes' => $clienteModel->findAll(),
             ]);
         }
-        // $rules = [];
-        // if (!$this->validate($rules)) {
-        //     return view('components\header') . view('components\navbar') . view('clienteView\mostrarClienteView', [
-        //         'validation' => $this->validator,
-        //         'clientes' => [],
-        //     ]);
-        // }
+        $rules = $clienteModel->getValidationRules();
+        if (!$this->validate($rules)) {
+            return view('components\header') . view('components\navbar') . view('clienteView\mostrarClienteView', [
+                'validation' => $this->validator,
+                'clientes' => [],
+            ]);
+        }
         $request = \Config\Services::request();
         $data = $clienteModel->where($request->getPost('selectForma'), (int) $request->getPost('inputValor'))->findAll();
         if (sizeof($data) == 0) {
