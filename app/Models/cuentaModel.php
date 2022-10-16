@@ -10,7 +10,7 @@ class cuentaModel extends Model
     protected $primaryKey        = 'id_cuenta';
     protected $useAutoIncrement  = true;
     protected $returnType        = 'array';
-    protected $useSoftDeletes    = true;    //con esto no se borra el registro de la base de datos en realidad al hacer un delete
+    protected $useSoftDeletes    = false;    //con esto no se borra el registro de la base de datos en realidad al hacer un delete
     protected $allowedFields = [
         'numero',
         'tipo_cuenta',

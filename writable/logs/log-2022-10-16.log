@@ -800,3 +800,317 @@ LINE 3: WHERE &quot;dni&quot; = ''
 #10 C:\Apache24\htdocs\comunidadBancaria\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
 #11 C:\Apache24\htdocs\comunidadBancaria\index.php(37): CodeIgniter\CodeIgniter->run()
 #12 {main}
+ERROR - 2022-10-16 16:56:08 --> Error connecting to the database: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  no existe la base de datos �ComunidadBancaria_BD�
+CRITICAL - 2022-10-16 16:56:08 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  no existe la base de datos �ComunidadBancaria_BD�
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-10-16 16:57:37 --> Error connecting to the database: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  no existe la base de datos �ComunidadBancaria_BD�
+CRITICAL - 2022-10-16 16:57:37 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  no existe la base de datos �ComunidadBancaria_BD�
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-10-16 16:57:56 --> Error connecting to the database: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  no existe la base de datos �ComunidadBancaria_BD�
+CRITICAL - 2022-10-16 16:57:56 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  no existe la base de datos �ComunidadBancaria_BD�
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-10-16 16:58:48 --> Error connecting to the database: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host &quot;localhost&quot; (::1) and accepting
+	TCP/IP connections on port 3306?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host &quot;localhost&quot; (127.0.0.1) and accepting
+	TCP/IP connections on port 3306?
+CRITICAL - 2022-10-16 16:58:48 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host &quot;localhost&quot; (::1) and accepting
+	TCP/IP connections on port 3306?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host &quot;localhost&quot; (127.0.0.1) and accepting
+	TCP/IP connections on port 3306?
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-10-16 16:59:39 --> Error connecting to the database: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  no existe la base de datos �ComunidadBancaria_BD�
+CRITICAL - 2022-10-16 16:59:39 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  no existe la base de datos �ComunidadBancaria_BD�
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-10-16 17:00:43 --> Error connecting to the database: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+CRITICAL - 2022-10-16 17:00:43 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-10-16 17:00:58 --> Error connecting to the database: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+CRITICAL - 2022-10-16 17:00:58 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-10-16 17:00:59 --> Error connecting to the database: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+CRITICAL - 2022-10-16 17:00:59 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-10-16 17:01:07 --> Error connecting to the database: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  no existe la base de datos �ComunidadBancaria_BD�
+CRITICAL - 2022-10-16 17:01:07 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  no existe la base de datos �ComunidadBancaria_BD�
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-10-16 17:02:40 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^ in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-16 17:02:40 --> pg_query(): Query failed: ERROR:  no existe la columna cliente.deleted_at
+LINE 3: WHERE &quot;cliente&quot;.&quot;deleted_at&quot; IS NULL
+              ^
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(118): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-16 17:12:15 --> Class 'App\Models\usuarioModel' not found
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->create()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-10-16 17:12:47 --> Class 'App\Models\usuarioModel' not found
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->create()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-10-16 17:12:59 --> Class 'App\Models\usuarioModel' not found
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->create()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+ERROR - 2022-10-16 17:13:49 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «Lautaro»
+LINE 1: ...(&quot;usuario&quot;, &quot;contrasena&quot;, &quot;tipo_usuario&quot;) VALUES ('Lautaro',...
+                                                             ^ in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(738): CodeIgniter\Model->doInsert()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(49): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->create()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2022-10-16 17:13:49 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «Lautaro»
+LINE 1: ...(&quot;usuario&quot;, &quot;contrasena&quot;, &quot;tipo_usuario&quot;) VALUES ('Lautaro',...
+                                                             ^
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(738): CodeIgniter\Model->doInsert()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(49): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->create()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2022-10-16 17:14:20 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «Lautaro»
+LINE 1: ...(&quot;usuario&quot;, &quot;contrasena&quot;, &quot;tipo_usuario&quot;) VALUES ('Lautaro',...
+                                                             ^ in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(738): CodeIgniter\Model->doInsert()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(49): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->create()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2022-10-16 17:14:20 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «Lautaro»
+LINE 1: ...(&quot;usuario&quot;, &quot;contrasena&quot;, &quot;tipo_usuario&quot;) VALUES ('Lautaro',...
+                                                             ^
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(738): CodeIgniter\Model->doInsert()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(49): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->create()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2022-10-16 17:15:21 --> ErrorException: pg_query(): Query failed: ERROR:  el valor nulo en la columna «id_usuario» de la relación «usuarios» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (null, Lautaro, 1, 4307263). in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(738): CodeIgniter\Model->doInsert()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(49): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->create()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2022-10-16 17:15:21 --> pg_query(): Query failed: ERROR:  el valor nulo en la columna «id_usuario» de la relación «usuarios» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (null, Lautaro, 1, 4307263).
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(738): CodeIgniter\Model->doInsert()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(49): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->create()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2022-10-16 17:16:24 --> ErrorException: pg_query(): Query failed: ERROR:  el valor nulo en la columna «id_usuario» de la relación «cliente» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (1, Lautaro, Buen Pastor 532, 223222, 2000-10-19, 4307263, 4307263, null). in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(738): CodeIgniter\Model->doInsert()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(60): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->create()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2022-10-16 17:16:24 --> pg_query(): Query failed: ERROR:  el valor nulo en la columna «id_usuario» de la relación «cliente» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (1, Lautaro, Buen Pastor 532, 223222, 2000-10-19, 4307263, 4307263, null).
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(738): CodeIgniter\Model->doInsert()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(60): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->create()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
