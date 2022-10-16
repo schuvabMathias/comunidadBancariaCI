@@ -10,14 +10,15 @@ class clienteModel extends Model
     protected $primaryKey         = 'id_cliente';
     protected $useAutoIncrement   = true;
     protected $returnType         = 'array';
-    protected $useSoftDeletes     = true;    //con esto no se borra el registro de la base de datos en realidad al hacer un delete
+    protected $useSoftDeletes     = false;    //con esto no se borra el registro de la base de datos en realidad al hacer un delete
     protected $allowedFields      = [
         'nombre_apellido',
         'direccion',
         'telefono',
         'fecha_nacimiento',
         'dni',
-        'cuit_cuil'
+        'cuit_cuil',
+        'id_usuario'
     ]; //Nos permite cambiar los campos que tengan estos nombre. Si no están acá no se podrán manipular
     protected $useTimestamps      = false;
     protected $updatedField       = 'updated_at';

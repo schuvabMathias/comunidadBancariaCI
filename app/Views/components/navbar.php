@@ -5,7 +5,7 @@
         <nav class="navbar navbar-expand-md justify-content-center bg-dark navbar-dark fixed-top">
             <!-- Brand -->
             <div class="narbar-brand" style="margin-left: 2%;">
-                <a class="navbar-brand" href="http://localhost/comunidadBancaria/index.php/homeController" style="font-family: 'Indie Flower', cursive; font-size: 2em;">TATW</a>
+                <a class="navbar-brand" href="http://localhost/comunidadBancariaCI/index.php/homeController" style="font-family: 'Indie Flower', cursive; font-size: 2em;">TATW</a>
             </div>
 
 
@@ -18,19 +18,19 @@
             <div class="collapse navbar-collapse mt-2 mb-2" id="collapsibleNavbar" style="margin-left: 5%;font-size: 1.4rem;">
                 <ul class="navbar-nav liNavbar">
                     <li class="nav-item liNavbar">
-                        <a class="nav-link" href="http://localhost/comunidadBancaria/index.php/homeController">Home</a>
+                        <a class="nav-link" href="http://localhost/comunidadBancariaCI/index.php/homeController">Home</a>
                     </li>
                     <li class="nav-item liNavbar">
-                        <a class="nav-link" href="http://localhost/comunidadBancaria/index.php/clienteController/mostrar">Mostrar</a>
+                        <a class="nav-link" href="http://localhost/comunidadBancariaCI/index.php/clienteController/mostrar">Mostrar</a>
                     </li>
                     <li class="nav-item liNavbar">
-                        <a class="nav-link" href="http://localhost/comunidadBancaria/index.php/clienteController/create">IngresarCliente</a>
+                        <a class="nav-link" href="http://localhost/comunidadBancariaCI/index.php/clienteController/create">IngresarCliente</a>
                     </li>
                     <?php
                     if (!isset($_SESSION['usuario'])) {
                     ?>
                         <li class="nav-item liNavbar">
-                            <a class="nav-link" href="http://localhost/comunidadBancaria/index.php/usuarioController">Ingresar</a>
+                            <a class="nav-link" href="http://localhost/comunidadBancariaCI/index.php/usuarioController">Ingresar</a>
                         </li>
                     <?php
                     } else {
@@ -45,7 +45,7 @@
                         }
                         ?>
                         <li class="nav-item liNavbar">
-                            <a class="nav-link" href="http://localhost/comunidadBancaria/index.php/usuarioController/disconect">Cerrar Sesion</a>
+                            <a class="nav-link" href="http://localhost/comunidadBancariaCI/index.php/usuarioController/disconect">Cerrar Sesion</a>
                         </li>
                     <?php } ?>
                 </ul>
