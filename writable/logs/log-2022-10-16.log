@@ -338,3 +338,283 @@ CRITICAL - 2022-10-16 19:15:04 --> Undefined index: id_usuario
 #3 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
 #4 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
 #5 {main}
+CRITICAL - 2022-10-16 22:41:45 --> Undefined variable: pantalla
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Views\clienteView\createClienteView.php(6): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(210): include('C:\\Apache24\\htd...')
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Common.php(1089): CodeIgniter\View\View->render()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(21): view()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->index()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-10-16 22:43:18 --> Undefined variable: pantalla
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Views\clienteView\createClienteView.php(6): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(210): include('C:\\Apache24\\htd...')
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Common.php(1089): CodeIgniter\View\View->render()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(21): view()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->index()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-10-16 22:43:24 --> Undefined variable: pantalla
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Views\clienteView\createClienteView.php(6): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(210): include('C:\\Apache24\\htd...')
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Common.php(1089): CodeIgniter\View\View->render()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(21): view()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->index()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-10-16 22:44:49 --> Class 'App\Models\bancoteModel' not found
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-10-16 22:45:13 --> Class 'App\Models\bancoteModel' not found
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-10-16 22:45:16 --> Class 'App\Models\bancoteModel' not found
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-10-16 22:45:26 --> Class 'App\Models\bancoteModel' not found
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-10-16 22:45:52 --> Undefined variable: pantalla
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Views\clienteView\createClienteView.php(6): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(210): include('C:\\Apache24\\htd...')
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Common.php(1089): CodeIgniter\View\View->render()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(46): view()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-10-16 22:46:58 --> Undefined variable: pantalla
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Views\cuentaView\createCuentaView.php(5): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(210): include('C:\\Apache24\\htd...')
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Common.php(1089): CodeIgniter\View\View->render()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(46): view()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-10-16 22:47:45 --> Undefined index: usuario
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Views\cuentaView\createCuentaView.php(34): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(210): include('C:\\Apache24\\htd...')
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Common.php(1089): CodeIgniter\View\View->render()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(46): view()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-10-16 22:57:31 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «ahorro»
+LINE 1: ...&quot;fecha_start&quot;, &quot;tipo_moneda&quot;) VALUES ('12346567', 'ahorro', ...
+                                                             ^ in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(738): CodeIgniter\Model->doInsert()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(65): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2022-10-16 22:57:31 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «ahorro»
+LINE 1: ...&quot;fecha_start&quot;, &quot;tipo_moneda&quot;) VALUES ('12346567', 'ahorro', ...
+                                                             ^
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(738): CodeIgniter\Model->doInsert()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(65): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2022-10-16 22:58:51 --> ErrorException: pg_query(): Query failed: ERROR:  el valor nulo en la columna «monto» de la relación «cuenta» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (1, 12346567, 1, 2022-10-19, Pesos argentinos, null, null, null). in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(738): CodeIgniter\Model->doInsert()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(65): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2022-10-16 22:58:51 --> pg_query(): Query failed: ERROR:  el valor nulo en la columna «monto» de la relación «cuenta» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (1, 12346567, 1, 2022-10-19, Pesos argentinos, null, null, null).
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(738): CodeIgniter\Model->doInsert()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(65): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2022-10-16 23:00:11 --> ErrorException: pg_query(): Query failed: ERROR:  el valor nulo en la columna «monto» de la relación «cuenta» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (2, 12346567, 1, 2022-10-19, Pesos argentinos, null, null, 1). in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(738): CodeIgniter\Model->doInsert()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(65): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2022-10-16 23:00:11 --> pg_query(): Query failed: ERROR:  el valor nulo en la columna «monto» de la relación «cuenta» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (2, 12346567, 1, 2022-10-19, Pesos argentinos, null, null, 1).
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(738): CodeIgniter\Model->doInsert()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(65): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2022-10-16 23:01:41 --> ErrorException: pg_query(): Query failed: ERROR:  el valor nulo en la columna «id_titular» de la relación «cuenta» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (3, 12346567, 1, 2022-10-19, Pesos argentinos, 0, null, 1). in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(738): CodeIgniter\Model->doInsert()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(66): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2022-10-16 23:01:41 --> pg_query(): Query failed: ERROR:  el valor nulo en la columna «id_titular» de la relación «cuenta» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (3, 12346567, 1, 2022-10-19, Pesos argentinos, 0, null, 1).
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(738): CodeIgniter\Model->doInsert()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(66): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2022-10-16 23:07:07 --> Undefined index: id_usuario
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(48): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-10-16 23:07:10 --> Undefined index: id_usuario
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(48): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-10-16 23:07:12 --> Undefined index: id_usuario
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(48): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-10-16 23:07:15 --> Undefined index: id_usuario
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(48): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-10-16 23:09:23 --> Undefined offset: 0
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(55): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-10-16 23:09:52 --> Undefined index: id_cliente
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(55): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-10-16 23:14:18 --> Undefined index: id_cliente
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(55): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-10-16 23:14:22 --> Undefined index: id_cliente
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(55): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

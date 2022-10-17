@@ -16,7 +16,9 @@ class cuentaModel extends Model
         'tipo_cuenta',
         'fecha_start',
         'tipo_moneda',
-        'monto'
+        'monto',
+        'id_titular',
+        'id_banco'
     ]; //Nos permite cambiar los campos que tengan estos nombre. Si no están acá no se podrán manipular
     protected $useTimestamps = false;
     protected $updatedFiel   = 'updated_at';
