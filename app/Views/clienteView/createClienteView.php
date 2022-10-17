@@ -1,30 +1,36 @@
     <h1>Ingreso de cliente:</h1>
 
-    <?= $validation->listErrors(); ?>
-    <?= form_open('clienteController/create') ?>
+    <?php if ($validation != null) { ?>
+        <?= $validation->listErrors(); ?>
+    <?php } ?>
+    <?php if ($pantalla == 'create') { ?>
+        <?= form_open('clienteController/create') ?>
+    <?php } else { ?>
+        <?= form_open('clienteController/update/' . $dni) ?>
+    <?php } ?>
     <div class="mb-3">
         <label for="inputNomyApe" class="form-label">Nombre y Apellido</label>
-        <input type="text" class="form-control" id="inputNomyApe" name="inputNomyApe" value="<?= set_value('nombre') ?>">
+        <input type="text" class="form-control" id="inputNomyApe" name="inputNomyApe" value="<?php echo $nombre_apellido ?>">
     </div>
     <div class="mb-3">
         <label for="inputDireccion" class="form-label">Direcci&oacute;n:</label>
-        <input type="text" class="form-control" id="inputDireccion" name="inputDireccion" value="<?= set_value('direccion') ?>">
+        <input type="text" class="form-control" id="inputDireccion" name="inputDireccion" value="<?php echo $direccion ?>">
     </div>
     <div class="mb-3">
         <label for="inputTelefono" class="form-label">Tel&eacute;fono:</label>
-        <input type="number" class="form-control" id="inputTelefono" name="inputTelefono" value="<?= set_value('telefono') ?>">
+        <input type="number" class="form-control" id="inputTelefono" name="inputTelefono" value="<?php echo $telefono ?>">
     </div>
     <div class="mb-3">
         <label for="inputFechaNac" class="form-label">Fecha de nacimiento:</label>
-        <input type="date" class="form-control" id="inputFechaNac" name="inputFechaNac" value="<?= set_value('fechaNacimiento') ?>">
+        <input type="date" class="form-control" id="inputFechaNac" name="inputFechaNac" value="<?php echo $fecha_nacimiento ?>">
     </div>
     <div class="mb-3">
         <label for="inputDocumento" class="form-label">Documento de Identidad:</label>
-        <input type="number" class="form-control" id="inputDocumento" name="inputDocumento" value="<?= set_value('documento') ?>">
+        <input type="number" class="form-control" id="inputDocumento" name="inputDocumento" value="<?php echo $dni ?>">
     </div>
     <div class="mb-3">
         <label for="inputCUIT_CUIL" class="form-label">CUIT/CUIL:</label>
-        <input type="number" class="form-control" id="inputCUIT_CUIL" name="inputCUIT_CUIL" value="<?= set_value('cuit_cuil') ?>">
+        <input type="number" class="form-control" id="inputCUIT_CUIL" name="inputCUIT_CUIL" value="<?php echo $cuit_cuil ?>">
     </div>
     <button type="submit" class="btn btn-primary">Ingresar</button>
     <?= form_close() ?>
