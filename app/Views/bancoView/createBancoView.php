@@ -10,24 +10,28 @@
 
 <body>
     <h1>Ingreso de banco:</h1>
-
-    <form>
-        <div class="mb-3">
-            <label for="inputNombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="inputNombre">
-        </div>
-        <div class="mb-3">
-            <label for="inputDireccion" class="form-label">Direcci&oacute;n:</label>
-            <input type="text" class="form-control" id="inputDireccion">
-            <label for="inputDirNumero" class="form-label">Numero:</label>
-            <input type="number" class="form-control" id="inputDirNumero">
-        </div>
-        <div class="mb-3">
-            <label for="inputNroSucursal" class="form-label">Numero de Sucursal:</label>
-            <input type="number" class="form-control" id="inputNroSucursal">
-        </div>
-        <button type="submit" class="btn btn-primary">Ingresar</button>
-    </form>
+    <?php if ($validation != null) { ?>
+        <?= $validation->listErrors(); ?>
+    <?php } ?>
+    <?php if ($pantalla == 'create') { ?>
+        <?= form_open('bancoController/create') ?>
+    <?php } else { ?>
+        <?= form_open('bancoController/update/' . $id_banco) ?>
+    <?php } ?>
+    <div class="mb-3">
+        <label for="inputNombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="inputNombre" name="inputNombre" value="<?php echo $nombre ?>">
+    </div>
+    <div class="mb-3">
+        <label for="inputDireccion" class="form-label">Direcci&oacute;n:</label>
+        <input type="text" class="form-control" id="inputDireccion" name="inputDireccion" value="<?php echo $direccion ?>">
+    </div>
+    <div class="mb-3">
+        <label for="inputNroSucursal" class="form-label">Numero de Sucursal:</label>
+        <input type="number" class="form-control" id="inputNroSucursal" name="inputNroSucursal" value="<?php echo $numero_sucursal ?>">
+    </div>
+    <button type="submit" class="btn btn-primary">Ingresar</button>
+    <?= form_close() ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 

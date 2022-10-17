@@ -15,13 +15,6 @@ class ClienteController extends BaseController
         $session = \Config\Services::session();
     }
 
-    public function index()
-    {
-        return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', [
-            'validation' => Services::validation(),
-        ]);
-    }
-
     public function create()
     {
         $request = \Config\Services::request();
@@ -79,18 +72,14 @@ class ClienteController extends BaseController
         return view('components\header') . view('components\navbar') . view('components\operacionExitosa');
     }
 
-    public function delete($dni)
+    public function delete($id)
     {
         $clienteModel = new clienteModel($db);
-        $cliente = $clienteModel->where('dni', $dni)->findAll();
-        if ($cliente == null) {
-            return view('components\header') . view('components\navbar') . view('clienteView\mostrarClienteView', [
-                'validation' => Services::validation(),
-            ]);
-        } else {
-            $clienteModel->where('dni', $dni)->delete();
-        }
-        return view('components\header') . view('components\navbar') . view('components\mostrarClienteView');
+        $clienteModel->where('id_cliente', $id)->delete();
+        return view('components\header') . view('components\navbar') . view('components\mostrarClienteView', [
+            'validation' => $this->validator,
+            'clientes' => $clienteModel->findAll(),
+        ]);
     }
 
     public function update($dni)
@@ -137,6 +126,7 @@ class ClienteController extends BaseController
 
     public function mostrar()
     {
+        $request = \Config\Services::request();
         $clienteModel = new clienteModel($db);
         if (strtolower($this->request->getMethod()) !== 'post') {
             return view('components\header') . view('components\navbar') . view('clienteView\mostrarClienteView', [
@@ -144,15 +134,7 @@ class ClienteController extends BaseController
                 'clientes' => $clienteModel->findAll(),
             ]);
         }
-        $rules = $clienteModel->getValidationRules();
-        if (!$this->validate($rules)) {
-            return view('components\header') . view('components\navbar') . view('clienteView\mostrarClienteView', [
-                'validation' => $this->validator,
-                'clientes' => [],
-            ]);
-        }
-        $request = \Config\Services::request();
-        $data = $clienteModel->where($request->getPost('selectForma'), (int) $request->getPost('inputValor'))->findAll();
+        $data = $clienteModel->where($request->getPost('selectForma'), $request->getPost('inputValor'))->findAll();
         if (sizeof($data) == 0) {
             $data = $clienteModel->findAll();
         }

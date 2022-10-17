@@ -34,6 +34,7 @@ class UsuarioController extends BaseController
             ) {
                 $session = \Config\Services::session();
                 if (!isset($_SESSION['usuario'])) {
+                    $session->set('id_usuario', $u[0]['id_usuario']);
                     $session->set('usuario', $request->getPostGet('inputUser'));
                     $session->set('tipo_usuario', $u[0]['tipo_usuario']);
                 }
