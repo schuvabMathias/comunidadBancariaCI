@@ -24,70 +24,22 @@ class ClienteController extends BaseController
 
     public function create()
     {
+        $request = \Config\Services::request();
         $usuarioModel = new usuarioModel($db);
         $clienteModel = new clienteModel($db);
-        if (strtolower($this->request->getMethod()) !== 'post') {
-            return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', [
-                'validation' => Services::validation(),
-            ]);
-        }
-        $rules = $clienteModel->getValidationRules();
-        if (!$this->validate($rules)) {
-            return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', [
-                'validation' => $this->validator,
-            ]);
-        }
-        $request = \Config\Services::request();
-        $user = array(
-            'usuario' => $request->getPost('inputNomyApe'),
-            'contrasena' => $request->getPost('inputDocumento'),
-            'tipo_usuario' => 1,
+        $dato = array(
+            'nombre_apellido' => "",
+            'direccion' => "",
+            'telefono' => "",
+            'fecha_nacimiento' => "",
+            'dni' => "",
+            'cuit_cuil' => "",
         );
-        if ($usuarioModel->insert($user)) {
-            $u = $usuarioModel->where('usuario', $request->getPostGet('inputNomyApe'))->findAll();
-            $data = array(
-                'nombre_apellido' => $request->getPost('inputNomyApe'),
-                'direccion' => $request->getPost('inputDireccion'),
-                'telefono' => $request->getPost('inputTelefono'),
-                'fecha_nacimiento' => $request->getPost('inputFechaNac'),
-                'dni' => $request->getPost('inputDocumento'),
-                'cuit_cuil' => $request->getPost('inputCUIT_CUIL'),
-                'id_usuario' => (int)$u[0]["id_usuario"],
-            );
-            if (!$clienteModel->insert($data)) {
-                var_dump($clienteModel->errors());
-                $usuarioModel->delete($user);
-                return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', [
-                    'validation' => $this->validator,
-                ]);
-            }
-        } else {
-            var_dump($usuarioModel->errors());
-            return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', [
-                'validation' => Services::validation(),
-            ]);
-        }
-        return view('components\header') . view('components\navbar') . view('components\operacionExitosa');
-    }
-
-    public function delete()
-    {
         if (strtolower($this->request->getMethod()) !== 'post') {
-            return view('components\header') . view('components\navbar') . view('clienteView\mostrarClienteView', [
-                'validation' => Services::validation(),
-            ]);
+            $dato['pantalla'] = 'create';
+            $dato['validation'] = $this->validator;
+            return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', $dato);
         }
-        $rules = [
-            'nombre_apellido' => 'required',
-            'dni' => 'required'
-        ];
-        if (!$this->validate($rules)) {
-            return view('components\header') . view('components\navbar') . view('clienteView\mostrarClienteView', [
-                'validation' => $this->validator,
-            ]);
-        }
-        $clienteModel = new clienteModel($db);
-        $request = \Config\Services::request();
         $data = array(
             'nombre_apellido' => $request->getPost('inputNomyApe'),
             'direccion' => $request->getPost('inputDireccion'),
@@ -96,12 +48,90 @@ class ClienteController extends BaseController
             'dni' => $request->getPost('inputDocumento'),
             'cuit_cuil' => $request->getPost('inputCUIT_CUIL'),
         );
-        if (!$clienteModel->insert($data)) {
-            var_dump($clienteModel->errors());
-            return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', [
-                'validation' => $this->validator,
+        //$rules = $clienteModel->getValidationRules();
+        //if (!$this->validate($rules)) {
+        //    $data['validation'] = $this->validator;
+        //    return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', $data);
+        //}
+        $user = array(
+            'usuario' => $request->getPost('inputNomyApe'),
+            'contrasena' => $request->getPost('inputDocumento'),
+            'tipo_usuario' => 1,
+        );
+        if ($usuarioModel->insert($user)) {
+            $u = $usuarioModel->where('usuario', $request->getPostGet('inputNomyApe'))->findAll();
+            $data['id_usuario'] = (int)$u[0]["id_usuario"];
+            if (!$clienteModel->insert($data)) {
+                var_dump($clienteModel->errors());
+                $user['id_usuario'] = (int)$u[0]["id_usuario"];
+                $usuarioModel->delete($user);
+                $data['validation'] = $this->validator;
+                unset($data['id_usuario']);
+                $data['pantalla'] = 'create';
+                return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', $data);
+            }
+        } else {
+            var_dump($usuarioModel->errors());
+            $data['validation'] = $this->validator;
+            $data['pantalla'] = 'create';
+            return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', $data);
+        }
+        return view('components\header') . view('components\navbar') . view('components\operacionExitosa');
+    }
+
+    public function delete($dni)
+    {
+        $clienteModel = new clienteModel($db);
+        $cliente = $clienteModel->where('dni', $dni)->findAll();
+        if ($cliente == null) {
+            return view('components\header') . view('components\navbar') . view('clienteView\mostrarClienteView', [
+                'validation' => Services::validation(),
             ]);
-        };
+        } else {
+            $clienteModel->where('dni', $dni)->delete();
+        }
+        return view('components\header') . view('components\navbar') . view('components\mostrarClienteView');
+    }
+
+    public function update($dni)
+    {
+        $request = \Config\Services::request();
+        $usuarioModel = new usuarioModel($db);
+        $clienteModel = new clienteModel($db);
+        $cliente = $clienteModel->where('dni', $dni)->findAll();
+        $cliente = $cliente[0];
+        if (strtolower($this->request->getMethod()) !== 'post') {
+            $cliente['pantalla'] = 'update';
+            $cliente['validation'] = $this->validator;
+            return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', $cliente);
+        }
+        $user = array(
+            'contrasena' => $dni,
+            'tipo_usuario' => 1,
+        );
+        $u = $usuarioModel->where('contrasena', $dni)->findAll();
+        $data = array(
+            'nombre_apellido' => $request->getPost('inputNomyApe'),
+            'direccion' => $request->getPost('inputDireccion'),
+            'telefono' => $request->getPost('inputTelefono'),
+            'fecha_nacimiento' => $request->getPost('inputFechaNac'),
+            'dni' => $request->getPost('inputDocumento'),
+            'cuit_cuil' => $request->getPost('inputCUIT_CUIL'),
+        );
+        $data['id_usuario'] = (int)$u[0]["id_usuario"];
+        $user = array(
+            'usuario' => $request->getPost('inputNomyApe'),
+            'contrasena' => $request->getPost('inputDocumento'),
+            'tipo_usuario' => 1,
+        );
+        $usuarioModel->update((int)$u[0]["id_usuario"], $user);
+        if (!$clienteModel->update($cliente['id_cliente'], $data)) {
+            var_dump($clienteModel->errors());
+            $data['validation'] = $this->validator;
+            unset($data['id_usuario']);
+            $data['pantalla'] = 'update';
+            return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', $data);
+        }
         return view('components\header') . view('components\navbar') . view('components\operacionExitosa');
     }
 
