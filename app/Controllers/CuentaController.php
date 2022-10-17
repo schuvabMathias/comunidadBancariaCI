@@ -5,6 +5,7 @@ namespace App\Controllers;
 use Config\Services;
 use App\Models\usuarioModel;
 use App\Models\bancoModel;
+use App\Models\bancoteModel;
 use App\Models\clienteModel;
 use App\Models\cuentaModel;
 
@@ -24,13 +25,36 @@ class CuentaController extends BaseController
         ]);
     }
 
-    /*  public function create()
+    public function create()
     {
+        $request = \Config\Services::request();
+        $bancoModel = new bancoModel($db);
+        $cuentaModel = new cuentaModel($db);
+        $clienteModel = new clienteModel($db);
+        $bancos = $bancoModel->findAll();
+        $data = array(
+            'numero' => "",
+            'tipo_cuenta' => "",
+            'fecha_start' => "",
+            'tipo_moneda' => "Pesos argentinos",
+            'monto' => (int) 0,
+        );
         if (strtolower($this->request->getMethod()) !== 'post') {
-            return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', [
-                'validation' => Services::validation(),
-            ]);
+            $data['validation'] = Services::validation();
+            $data['bancos'] = $bancos;
+            $data['pantalla'] = 'create';
+            return view('components\header') . view('components\navbar') . view('cuentaView\createCuentaView', $data);
         }
+        $cliente = $clienteModel->where('id_usuario', $_SESSION['id_usuario'])->findAll();
+        $data = array(
+            'numero' => $request->getPost('inputNumero'),
+            'tipo_cuenta' => $request->getPost('selectTipo'),
+            'fecha_start' => $request->getPost('inputFechaCreacion'), //aca lo podemos hacer por programa que lo haga solo el dia que la crea el usuario
+            'tipo_moneda' => $request->getPost('inputMoneda'), //aca tmb lo de arriba, o no?
+            'monto' => 0,
+            'id_titular' => $cliente[0]['id_cliente'],
+            'id_banco' => $request->getPost('inputBanco'),
+        );
         // $rules = [
         //     'nombre_apellido' => 'required',
         //     'dni' => 'required'
@@ -40,41 +64,16 @@ class CuentaController extends BaseController
         //         'validation' => $this->validator,
         //     ]);
         // }
-        $usuarioModel = new usuarioModel($db);
-        
-        $request = \Config\Services::request();
-        $user = array(
-            'usuario' => $request->getPost('inputNomyApe'),
-            'contrasena' => $request->getPost('inputDocumento'),
-            'tipo_usuario' => 1,
-        );
-        if ($usuarioModel->insert($user)) {
-            $u = $usuarioModel->where('usuario', $request->getPostGet('inputNomyApe'))->findAll();
-            $data = array(
-                'nombre_apellido' => $request->getPost('inputNomyApe'),
-                'direccion' => $request->getPost('inputDireccion'),
-                'telefono' => $request->getPost('inputTelefono'),
-                'fecha_nacimiento' => $request->getPost('inputFechaNac'),
-                'dni' => $request->getPost('inputDocumento'),
-                'cuit_cuil' => $request->getPost('inputCUIT_CUIL'),
-                'id_usuario' => (int)$u[0]["id_usuario"],
-            );
-            if (!$clienteModel->insert($data)) {
-                var_dump($usuarioModel->errors());
-                var_dump($clienteModel->errors());
-                $usuarioModel->delete($user);
-                return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', [
-                    'validation' => $this->validator,
-                ]);
-            }
-        } else {
-            var_dump($clienteModel->errors());
-            return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', [
-                'validation' => $this->validator,
-            ]);
+        if (!$cuentaModel->insert($data)) {
+            echo var_dump($cuentaModel->errors());
+            return 0;
+            $data['validation'] = $this->validator;
+            $data['bancos'] = $bancos;
+            $data['pantalla'] = 'create';
+            return view('components\header') . view('components\navbar') . view('cuentaView\createCuentaView', $data);
         }
         return view('components\header') . view('components\navbar') . view('components\operacionExitosa');
-    } */
+    }
 
     /* public function delete()
     {
