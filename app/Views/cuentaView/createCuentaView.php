@@ -30,7 +30,11 @@
     </div>
     <div class="mb-3">
         <label for="inputTitular" class="form-label">Titular:</label>
-        <input type="text" value="<?php echo $_SESSION['usuario'] ?>" class="form-control" name="inputTitular" id="inputTitular" disabled>
+        <input type="text" value="<?php if ($pantalla == 'create') {
+                                        echo $_SESSION['usuario'];
+                                    } else {
+                                        echo $titular;
+                                    } ?>" class="form-control" name="inputTitular" id="inputTitular" disabled>
     </div>
     <div class="mb-3">
         <label for="inputBanco" class="form-label">Banco:</label>

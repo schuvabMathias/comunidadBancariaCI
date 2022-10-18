@@ -28,9 +28,9 @@ class CuentaController extends BaseController
     {
         if (isset($_SESSION['tipo_usuario'])) {
             $request = \Config\Services::request();
-            $bancoModel = new bancoModel($db);
             $cuentaModel = new cuentaModel($db);
             $clienteModel = new clienteModel($db);
+            $bancoModel = new bancoModel($db);
             $bancos = $bancoModel->findAll();
             $data = array(
                 'numero' => "",
@@ -90,7 +90,7 @@ class CuentaController extends BaseController
             $data = $cuentaModel->findAll();
             return view('components\header') . view('components\navbar') . view('cuentaView\mostrarCuentaView', [
                 'validation' => $this->validator,
-                'bancos' => $data,
+                'cuentas' => $data,
             ]);
         } else {
             $data = [
@@ -108,14 +108,18 @@ class CuentaController extends BaseController
             $request = \Config\Services::request();
             $clienteModel = new clienteModel($db);
             $cuentaModel = new cuentaModel($db);
+            $bancoModel = new bancoModel($db);
+            $bancos = $bancoModel->findAll();
             $cuenta = $cuentaModel->where('id_cuenta', $id)->findAll();
+            $cliente = $clienteModel->where('id_cliente', $cuenta[0]['id_titular'])->findAll();
             $cuenta = $cuenta[0];
             if (strtolower($this->request->getMethod()) !== 'post') {
                 $cuenta['pantalla'] = 'update';
                 $cuenta['validation'] = $this->validator;
+                $cuenta['bancos'] = $bancos;
+                $cuenta['titular'] = $cliente[0]['nombre_apellido'];
                 return view('components\header') . view('components\navbar') . view('cuentaView\createCuentaView', $cuenta);
             }
-            $cliente = $clienteModel->where('id_usuario', $_SESSION['id_usuario'])->findAll();
             $data = array(
                 'numero' => $request->getPost('inputNumero'),
                 'tipo_cuenta' => $request->getPost('selectTipo'),
@@ -129,6 +133,7 @@ class CuentaController extends BaseController
                 var_dump($cuentaModel->errors());
                 $data['validation'] = $this->validator;
                 $data['pantalla'] = 'update';
+                $cuenta['bancos'] = $bancos;
                 return view('components\header') . view('components\navbar') . view('bancoView\createCuentaView', $data);
             }
             return view('components\header') . view('components\navbar') . view('components\operacionExitosa');
@@ -153,9 +158,9 @@ class CuentaController extends BaseController
                     return view('components\header') . view('components\navbar') . view('cuentaView\mostrarCuentaView', $data);
                 }
                 $request = \Config\Services::request();
-                $data = $cuentaModel->findAll();
-                if (sizeof($data) == 0) {
-                    $data = $cuentaModel->where($request->getPost('selectForma'), $request->getPost('inputValor'))->findAll();
+                $data = $cuentaModel->where($request->getPost('selectForma'), $request->getPost('inputValor'))->findAll();
+                if ($request->getPost('inputValor') == "") {
+                    $data = $cuentaModel->findAll();
                 }
                 return view('components\header') . view('components\navbar') . view('cuentaView\mostrarCuentaView', [
                     'validation' => $this->validator,
