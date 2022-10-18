@@ -12,7 +12,7 @@ class UsuarioController extends BaseController
     public function __construct()
     {
         helper('form');
-        $session = \Config\Services::session();
+        $session = Services::session();
     }
 
     public function index()
@@ -27,7 +27,7 @@ class UsuarioController extends BaseController
     public function connect()
     {
         $userModel = new UsuarioModel($db);
-        $request = \Config\Services::request();
+        $request = Services::request();
         if (!isset($_SESSION['usuario'])) {
             if (($u = $userModel->where('usuario', $request->getPostGet('inputUser'))->findAll()) &&
                 ($u[0]['contrasena'] == $request->getPostGet('inputPassword'))
