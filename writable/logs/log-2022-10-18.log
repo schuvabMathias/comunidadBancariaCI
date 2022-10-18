@@ -1,0 +1,30 @@
+CRITICAL - 2022-10-18 02:34:40 --> The framework needs the following extension(s) installed and loaded: curl, intl, mbstring.
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('curl, intl, mbs...')
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\index.php(28): require('C:\\Apache24\\htd...')
+#4 {main}
+CRITICAL - 2022-10-18 02:50:17 --> The framework needs the following extension(s) installed and loaded: curl, intl, mbstring.
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('curl, intl, mbs...')
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\index.php(28): require('C:\\Apache24\\htd...')
+#4 {main}
+CRITICAL - 2022-10-18 02:50:19 --> The framework needs the following extension(s) installed and loaded: curl, intl, mbstring.
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('curl, intl, mbs...')
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\index.php(28): require('C:\\Apache24\\htd...')
+#4 {main}
+CRITICAL - 2022-10-18 02:50:20 --> The framework needs the following extension(s) installed and loaded: curl, intl, mbstring.
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('curl, intl, mbs...')
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\index.php(28): require('C:\\Apache24\\htd...')
+#4 {main}
+CRITICAL - 2022-10-18 02:50:23 --> The framework needs the following extension(s) installed and loaded: curl, intl, mbstring.
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('curl, intl, mbs...')
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\index.php(28): require('C:\\Apache24\\htd...')
+#4 {main}

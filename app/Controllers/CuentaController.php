@@ -82,40 +82,64 @@ class CuentaController extends BaseController
         }
     }
 
-    /* public function delete()
+    public function delete($id)
     {
-        if (strtolower($this->request->getMethod()) !== 'post') {
-            return view('components\header') . view('components\navbar') . view('clienteView\mostrarClienteView', [
-                'validation' => Services::validation(),
-            ]);
-        }
-        $rules = [
-            'nombre_apellido' => 'required',
-            'dni' => 'required'
-        ];
-        if (!$this->validate($rules)) {
-            return view('components\header') . view('components\navbar') . view('clienteView\mostrarClienteView', [
+        if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == 0) {
+            $cuentaModel = new cuentaModel($db);
+            $cuentaModel->where('id_cuenta', $id)->delete();
+            $data = $cuentaModel->findAll();
+            return view('components\header') . view('components\navbar') . view('cuentaView\mostrarCuentaView', [
                 'validation' => $this->validator,
+                'bancos' => $data,
             ]);
+        } else {
+            $data = [
+                'user' => "",
+                'password' => ""
+            ];
+            return  view('components\header') . view('components\navbar') . view("usuarioView/login", $data);
         }
-        $clienteModel = new clienteModel($db);
-        $request = \Config\Services::request();
-        $data = array(
-            'nombre_apellido' => $request->getPost('inputNomyApe'),
-            'direccion' => $request->getPost('inputDireccion'),
-            'telefono' => $request->getPost('inputTelefono'),
-            'fecha_nacimiento' => $request->getPost('inputFechaNac'),
-            'dni' => $request->getPost('inputDocumento'),
-            'cuit_cuil' => $request->getPost('inputCUIT_CUIL'),
-        );
-        if (!$clienteModel->insert($data)) {
-            var_dump($clienteModel->errors());
-            return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', [
-                'validation' => $this->validator,
-            ]);
-        };
-        return view('components\header') . view('components\navbar') . view('components\operacionExitosa');
-    } */
+    }
+
+    public function update($id)
+    {
+
+        if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == 0) {
+            $request = \Config\Services::request();
+            $clienteModel = new clienteModel($db);
+            $cuentaModel = new cuentaModel($db);
+            $cuenta = $cuentaModel->where('id_cuenta', $id)->findAll();
+            $cuenta = $cuenta[0];
+            if (strtolower($this->request->getMethod()) !== 'post') {
+                $cuenta['pantalla'] = 'update';
+                $cuenta['validation'] = $this->validator;
+                return view('components\header') . view('components\navbar') . view('cuentaView\createCuentaView', $cuenta);
+            }
+            $cliente = $clienteModel->where('id_usuario', $_SESSION['id_usuario'])->findAll();
+            $data = array(
+                'numero' => $request->getPost('inputNumero'),
+                'tipo_cuenta' => $request->getPost('selectTipo'),
+                'fecha_start' => $request->getPost('inputFechaCreacion'), //aca lo podemos hacer por programa que lo haga solo el dia que la crea el usuario
+                'tipo_moneda' => $request->getPost('inputMoneda'), //aca tmb lo de arriba, o no?
+                'monto' => 0,
+                'id_titular' => $cliente[0]['id_cliente'],
+                'id_banco' => $request->getPost('inputBanco')
+            );
+            if (!$cuentaModel->update($id, $data)) {
+                var_dump($cuentaModel->errors());
+                $data['validation'] = $this->validator;
+                $data['pantalla'] = 'update';
+                return view('components\header') . view('components\navbar') . view('bancoView\createCuentaView', $data);
+            }
+            return view('components\header') . view('components\navbar') . view('components\operacionExitosa');
+        } else {
+            $data = [
+                'user' => "",
+                'password' => ""
+            ];
+            return  view('components\header') . view('components\navbar') . view("usuarioView/login", $data);
+        }
+    }
 
     /* funcion que muestra todas las cuentas que posee el banco */
     public function mostrarCuentas()
@@ -124,17 +148,16 @@ class CuentaController extends BaseController
             if ($_SESSION['tipo_usuario'] == 0) {
                 $cuentaModel = new cuentaModel($db);
                 if (strtolower($this->request->getMethod()) !== 'post') {
-                    return view('components\header') . view('components\navbar') . view('clienteView\mostrarClienteView', [
-                        'validation' => Services::validation(),
-                        'cuentas' => $cuentaModel->findAll(),
-                    ]);
+                    $data['validation'] = $this->validator;
+                    $data['cuentas'] = $cuentaModel->findAll();
+                    return view('components\header') . view('components\navbar') . view('cuentaView\mostrarCuentaView', $data);
                 }
                 $request = \Config\Services::request();
                 $data = $cuentaModel->findAll();
                 if (sizeof($data) == 0) {
-                    $data = $cuentaModel->findAll();
+                    $data = $cuentaModel->where($request->getPost('selectForma'), $request->getPost('inputValor'))->findAll();
                 }
-                return view('components\header') . view('components\navbar') . view('clienteView\mostrarClienteView', [
+                return view('components\header') . view('components\navbar') . view('cuentaView\mostrarCuentaView', [
                     'validation' => $this->validator,
                     'cuentas' => $data,
                 ]);
@@ -149,7 +172,7 @@ class CuentaController extends BaseController
                         if (sizeof($valoresClientes) != 0) {
                             $valoresCuentas = $cuentaModel->where('titular', $valoresClientes[0]['id-cuenta'])->findAll();
 
-                            return view('components\header') . view('components\navbar') . view('clienteView\mostrarClienteView', [
+                            return view('components\header') . view('components\navbar') . view('cuentaView\mostrarCuentaView', [
                                 'validation' => Services::validation(),
                                 'cuentas' => $valoresCuentas,
 
