@@ -11,11 +11,12 @@
 <body>
     <?= form_open('bancoController/mostrar') ?>
     <label class="form-label">Buscar:</label>
-    <div class="mb-3">
+    <div class="mb-3 form-floating">
         <select class="form-select" aria-label="Select Forma" name="selectForma" id="selectForma">
             <option value="nombre">Nombre</option>
             <option value="numero_sucursal">Numero de Sucursal</option>
         </select>
+        <label class="form-label" for="selectForma">Buscar por:</label>
     </div>
     <div class="mb-3">
         <input type="text" class="form-control" id="inputValor" name="inputValor">

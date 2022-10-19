@@ -8,29 +8,30 @@
     <?php } else { ?>
         <?= form_open('clienteController/update/' . $dni) ?>
     <?php } ?>
-    <div class="mb-3">
+    <div class="mb-3 form-floating">
+        <input type="text" class="form-control" id="inputNomyApe" name="inputNomyApe" value="<?php echo $nombre_apellido ?>" placeholder="Nombre">
         <label for="inputNomyApe" class="form-label">Nombre y Apellido</label>
-        <input type="text" class="form-control" id="inputNomyApe" name="inputNomyApe" value="<?php echo $nombre_apellido ?>">
     </div>
-    <div class="mb-3">
+    <div class="mb-3 form-floating">
+        <input type="text" class="form-control" id="inputDireccion" name="inputDireccion" value="<?php echo $direccion ?>" placeholder="Direccion">
         <label for="inputDireccion" class="form-label">Direcci&oacute;n:</label>
-        <input type="text" class="form-control" id="inputDireccion" name="inputDireccion" value="<?php echo $direccion ?>">
     </div>
-    <div class="mb-3">
+    <div class="mb-3 form-floating">
+        <input type="number" class="form-control" id="inputTelefono" name="inputTelefono" value="<?php echo $telefono ?>" placeholder="Telefono">
         <label for="inputTelefono" class="form-label">Tel&eacute;fono:</label>
-        <input type="number" class="form-control" id="inputTelefono" name="inputTelefono" value="<?php echo $telefono ?>">
     </div>
-    <div class="mb-3">
+
+    <div class="mb-3 form-floating">
+        <input type="date" class="form-control" id="inputFechaNac" name="inputFechaNac" value="<?php echo $fecha_nacimiento ?>" placeholder="Fecha de Nacimiento">
         <label for="inputFechaNac" class="form-label">Fecha de nacimiento:</label>
-        <input type="date" class="form-control" id="inputFechaNac" name="inputFechaNac" value="<?php echo $fecha_nacimiento ?>">
     </div>
-    <div class="mb-3">
+    <div class="mb-3 form-floating">
+        <input type="number" class="form-control" id="inputDocumento" name="inputDocumento" value="<?php echo $dni ?>" placeholder="Documento">
         <label for="inputDocumento" class="form-label">Documento de Identidad:</label>
-        <input type="number" class="form-control" id="inputDocumento" name="inputDocumento" value="<?php echo $dni ?>">
     </div>
-    <div class="mb-3">
+    <div class="mb-3 form-floating">
+        <input type="number" class="form-control" id="inputCUIT_CUIL" name="inputCUIT_CUIL" value="<?php echo $cuit_cuil ?>" placeholder="Cuit/Cuil">
         <label for="inputCUIT_CUIL" class="form-label">CUIT/CUIL:</label>
-        <input type="number" class="form-control" id="inputCUIT_CUIL" name="inputCUIT_CUIL" value="<?php echo $cuit_cuil ?>">
     </div>
     <button type="submit" class="btn btn-primary">Ingresar</button>
     <?= form_close() ?>

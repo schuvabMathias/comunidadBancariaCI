@@ -11,10 +11,11 @@
 <body>
     <?= form_open('cuentaController/mostrarCuentas') ?>
     <label class="form-label">Buscar:</label>
-    <div class="mb-3">
+    <div class="mb-3 form-floating">
         <select class="form-select" aria-label="Select Forma" name="selectForma" id="selectForma">
             <option value="numero">Numero</option>
         </select>
+        <label class="form-label" for="selectForma">Buscar por:</label>
     </div>
     <div class="mb-3">
         <input type="text" class="form-control" id="inputValor" name="inputValor">

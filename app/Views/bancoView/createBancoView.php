@@ -18,17 +18,17 @@
     <?php } else { ?>
         <?= form_open('bancoController/update/' . $id_banco) ?>
     <?php } ?>
-    <div class="mb-3">
+    <div class="mb-3 form-floating">
+        <input type="text" class="form-control" id="inputNombre" name="inputNombre" value="<?php echo $nombre ?>" placeholder="Numero">
         <label for="inputNombre" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="inputNombre" name="inputNombre" value="<?php echo $nombre ?>">
     </div>
-    <div class="mb-3">
+    <div class="mb-3 form-floating">
+        <input type="text" class="form-control" id="inputDireccion" name="inputDireccion" value="<?php echo $direccion ?>" placeholder="Dirección">
         <label for="inputDireccion" class="form-label">Direcci&oacute;n:</label>
-        <input type="text" class="form-control" id="inputDireccion" name="inputDireccion" value="<?php echo $direccion ?>">
     </div>
-    <div class="mb-3">
+    <div class="mb-3 form-floating">
+        <input type="number" class="form-control" id="inputNroSucursal" name="inputNroSucursal" value="<?php echo $numero_sucursal ?>" placeholder="Numero de Sucursal">
         <label for="inputNroSucursal" class="form-label">Numero de Sucursal:</label>
-        <input type="number" class="form-control" id="inputNroSucursal" name="inputNroSucursal" value="<?php echo $numero_sucursal ?>">
     </div>
     <button type="submit" class="btn btn-primary">Ingresar</button>
     <?= form_close() ?>

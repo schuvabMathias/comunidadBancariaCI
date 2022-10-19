@@ -157,7 +157,7 @@ class ClienteController extends BaseController
                 ]);
             }
             $data = $clienteModel->where($request->getPost('selectForma'), $request->getPost('inputValor'))->findAll();
-            if (sizeof($data) == 0) {
+            if ($request->getPost('inputValor') == "") {
                 $data = $clienteModel->findAll();
             }
             return view('components\header') . view('components\navbar') . view('clienteView\mostrarClienteView', [

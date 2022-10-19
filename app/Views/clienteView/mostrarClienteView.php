@@ -11,12 +11,13 @@
 <body>
     <?= form_open('clienteController/mostrar') ?>
     <label class="form-label">Buscar:</label>
-    <div class="mb-3">
+    <div class="mb-3 form-floating">
         <select class="form-select" aria-label="Select Forma" name="selectForma" id="selectForma">
             <option value="dni">Documento</option>
             <option value="cuit_cuil">CUIT / CUIL</option>
             <option value="NomyApe">Nombre y Apellido</option>
         </select>
+        <label class="form-label" for="selectForma">Buscar por:</label>
     </div>
     <div class="mb-3">
         <input type="text" class="form-control" id="inputValor" name="inputValor">

@@ -121,7 +121,7 @@ class BancoController extends BaseController
                 ]);
             }
             $data = $bancoModel->where($request->getPost('selectForma'), $request->getPost('inputValor'))->findAll();
-            if (sizeof($data) == 0) {
+            if ($request->getPost('inputValor') == "") {
                 $data = $bancoModel->findAll();
             }
             return view('components\header') . view('components\navbar') . view('bancoView\mostrarBancoView', [
