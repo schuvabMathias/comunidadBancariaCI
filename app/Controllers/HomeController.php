@@ -13,6 +13,6 @@ class HomeController extends BaseController
 
     public function index()
     {
-        return view('components/header') . view('components/navbar') . view('home');
+        return view('home');
     }
 }

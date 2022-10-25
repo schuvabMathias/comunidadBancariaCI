@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+}
+
+body {
+    background: #bdc3c7;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    margin-top: 0.5rem;
+}
+
+.titulo {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    background-color: #5b6262;
+    border-radius: 27px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: azure;
+    box-shadow: 2px 5px 10px rgb(53, 52, 52);
+}
+
+.container {
+    max-width: 87%;
+}
+
+.imagenLogo {
+    border-radius: 15px;
+    margin-bottom: 10px;
+    box-shadow: 2px 5px 10px rgb(53, 52, 52);
+}
+
+.menuInfo {
+    margin-top: 2rem;
+}
+
+.navbar {
+    margin-top: 1.5rem;
+
+}
+
+.navbar-exapnd-md .navbar-nav .nav-link {
+    padding-right: initial;
+}
+
+.navbar li {
+    padding: 5px 5px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #CCC5B9;
+    border: 10px 10px;
+    border-radius: 25px;
+    margin-bottom: 4px;
+    box-shadow: 2px 5px 10px rgb(53, 52, 52);
+}
+
+.navbar li:hover {
+    color: #fff;
+    background-color: #4f4e4d;
+    border: #236568;
+    transform: scale(1.1, 1.1);
+}
+
+.navbar li:active {
+    background-color: #236568 !important;
+    transform: translateY(2px) !important;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none;
+    transform: scale(1.1, 1.1);
+}
+
+.informacion {
+    border: solid 2px #5b6262;
+    border-radius: 15px;
+    margin-left: 2.5rem;
+    box-shadow: 2px 5px 10px rgb(53, 52, 52);
+    background-color: #e5e3e0;
+}
+
+.container .laInfo {
+    max-width: 100%;
+    padding-top: 10px;
+    padding-bottom: 7px;
+}

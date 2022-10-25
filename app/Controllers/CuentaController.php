@@ -19,7 +19,7 @@ class CuentaController extends BaseController
 
     public function index()
     {
-        return view('components\header') . view('components\navbar') . view('clienteView\createCuentaView', [
+        return  view('clienteView\createCuentaView', [
             'validation' => Services::validation(),
         ]);
     }
@@ -43,7 +43,7 @@ class CuentaController extends BaseController
                 $data['validation'] = Services::validation();
                 $data['bancos'] = $bancos;
                 $data['pantalla'] = 'create';
-                return view('components\header') . view('components\navbar') . view('cuentaView\createCuentaView', $data);
+                return  view('cuentaView\createCuentaView', $data);
             }
             $cliente = $clienteModel->where('id_usuario', $_SESSION['id_usuario'])->findAll();
             $data = array(
@@ -60,7 +60,7 @@ class CuentaController extends BaseController
             //     'dni' => 'required'
             // ];
             // if (!$this->validate($rules)) {
-            //     return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', [
+            //     return  view('clienteView\createClienteView', [
             //         'validation' => $this->validator,
             //     ]);
             // }
@@ -70,15 +70,15 @@ class CuentaController extends BaseController
                 $data['validation'] = $this->validator;
                 $data['bancos'] = $bancos;
                 $data['pantalla'] = 'create';
-                return view('components\header') . view('components\navbar') . view('cuentaView\createCuentaView', $data);
+                return  view('cuentaView\createCuentaView', $data);
             }
-            return view('components\header') . view('components\navbar') . view('components\operacionExitosa');
+            return  view('components\operacionExitosa');
         } else {
             $data = [
                 'user' => "",
                 'password' => ""
             ];
-            return  view('components\header') . view('components\navbar') . view("usuarioView/login", $data);
+            return   view("usuarioView/login", $data);
         }
     }
 
@@ -88,7 +88,7 @@ class CuentaController extends BaseController
             $cuentaModel = new cuentaModel($db);
             $cuentaModel->where('id_cuenta', $id)->delete();
             $data = $cuentaModel->findAll();
-            return view('components\header') . view('components\navbar') . view('cuentaView\mostrarCuentaView', [
+            return  view('cuentaView\mostrarCuentaView', [
                 'validation' => $this->validator,
                 'cuentas' => $data,
             ]);
@@ -97,7 +97,7 @@ class CuentaController extends BaseController
                 'user' => "",
                 'password' => ""
             ];
-            return  view('components\header') . view('components\navbar') . view("usuarioView/login", $data);
+            return   view("usuarioView/login", $data);
         }
     }
 
@@ -118,7 +118,7 @@ class CuentaController extends BaseController
                 $cuenta['validation'] = $this->validator;
                 $cuenta['bancos'] = $bancos;
                 $cuenta['titular'] = $cliente[0]['nombre_apellido'];
-                return view('components\header') . view('components\navbar') . view('cuentaView\createCuentaView', $cuenta);
+                return  view('cuentaView\createCuentaView', $cuenta);
             }
             $data = array(
                 'numero' => $request->getPost('inputNumero'),
@@ -134,20 +134,20 @@ class CuentaController extends BaseController
                 $data['validation'] = $this->validator;
                 $data['pantalla'] = 'update';
                 $cuenta['bancos'] = $bancos;
-                return view('components\header') . view('components\navbar') . view('bancoView\createCuentaView', $data);
+                return  view('bancoView\createCuentaView', $data);
             }
-            return view('components\header') . view('components\navbar') . view('components\operacionExitosa');
+            return  view('components\operacionExitosa');
         } else {
             $data = [
                 'user' => "",
                 'password' => ""
             ];
-            return  view('components\header') . view('components\navbar') . view("usuarioView/login", $data);
+            return   view("usuarioView/login", $data);
         }
     }
 
     /* funcion que muestra todas las cuentas que posee el banco */
-    public function mostrarCuentas()
+    public function mostrar()
     {
         if (isset($_SESSION['tipo_usuario'])) {
             if ($_SESSION['tipo_usuario'] == 0) {
@@ -155,14 +155,14 @@ class CuentaController extends BaseController
                 if (strtolower($this->request->getMethod()) !== 'post') {
                     $data['validation'] = $this->validator;
                     $data['cuentas'] = $cuentaModel->findAll();
-                    return view('components\header') . view('components\navbar') . view('cuentaView\mostrarCuentaView', $data);
+                    return  view('cuentaView\mostrarCuentaView', $data);
                 }
                 $request = \Config\Services::request();
                 $data = $cuentaModel->where($request->getPost('selectForma'), $request->getPost('inputValor'))->findAll();
                 if ($request->getPost('inputValor') == "") {
                     $data = $cuentaModel->findAll();
                 }
-                return view('components\header') . view('components\navbar') . view('cuentaView\mostrarCuentaView', [
+                return  view('cuentaView\mostrarCuentaView', [
                     'validation' => $this->validator,
                     'cuentas' => $data,
                 ]);
@@ -177,7 +177,7 @@ class CuentaController extends BaseController
                         if (sizeof($valoresClientes) != 0) {
                             $valoresCuentas = $cuentaModel->where('titular', $valoresClientes[0]['id-cuenta'])->findAll();
 
-                            return view('components\header') . view('components\navbar') . view('cuentaView\mostrarCuentaView', [
+                            return  view('cuentaView\mostrarCuentaView', [
                                 'validation' => Services::validation(),
                                 'cuentas' => $valoresCuentas,
 
@@ -191,7 +191,7 @@ class CuentaController extends BaseController
                 'user' => "",
                 'password' => ""
             ];
-            return  view('components\header') . view('components\navbar') . view("usuarioView/login", $data);
+            return   view("usuarioView/login", $data);
         }
     }
 
@@ -200,7 +200,7 @@ class CuentaController extends BaseController
         if (isset($_SESSION['tipo_usuario'])) {
             $cuentaModel = new cuentaModel($db);
             $cuentas = $cuentaModel->where('id_titular', $id)->findAll();
-            return view('components\header') . view('components\navbar') . view('clienteView\mostrarCuentaView', [
+            return  view('clienteView\mostrarCuentaView', [
                 'validation' => $this->validator,
                 'cuentas' => $cuentas,
             ]);
@@ -209,7 +209,7 @@ class CuentaController extends BaseController
                 'user' => "",
                 'password' => ""
             ];
-            return  view('components\header') . view('components\navbar') . view("usuarioView/login", $data);
+            return   view("usuarioView/login", $data);
         }
     }
 }

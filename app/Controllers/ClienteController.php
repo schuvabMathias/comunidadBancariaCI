@@ -33,7 +33,7 @@ class ClienteController extends BaseController
             if (strtolower($this->request->getMethod()) !== 'post') {
                 $dato['pantalla'] = 'create';
                 $dato['validation'] = $this->validator;
-                return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', $dato);
+                return  view('clienteView\createClienteView', $dato);
             }
             $data = array(
                 'nombre_apellido' => $request->getPost('inputNomyApe'),
@@ -46,7 +46,7 @@ class ClienteController extends BaseController
             //$rules = $clienteModel->getValidationRules();
             //if (!$this->validate($rules)) {
             //    $data['validation'] = $this->validator;
-            //    return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', $data);
+            //    return  view('clienteView\createClienteView', $data);
             //}
             $user = array(
                 'usuario' => $request->getPost('inputNomyApe'),
@@ -63,15 +63,15 @@ class ClienteController extends BaseController
                     $data['validation'] = $this->validator;
                     unset($data['id_usuario']);
                     $data['pantalla'] = 'create';
-                    return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', $data);
+                    return  view('clienteView\createClienteView', $data);
                 }
             } else {
                 var_dump($usuarioModel->errors());
                 $data['validation'] = $this->validator;
                 $data['pantalla'] = 'create';
-                return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', $data);
+                return  view('clienteView\createClienteView', $data);
             }
-            return view('components\header') . view('components\navbar') . view('components\operacionExitosa');
+            return  view('components\operacionExitosa');
         } else {
             return view('components/header') . view('components/navbar') . view('home');
         }
@@ -82,7 +82,7 @@ class ClienteController extends BaseController
         if (isset($_SESSION['tipo_usuario'])) {
             $clienteModel = new clienteModel($db);
             $clienteModel->where('id_cliente', $id)->delete();
-            return view('components\header') . view('components\navbar') . view('components\mostrarClienteView', [
+            return  view('components\mostrarClienteView', [
                 'validation' => $this->validator,
                 'clientes' => $clienteModel->findAll(),
             ]);
@@ -91,7 +91,7 @@ class ClienteController extends BaseController
                 'user' => "",
                 'password' => ""
             ];
-            return  view('components\header') . view('components\navbar') . view("usuarioView/login", $data);
+            return   view("usuarioView/login", $data);
         }
     }
 
@@ -106,7 +106,7 @@ class ClienteController extends BaseController
             if (strtolower($this->request->getMethod()) !== 'post') {
                 $cliente['pantalla'] = 'update';
                 $cliente['validation'] = $this->validator;
-                return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', $cliente);
+                return  view('clienteView\createClienteView', $cliente);
             }
             $user = array(
                 'contrasena' => $dni,
@@ -133,15 +133,15 @@ class ClienteController extends BaseController
                 $data['validation'] = $this->validator;
                 unset($data['id_usuario']);
                 $data['pantalla'] = 'update';
-                return view('components\header') . view('components\navbar') . view('clienteView\createClienteView', $data);
+                return  view('clienteView\createClienteView', $data);
             }
-            return view('components\header') . view('components\navbar') . view('components\operacionExitosa');
+            return  view('components\operacionExitosa');
         } else {
             $data = [
                 'user' => "",
                 'password' => ""
             ];
-            return  view('components\header') . view('components\navbar') . view("usuarioView/login", $data);
+            return   view("usuarioView/login", $data);
         }
     }
 
@@ -151,7 +151,7 @@ class ClienteController extends BaseController
             $request = \Config\Services::request();
             $clienteModel = new clienteModel($db);
             if (strtolower($this->request->getMethod()) !== 'post') {
-                return view('components\header') . view('components\navbar') . view('clienteView\mostrarClienteView', [
+                return  view('clienteView\mostrarClienteView', [
                     'validation' => Services::validation(),
                     'clientes' => $clienteModel->findAll(),
                 ]);
@@ -160,7 +160,7 @@ class ClienteController extends BaseController
             if ($request->getPost('inputValor') == "") {
                 $data = $clienteModel->findAll();
             }
-            return view('components\header') . view('components\navbar') . view('clienteView\mostrarClienteView', [
+            return  view('clienteView\mostrarClienteView', [
                 'validation' => $this->validator,
                 'clientes' => $data,
             ]);
@@ -169,7 +169,7 @@ class ClienteController extends BaseController
                 'user' => "",
                 'password' => ""
             ];
-            return  view('components\header') . view('components\navbar') . view("usuarioView/login", $data);
+            return   view("usuarioView/login", $data);
         }
     }
 
@@ -183,7 +183,7 @@ class ClienteController extends BaseController
                 $ids[$i] = $cuentas[$i]['id_titular'];
             }
             $clientes = $clienteModel->whereIn('id_cliente', $ids)->findAll();
-            return view('components\header') . view('components\navbar') . view('clienteView\mostrarClienteView', [
+            return  view('clienteView\mostrarClienteView', [
                 'validation' => $this->validator,
                 'clientes' => $clientes,
             ]);
@@ -192,7 +192,7 @@ class ClienteController extends BaseController
                 'user' => "",
                 'password' => ""
             ];
-            return  view('components\header') . view('components\navbar') . view("usuarioView/login", $data);
+            return   view("usuarioView/login", $data);
         }
     }
 }

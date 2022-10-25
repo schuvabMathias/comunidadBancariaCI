@@ -1,0 +1,17 @@
+#accordion {
+    margin: 10px 0px;
+    text-align: center;
+}
+
+#accordion h1 {
+    text-decoration: underline;
+    color: #706757;
+}
+
+#accordion .card {
+    border-radius: 27px;
+    text-align: center;
+    margin-top: 5px;
+    border: 1px solid #706757;
+
+}
