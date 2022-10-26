@@ -17,8 +17,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
+
     <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/styleSideBar.css">
-    <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/usuarioView/logIn.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/generalStyle.css">
 
     <title>Comunidad Bancaria</title>
 </head>
@@ -63,27 +64,44 @@
         </div>
 
 
-        <main class="container informacion ps-0 ps-md-5 flex-grow-1">
+        <main class="container informacion flex-grow-1">
 
+            <div class="container tituloTwo">
+                <h3>Inicio de sesi&oacute;n:</h3>
+            </div>
+            <div class="container mt-3">
+                <h5>Por favor, coloque su nombre de usuario y contrase&ntilde;a para acceder al sistema</h5>
+                <?php
+                if (isset($error)) { ?>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                        <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z" />
+                    </svg>
+                <?php
+                    echo 'Usuario no encontrado o contrase&ntilde;a incorrecta <br><br>';
+                } ?>
+                <?= form_open('usuarioController/connect') ?>
+                <div class="container-fluid">
+                    <div class="mb-1 form-floating">
+                        <input type="text" class="form-control" id="inputUser" name="inputUser" value="<?= $user ?>" placeholder="User">
+                        <label for="inputUser" class="form-label">Usuario</label>
+                    </div>
+                    <div class="mb-3 form-floating">
+                        <input type="password" class="form-control" id="inputPassword" name="inputPassword" value="<?= $password ?>" placeholder="Contraseña">
+                        <label for="inputPassword" class="form-label">Contraseña</label>
+                    </div>
+                </div>
 
-            <h2 class="mt-3">Inicion de sesi&oacute;n:</h2>
-            <h5>Por favor, coloque su nombre de usuario y contrase&ntilde;a para acceder al sistema</h5>
-            <?php
-            if (isset($error)) {
-                echo '<br>Usuario no encontrado o contrase&ntilde;a incorrecta <br><br>';
-            } ?>
-            <?= form_open('usuarioController/connect') ?>
-            <div class="mb-3">
-                <label for="inputUser" class="form-label">Usuario</label>
-                <input type="text" class="form-control" id="inputUser" name="inputUser" value="<?= $user ?>">
+                <div class="container divBotoncitoCenter">
+                    <div class="d-grid mt-3">
+                        <button type="submit" class="btn btn-outline-dark mb-3 botoncito">Ingresar</button>
+                    </div>
+                </div>
+
+                <?= form_close() ?> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+                </script>
+
             </div>
-            <div class="mb-3">
-                <label for="inputPassword" class="form-label">Contrase&ntilde;a</label>
-                <input type="password" class="form-control" id="inputPassword" name="inputPassword" value="<?= $password ?>">
-            </div>
-            <button type="submit" class="btn btn-primary mb-3">Ingresar</button>
-            <?= form_close() ?>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
         </main>
     </div>

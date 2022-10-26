@@ -23,7 +23,6 @@ class ClienteController extends BaseController
 
     public function create()
     {
-        $encrypter = \Config\Services::encrypter();
         if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] == 0) {
             $request = \Config\Services::request();
             $usuarioModel = new usuarioModel($db);
@@ -59,38 +58,48 @@ class ClienteController extends BaseController
             );
             $user = array(
                 'usuario' => $request->getPost('inputNomyApe'),
-                'contrasena' => $encrypter->encrypt($request->getPost('inputDocumento')),
+                'contrasena' => password_hash($request->getPost('inputDocumento'), PASSWORD_DEFAULT),
                 'tipo_usuario' => 1,
             );
-            if ($usuarioModel->insert($user)) {
-                $u = $usuarioModel->where('usuario', $request->getPostGet('inputNomyApe'))->findAll();
-                $data['id_usuario'] = (int)$u[0]["id_usuario"];
-                if (!$clienteModel->insert($data)) {
-                    $user['id_usuario'] = (int)$u[0]["id_usuario"];
-                    $usuarioModel->delete($user);
-                    foreach ($clienteModel->errors() as $clave => $valor) {
+            $u = $usuarioModel->where('usuario', $request->getPostGet('inputNomyApe'))->findAll();
+            if (sizeof($u) == 0) {
+                if ($usuarioModel->insert($user)) {
+                    $u = $usuarioModel->where('usuario', $request->getPostGet('inputNomyApe'))->findAll();
+                    $data['id_usuario'] = (int)$u[0]["id_usuario"];
+                    if (!$clienteModel->insert($data)) {
+                        $usuario['id_usuario'] = (int)$u[0]["id_usuario"];
+                        $usuarioModel->delete($usuario);
+                        foreach ($clienteModel->errors() as $clave => $valor) {
+                            $validation[$clave] = $valor;
+                        }
+                        $data['validation'] = $validation;
+                        unset($data['id_usuario']);
+                        $data['pantalla'] = 'create';
+                        return  view('clienteView\createClienteView', $data);
+                    }
+                } else {
+                    $validation['contrasena'] = "";
+                    $validation['usuario'] = "";
+                    foreach ($usuarioModel->errors() as $clave => $valor) {
                         $validation[$clave] = $valor;
                     }
+                    $validation['nombre_apellido'] = $validation['usuario'];
+                    $validation['dni'] = $validation['contrasena'];
                     $data['validation'] = $validation;
-                    unset($data['id_usuario']);
                     $data['pantalla'] = 'create';
                     return  view('clienteView\createClienteView', $data);
                 }
+                $tipo = array('tipo' => "cliente");
+                return  view('operacionExitosa', $tipo);
             } else {
-                $validation['contrasena'] = "";
-                $validation['usuario'] = "";
-                foreach ($usuarioModel->errors() as $clave => $valor) {
-                    $validation[$clave] = $valor;
-                }
-                $validation['nombre_apellido'] = $validation['usuario'];
-                $validation['dni'] = $validation['contrasena'];
+                $validation['nombre_apellido'] = "";
+                $validation['dni'] =  "Ya existe un cliente con este documento";
                 $data['validation'] = $validation;
                 $data['pantalla'] = 'create';
                 return  view('clienteView\createClienteView', $data);
             }
-            return  view('components\operacionExitosa');
         } else {
-            return view('components/header') . view('components/navbar') . view('home');
+            return view('home');
         }
     }
 
@@ -98,11 +107,19 @@ class ClienteController extends BaseController
     {
         if (isset($_SESSION['tipo_usuario'])) {
             $clienteModel = new clienteModel($db);
-            $clienteModel->where('id_cliente', $id)->delete();
-            return  view('components\mostrarClienteView', [
-                'validation' => $this->validator,
-                'clientes' => $clienteModel->findAll(),
-            ]);
+            $cuentaModel = new cuentaModel($db);
+            $usuarioModel = new usuarioModel($db);
+            $cuentas = $cuentaModel->where('id_titular', $id)->findAll();
+            $cliente = $clienteModel->where('id_cliente', $id)->findAll();
+            if (sizeof($cuentas) < 0) {
+                $clienteModel->where('id_cliente', $id)->delete();
+                $usuarioModel->where('usuario', $cliente[0]['id_usuario'])->delete();
+                $tipo = array('tipo' => "cliente");
+                return  view('operacionExitosa', $tipo);
+            } else {
+                $tipo = array('tipo' => "cliente");
+                return  view('operacionNoExitosa', $tipo);
+            }
         } else {
             $data = [
                 'user' => "",
@@ -162,7 +179,8 @@ class ClienteController extends BaseController
                 $data['pantalla'] = 'update';
                 return  view('clienteView\createClienteView', $data);
             }
-            return  view('components\operacionExitosa');
+            $tipo = array('tipo' => "cliente");
+            return  view('operacionExitosa', $tipo);
         } else {
             $data = [
                 'user' => "",
@@ -188,7 +206,6 @@ class ClienteController extends BaseController
                 $data = $clienteModel->findAll();
             }
             return  view('clienteView\mostrarClienteView', [
-                'validation' => $this->validator,
                 'clientes' => $data,
             ]);
         } else {
@@ -208,7 +225,6 @@ class ClienteController extends BaseController
             $cuentas = $cuentaModel->select('id_titular')->where('id_banco', $id)->findAll();
             if (sizeof($cuentas) == 0) {
                 return  view('clienteView\mostrarClienteView', [
-                    'validation' => $this->validator,
                     'clientes' => [],
                 ]);
             }
@@ -217,7 +233,6 @@ class ClienteController extends BaseController
             }
             $clientes = $clienteModel->whereIn('id_cliente', $ids)->findAll();
             return  view('clienteView\mostrarClienteView', [
-                'validation' => $this->validator,
                 'clientes' => $clientes,
             ]);
         } else {
@@ -227,5 +242,9 @@ class ClienteController extends BaseController
             ];
             return   view("usuarioView/login", $data);
         }
+    }
+    public function volver()
+    {
+        return view("clienteView/opcionesClienteView.php");
     }
 }

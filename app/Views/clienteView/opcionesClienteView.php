@@ -18,7 +18,7 @@
 
 
     <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/styleSideBar.css">
-    <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/clienteView/crearCliente.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/generalStyle.css">
 
     <title>Comunidad Bancaria</title>
 </head>
@@ -91,18 +91,20 @@
             </nav>
         </div>
 
-
         <main class="container informacion ps-0 ps-md-5 flex-grow-1">
-            <div class="container titulo">
-                <h3>Menu Cliente</h3>
-
+            <div class="container tituloTwo">
+                <h3>Menú Cliente</h3>
             </div>
-            <p class="p-3 mt-3">Por favor seleccione una opcion para continuar</p>
-            <div class="d-grid mt-3">
-                <a type="button" class="btn btn-lg btn-primary" href="<?php echo base_url() ?>/index.php/clienteController/create">Crear cliente</a>
-            </div>
-            <div class="d-grid mt-3">
-                <a type="button" class="btn btn-lg btn-dark" href="<?php echo base_url() ?>/index.php/clienteController/mostrar">Mostrar clientes</a>
+            <div class=" justify-content-center ">
+                <div class="container mt-5">
+                    <p class="p-3">Por favor, seleccione una opción para continuar</p>
+                    <div class="d-grid mt-3">
+                        <a type="button" class="btn btn-lg btn-primary" href="<?php echo base_url() ?>/index.php/clienteController/create">Crear cliente</a>
+                    </div>
+                    <div class="d-grid mt-3">
+                        <a type="button" class="btn btn-lg btn-dark" href="<?php echo base_url() ?>/index.php/clienteController/mostrar">Mostrar clientes</a>
+                    </div>
+                </div>
             </div>
         </main>
     </div>

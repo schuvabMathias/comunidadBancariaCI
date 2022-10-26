@@ -37,6 +37,7 @@ class CuentaController extends BaseController
                 'tipo_moneda' => "Pesos argentinos",
                 'monto' => (int) 0,
                 'id_titular' => "",
+                'id_banco' => "",
             );
             $validation = array(
                 'numero' => "",
@@ -63,12 +64,11 @@ class CuentaController extends BaseController
                 'id_banco' => $request->getPost('inputBanco'),
             );
             if ($_SESSION['tipo_usuario'] == 0) {
-                if ($request->getPost('inputTitularDoc') == "") {
-                    $cliente = $clienteModel->where('dni', $request->getPost('inputTitularDoc'))->findAll();
+                $cliente = $clienteModel->where('dni', $request->getPost('inputTitularDoc'))->findAll();
+                if (sizeof($cliente) > 0) {
                     $data['id_titular'] = $cliente[0]['id_cliente'];
                 }
-            }
-            if ($_SESSION['tipo_usuario'] == 1) {
+            } else {
                 $cliente = $clienteModel->where('id_usuario', $_SESSION['id_usuario'])->findAll();
                 $data['id_titular'] = $cliente[0]['id_cliente'];
             }
@@ -78,11 +78,16 @@ class CuentaController extends BaseController
                 }
                 $data['validation'] = $validation;
                 $data['bancos'] = $bancos;
-                $data['id_titular'] = $request->getPost('inputTitular');
+                if ($_SESSION['tipo_usuario'] == 1) {
+                    $data['id_titular'] = $request->getPost('inputTitular');
+                } else {
+                    $data['id_titular'] = $request->getPost('inputTitularDoc');
+                }
                 $data['pantalla'] = 'create';
                 return  view('cuentaView\createCuentaView', $data);
             }
-            return  view('components\operacionExitosa');
+            $tipo = array('tipo' => "cuenta");
+            return  view('operacionExitosa', $tipo);
         } else {
             $data = [
                 'user' => "",
@@ -97,11 +102,8 @@ class CuentaController extends BaseController
         if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == 0) {
             $cuentaModel = new cuentaModel($db);
             $cuentaModel->where('id_cuenta', $id)->delete();
-            $data = $cuentaModel->findAll();
-            return  view('cuentaView\mostrarCuentaView', [
-                'validation' => $this->validator,
-                'cuentas' => $data,
-            ]);
+            $tipo = array('tipo' => "cuenta");
+            return  view('operacionExitosa', $tipo);
         } else {
             $data = [
                 'user' => "",
@@ -136,7 +138,7 @@ class CuentaController extends BaseController
                 $cuenta['pantalla'] = 'update';
                 $cuenta['validation'] = $validation;
                 $cuenta['bancos'] = $bancos;
-                $cuenta['titular'] = $cliente[0]['nombre_apellido'];
+                $cuenta['id_titular'] = $cliente[0]['dni'];
                 return  view('cuentaView/createCuentaView', $cuenta);
             }
             $data = array(
@@ -157,7 +159,8 @@ class CuentaController extends BaseController
                 $cuenta['bancos'] = $bancos;
                 return  view('bancoView\createCuentaView', $data);
             }
-            return  view('components\operacionExitosa');
+            $tipo = array('tipo' => "cuenta");
+            return  view('operacionExitosa', $tipo);
         } else {
             $data = [
                 'user' => "",
@@ -171,37 +174,51 @@ class CuentaController extends BaseController
     public function mostrar()
     {
         if (isset($_SESSION['tipo_usuario'])) {
+            $request = \Config\Services::request();
+            $usuarioModel = new usuarioModel($db);
+            $clienteModel = new clienteModel($db);
+            $cuentaModel = new cuentaModel($db);
+            $bancoModel = new bancoModel($db);
             if ($_SESSION['tipo_usuario'] == 0) {
-                $cuentaModel = new cuentaModel($db);
                 if (strtolower($this->request->getMethod()) !== 'post') {
-                    $data['validation'] = $this->validator;
-                    $data['cuentas'] = $cuentaModel->findAll();
+                    $valoresCuentas = $cuentaModel->findAll();
+                    for ($i = 0; sizeof($valoresCuentas) > $i; $i++) {
+                        $valoresClientes = $clienteModel->where('id_cliente', $valoresCuentas[$i]['id_titular'])->findAll();
+                        $valoresBanco = $bancoModel->where('id_banco', $valoresCuentas[$i]['id_banco'])->findAll();
+                        $valoresCuentas[$i]['id_titular'] = $valoresClientes[0]['nombre_apellido'];
+                        $valoresCuentas[$i]['id_banco'] = $valoresBanco[0]['nombre'];
+                        $valoresCuentas[$i]['numero_sucursal'] = $valoresBanco[0]['numero_sucursal'];
+                    }
+                    $data['cuentas'] = $valoresCuentas;
                     return  view('cuentaView\mostrarCuentaView', $data);
                 }
-                $request = \Config\Services::request();
-                $data = $cuentaModel->where($request->getPost('selectForma'), $request->getPost('inputValor'))->findAll();
+                $valoresCuentas = $cuentaModel->where($request->getPost('selectForma'), $request->getPost('inputValor'))->findAll();
                 if ($request->getPost('inputValor') == "") {
-                    $data = $cuentaModel->findAll();
+                    $valoresCuentas = $cuentaModel->findAll();
                 }
-                return  view('cuentaView\mostrarCuentaView', [
-                    'validation' => $this->validator,
-                    'cuentas' => $data,
-                ]);
+                for ($i = 0; sizeof($valoresCuentas) > $i; $i++) {
+                    $valoresClientes = $clienteModel->where('id_cliente', $valoresCuentas[$i]['id_titular'])->findAll();
+                    $valoresBanco = $bancoModel->where('id_banco', $valoresCuentas[$i]['id_banco'])->findAll();
+                    $valoresCuentas[$i]['id_titular'] = $valoresClientes[0]['nombre_apellido'];
+                    $valoresCuentas[$i]['id_banco'] = $valoresBanco[0]['nombre'];
+                    $valoresCuentas[$i]['numero_sucursal'] = $valoresBanco[0]['numero_sucursal'];
+                }
+                $data['cuentas'] = $valoresCuentas;
+                return  view('cuentaView\mostrarCuentaView', $data);
             } else {
                 if (strtolower($this->request->getMethod()) !== 'post') {
-                    $usuarioModel = new usuarioModel($db);
-                    $clienteModel = new clienteModel($db);
-                    $cuentaModel = new cuentaModel($db);
                     $valoresUsuario = $usuarioModel->where('usuario', $_SESSION['usuario'])->findAll();
                     if (sizeof($valoresUsuario) > 0) {
                         $valoresClientes = $clienteModel->where('id_usuario', $valoresUsuario[0]['id_usuario'])->findAll();
                         if (sizeof($valoresClientes) > 0) {
                             $valoresCuentas = $cuentaModel->where('id_titular', $valoresClientes[0]['id_cliente'])->findAll();
-                            return  view('cuentaView\mostrarCuentaView', [
-                                'validation' => Services::validation(),
-                                'cuentas' => $valoresCuentas,
-
-                            ]);
+                            for ($i = 0; sizeof($valoresCuentas) > $i; $i++) {
+                                $valoresBanco = $bancoModel->where('id_banco', $valoresCuentas[$i]['id_banco'])->findAll();
+                                $valoresCuentas[$i]['id_titular'] = $valoresClientes[0]['nombre_apellido'];
+                                $valoresCuentas[$i]['id_banco'] = $valoresBanco[0]['nombre'];
+                                $valoresCuentas[$i]['numero_sucursal'] = $valoresBanco[0]['numero_sucursal'];
+                            }
+                            return  view('cuentaView\mostrarCuentaView', ['cuentas' => $valoresCuentas,]);
                         }
                     }
                 }
@@ -220,10 +237,7 @@ class CuentaController extends BaseController
         if (isset($_SESSION['tipo_usuario'])) {
             $cuentaModel = new cuentaModel($db);
             $cuentas = $cuentaModel->where('id_titular', $id)->findAll();
-            return  view('clienteView\mostrarCuentaView', [
-                'validation' => $this->validator,
-                'cuentas' => $cuentas,
-            ]);
+            return  view('clienteView\mostrarCuentaView', ['cuentas' => $cuentas,]);
         } else {
             $data = [
                 'user' => "",
@@ -231,5 +245,10 @@ class CuentaController extends BaseController
             ];
             return   view("usuarioView/login", $data);
         }
+    }
+
+    public function volver()
+    {
+        return view("cuentaView/opcionesCuentaView.php");
     }
 }

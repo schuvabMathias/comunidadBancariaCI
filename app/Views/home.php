@@ -19,7 +19,7 @@
 
     <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/styleSideBar.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/homePage.css">
-
+    <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/generalStyle.css">
     <title>Comunidad Bancaria</title>
 </head>
 
@@ -63,74 +63,79 @@
         </div>
 
 
-        <main class="container informacion ps-0 ps-md-5 flex-grow-1">
+        <main class="container informacion flex-grow-1">
+
             <div id="accordion">
-                <h1 class="h2">Caracteristicas</h1>
-
-                <div class="card">
-                    <div class="card-header">
-                        <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
-                            Interoperabilidad
-                        </a>
-                    </div>
-                    <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
-                        <div class="card-body">
-                            Registrandose en nuestra pagina web, va a poder visualizar todas sus cuentas bancarias en un
-                            solo lugar!
-                        </div>
-                    </div>
+                <div class="container tituloTwo">
+                    <h3>Características</h3>
                 </div>
 
-                <div class="card">
-                    <div class="card-header">
-                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
-                            Usabilidad
-                        </a>
-                    </div>
-                    <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
-                        <div class="card-body">
-                            La pagina esta diseñada de una manera muy intuitiva con unos menus flotantes, donde se logre
-                            apreciar de manera
-                            correcta la informacion solicitada para que nuestros usuarios no tengan ningun inconveniente
-                            al querer consultar por
-                            el estado de sus cuentas, entre otras cosas
+                <div class="contenido p-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+                                Interoperabilidad
+                            </a>
+                        </div>
+                        <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+                            <div class="card-body">
+                                Registrandose en nuestra página web, podrá visualizar todas sus cuentas bancarias en un
+                                solo lugar!
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="card">
-                    <div class="card-header">
-                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
-                            Diseño amigable
-                        </a>
-                    </div>
-                    <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
-                        <div class="card-body">
-                            De la mano del apartado anterior, el diseño esta pensado para que sea amigable y facil de
-                            aprender para
-                            nuestros usuarios
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+                                Usabilidad
+                            </a>
+                        </div>
+                        <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                            <div class="card-body">
+                                La página está diseñada de una manera muy intuitiva con menus flotantes, donde se logra
+                                apreciar de manera
+                                correcta la información solicitada para que nuestros usuarios no tengan ningún inconveniente
+                                al querer consultar por
+                                el estado de sus cuentas, entre otras cosas
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="card">
-                    <div class="card-header">
-                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseFour">
-                            Beneficios
-                        </a>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+                                Diseño amigable
+                            </a>
+                        </div>
+                        <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+                            <div class="card-body">
+                                De la mano del apartado anterior, el diseño está pensado para que sea amigable y fácil de
+                                aprender
+                            </div>
+                        </div>
                     </div>
-                    <div id="collapseFour" class="collapse" data-bs-parent="#accordion">
-                        <div class="card-body">
-                            Al utilizar nuestra aplicacion, se obtienen los siguientes beneficios:
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">- Poder visualizar todas sus cuentas en un solo lugar</li>
-                                <li class="list-group-item">- Alta confidencialidad y proteccion de sus datos</li>
-                                <li class="list-group-item">- Poner mas beneficios</li>
-                            </ul>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseFour">
+                                Beneficios
+                            </a>
+                        </div>
+                        <div id="collapseFour" class="collapse" data-bs-parent="#accordion">
+                            <div class="card-body">
+                                Al utilizar nuestra aplicación, se obtienen los siguientes beneficios:
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">- Poder visualizar todas sus cuentas en un solo lugar</li>
+                                    <li class="list-group-item">- Alta confidencialidad y protección de sus datos</li>
+                                    <li class="list-group-item">- Poner mas beneficios</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </main>
 
     </div>

@@ -5,6 +5,7 @@ namespace App\Controllers;
 use Config\Services;
 use CodeIgniter\Controller;
 use App\Models\usuarioModel;
+use App\Models\cuentaModel;
 use App\Models\bancoModel;
 
 class BancoController extends BaseController
@@ -53,7 +54,8 @@ class BancoController extends BaseController
                 $data['pantalla'] = 'create';
                 return  view('bancoView\createBancoView', $data);
             }
-            return  view('components\operacionExitosa');
+            $tipo = array('tipo' => "banco");
+            return  view('operacionExitosa', $tipo);
         } else {
             $data = [
                 'user' => "",
@@ -67,12 +69,16 @@ class BancoController extends BaseController
     {
         if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == 0) {
             $bancoModel = new bancoModel($db);
-            $bancoModel->where('id_banco', $id)->delete();
-            $data = $bancoModel->findAll();
-            return  view('bancoView\mostrarBancoView', [
-                'validation' => $this->validator,
-                'bancos' => $data,
-            ]);
+            $cuentaModel = new cuentaModel($db);
+            $cuentas = $cuentaModel->where('id_banco', $id)->findAll();
+            if (sizeof($cuentas) <= 0) {
+                $bancoModel->where('id_banco', $id)->delete();
+                $tipo = array('tipo' => "banco");
+                return  view('operacionExitosa', $tipo);
+            } else {
+                $tipo = array('tipo' => "banco");
+                return view('operacionNoExitosa', $tipo);
+            }
         } else {
             $data = [
                 'user' => "",
@@ -89,9 +95,14 @@ class BancoController extends BaseController
             $bancoModel = new bancoModel($db);
             $banco = $bancoModel->where('id_banco', $id)->findAll();
             $banco = $banco[0];
+            $validation = array(
+                'nombre' => "",
+                'direccion' => "",
+                'numero_sucursal' => "",
+            );
             if (strtolower($this->request->getMethod()) !== 'post') {
+                $banco['validation'] = $validation;
                 $banco['pantalla'] = 'update';
-                $banco['validation'] = $this->validator;
                 return  view('bancoView\createBancoView', $banco);
             }
             $data = array(
@@ -100,12 +111,15 @@ class BancoController extends BaseController
                 'numero_sucursal' => $request->getPost('inputNroSucursal'),
             );
             if (!$bancoModel->update($id, $data)) {
-                var_dump($bancoModel->errors());
-                $data['validation'] = $this->validator;
+                foreach ($bancoModel->errors() as $clave => $valor) {
+                    $validation[$clave] = $valor;
+                }
+                $data['validation'] = $validation;
                 $data['pantalla'] = 'update';
                 return  view('bancoView\createBancoView', $data);
             }
-            return  view('components\operacionExitosa');
+            $tipo = array('tipo' => "banco");
+            return  view('operacionExitosa', $tipo);
         } else {
             $data = [
                 'user' => "",
@@ -159,5 +173,10 @@ class BancoController extends BaseController
             ];
             return   view("usuarioView/login", $data);
         }
+    }
+
+    public function volver()
+    {
+        return view("bancoView/opcionesBancoView.php");
     }
 }

@@ -31,6 +31,18 @@ body {
     box-shadow: 2px 5px 10px rgb(53, 52, 52);
 }
 
+.tituloTwo {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    background-color: #363939;
+    border-radius: 14px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: azure;
+    box-shadow: 2px 5px 10px rgb(53, 52, 52);
+}
+
 .container {
     max-width: 87%;
 }

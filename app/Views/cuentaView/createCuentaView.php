@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/styleSideBar.css">
-    <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/cuentaView/crearCuenta.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/generalStyle.css">
 
     <title>Comunidad Bancaria</title>
 </head>
@@ -93,62 +93,84 @@
 
 
         <main class="container informacion ps-0 ps-md-5 flex-grow-1">
-            <h1>Crear una cuenta:</h1>
-            <?php if ($pantalla == 'create') { ?>
-                <?= form_open('cuentaController/create') ?>
-            <?php } else { ?>
-                <?= form_open('cuentaController/update/' . $id_cuenta) ?>
-            <?php } ?>
-            <div class="mb-3 form-floating">
-                <input type="number" value="<?php echo $numero ?>" class="form-control" name="inputNumero" id="inputNumero" placeholder="numero">
-                <label for="inputNumero" class="form-label">Numero:</label>
-                <?php echo $validation['numero']; ?>
+            <div class="container tituloTwo">
+                <h3>Menú Cuenta</h3>
             </div>
-            <div class="mb-3 form-floating">
-                <select class="form-select" value="<?php echo $tipo_cuenta ?>" aria-label="Select Tipo" name="selectTipo" id="selectTipo">
-                    <option value="1" <?php if ($tipo_cuenta == 1) echo "selected"; ?>>Caja de Ahorros</option>
-                    <option value="2" <?php if ($tipo_cuenta == 2) echo "selected"; ?>>Cuenta Sueldo / Cuenta de Seguridad Social</option>
-                    <option value="3" <?php if ($tipo_cuenta == 3) echo "selected"; ?>>Cuenta Corriente</option>
-                    <option value="4" <?php if ($tipo_cuenta == 4) echo "selected"; ?>>Cuenta Universal Gratuita</option>
-                </select>
-                <label for="selectTipo" class="form-label">Tipo:</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="date" value="<?php echo $fecha_start ?>" class="form-control" name="inputFechaCreacion" id="inputFechaCreacion" placeholder="fechaDeCreacion">
-                <label for="inputFechaCreacion" class="form-label">Fecha de creaci&oacute;n:</label>
-                <?php echo $validation['fecha_start']; ?>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="text" value="<?php echo $tipo_moneda ?>" class="form-control" name="inputMoneda" id="inputMoneda" placeholder="moneda">
-                <label for="inputMoneda" class="form-label">Moneda:</label>
-                <?php echo $validation['tipo_moneda']; ?>
-            </div>
-            <?php if ($_SESSION['tipo_usuario'] == 1) { ?>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" name="inputTitular" id="inputTitular" placeholder="titular" value="<?php echo $_SESSION['usuario']; ?>" disabled>
-                    <label for="inputTitular" class="form-label">Titular:</label>
-                    <?php echo $validation['id_titular']; ?>
-                </div>
-            <?php } ?>
-            <?php if ($_SESSION['tipo_usuario'] == 0) { ?>
-                <div class="form-floating mb-3">
-                    <input type="number" class="form-control" name="inputTitularDoc" id="inputTitularDoc" placeholder="titular" value="<?php echo $id_titular; ?>">
-                    <label for="inputTitularDoc" class="form-label">Documento Titular:</label>
-                    <?php echo $validation['id_titular']; ?>
-                </div>
-            <?php } ?>
-            <div class="form-floating mb-3">
-                <select class="form-select" aria-label="Floating label select example" name="inputBanco" id="inputBanco">
-                    <?php for ($i = 0; $i < sizeof($bancos); $i++) { ?>
-                        <option value="<?php echo $bancos[$i]['id_banco'] ?>">
-                            <?php echo $bancos[$i]['nombre'] . ", " . $bancos[$i]['direccion'] ?>
-                        </option>
+            <div class="justify-content-center ">
+                <div class="container mt-5">
+                    <h1>Crear una cuenta:</h1>
+                    <?php if ($pantalla == 'create') { ?>
+                        <?= form_open('cuentaController/create') ?>
+                    <?php } else { ?>
+                        <?= form_open('cuentaController/update/' . $id_cuenta) ?>
                     <?php } ?>
-                </select>
-                <label for="inputBanco" class="form-label">Banco:</label>
-                <?php echo $validation['id_banco']; ?>
+                    <div class="mb-3 form-floating">
+                        <input type="number" value="<?php echo $numero ?>" class="form-control" name="inputNumero" id="inputNumero" placeholder="numero">
+                        <label for="inputNumero" class="form-label">Número:</label>
+                        <?php echo $validation['numero']; ?>
+                    </div>
+                    <div class="mb-3 form-floating">
+                        <select class="form-select" value="<?php echo $tipo_cuenta ?>" aria-label="Select Tipo" name="selectTipo" id="selectTipo">
+                            <option value="1" <?php if ($tipo_cuenta == 1) echo "selected"; ?>>Caja de Ahorros</option>
+                            <option value="2" <?php if ($tipo_cuenta == 2) echo "selected"; ?>>Cuenta Sueldo / Cuenta de Seguridad Social</option>
+                            <option value="3" <?php if ($tipo_cuenta == 3) echo "selected"; ?>>Cuenta Corriente</option>
+                            <option value="4" <?php if ($tipo_cuenta == 4) echo "selected"; ?>>Cuenta Universal Gratuita</option>
+                        </select>
+                        <label for="selectTipo" class="form-label">Tipo:</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="date" value="<?php echo $fecha_start ?>" class="form-control" name="inputFechaCreacion" id="inputFechaCreacion" placeholder="fechaDeCreacion">
+                        <label for="inputFechaCreacion" class="form-label">Fecha de creaci&oacute;n:</label>
+                        <?php echo $validation['fecha_start']; ?>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" value="<?php echo $tipo_moneda ?>" class="form-control" name="inputMoneda" id="inputMoneda" placeholder="moneda">
+                        <label for="inputMoneda" class="form-label">Moneda:</label>
+                        <?php echo $validation['tipo_moneda']; ?>
+                    </div>
+                    <?php if ($_SESSION['tipo_usuario'] == 1) { ?>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name="inputTitular" id="inputTitular" placeholder="titular" value="<?php echo $_SESSION['usuario']; ?>" disabled>
+                            <label for="inputTitular" class="form-label">Titular:</label>
+                            <?php echo $validation['id_titular']; ?>
+                        </div>
+                    <?php } ?>
+                    <?php if ($_SESSION['tipo_usuario'] == 0) { ?>
+                        <div class="form-floating mb-3">
+                            <input type="number" class="form-control" name="inputTitularDoc" id="inputTitularDoc" placeholder="titular" value="<?php echo $id_titular; ?>">
+                            <label for="inputTitularDoc" class="form-label">Documento Titular:</label>
+                            <?php echo $validation['id_titular']; ?>
+                        </div>
+                    <?php } ?>
+                    <div class="form-floating mb-3">
+                        <select class="form-select" aria-label="Floating label select example" name="inputBanco" id="inputBanco">
+                            <?php for ($i = 0; $i < sizeof($bancos); $i++) { ?>
+                                <option value="<?php echo $bancos[$i]['id_banco'] ?>" <?php if ($id_banco == $bancos[$i]['id_banco']) echo "selected"; ?>>
+                                    <?php echo $bancos[$i]['nombre'] . ", " . $bancos[$i]['direccion'] ?>
+                                </option>
+                            <?php } ?>
+                        </select>
+                        <label for="inputBanco" class="form-label">Banco:</label>
+                        <?php echo $validation['id_banco']; ?>
+                    </div>
+
+
+                </div>
             </div>
-            <button type="submit" class="btn btn-primary">Ingresar</button>
+            <div class="container d-flex justify-content-center">
+                <div class="container  divBotoncitoCenter row">
+                    <div class="col-sm-6 col-6">
+                        <div class="d-grid mt-3 ">
+                            <a href="<?php echo base_url() ?>/index.php/cuentaController/volver" type="button" class="btn btn-outline-dark botoncito">Volver</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-6">
+                        <div class="d-grid mt-3">
+                            <button type="submit" class="btn btn-outline-dark botoncito">Ingresar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <?= form_close() ?>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
         </main>

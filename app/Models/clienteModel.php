@@ -24,20 +24,20 @@ class clienteModel extends Model
     protected $updatedField       = 'updated_at';
     protected $deletedField       = 'deleted_at';
     protected $validationRules    = [
-        'nombre_apellido' => 'required',
+        'nombre_apellido' => 'required|alpha_space',
         'direccion' => 'required',
+        'telefono' => 'required',
         'fecha_nacimiento' => 'required',
-        'dni' => 'required',
-        'cuit_cuil' => 'required'
-    ]; //['email' => 'required|valid_email|is_unique[usuarios.email]'];
+        'dni' => 'required|is_unique[cliente.dni]',
+        'cuit_cuil' => 'required|is_unique[cliente.cuit_cuil]'
+    ];
     protected $validationMessages = [
-        'nombre_apellido' => ['required' => 'El campo nombre es requerido'],
-        'direccion' => ['required' => 'El campo direccion es requerido'],
+        'nombre_apellido' => ['required' => 'El campo nombre y apellido es requerido', 'alpha_space' => "Solo debe ingresar letras"],
+        'direccion' => ['required' => 'El campo dirección es requerido'],
+        'telefono' => ['required' => 'El campo teléfono es requerido'],
         'fecha_nacimiento' => ['required' => 'El campo fecha de nacimiento es requerido'],
-        'dni' => ['required' => 'El campo dni es requerido'],
-        'cuit_cuil' => ['required' => 'El campo CUIT/CUIL es requerido'],
-    ]; /*[
-        'email' => ['is_unique' => 'Este e-mail ya pertenece a otro usuario']
-    ];*/
+        'dni' => ['required' => 'El campo documento es requerido', 'is_unique' => "Ya existe otro cliente con este documento"],
+        'cuit_cuil' => ['required' => 'El campo CUIT/CUIL es requerido', 'is_unique' => "Ya existe otro cliente con este documento"],
+    ];
     protected $skipValidation = false;  // es para indicar que use la validación
 }

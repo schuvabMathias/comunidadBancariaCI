@@ -18,7 +18,8 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/styleSideBar.css">
-    <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/cuentaView/crearCuenta.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/generalStyle.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/tablitaStyle.css">
 
     <title>Comunidad Bancaria</title>
 </head>
@@ -28,7 +29,6 @@
         <h2>Comunidad Bancaria</h2>
     </div>
     <div class="container menuInfo d-flex  flex-column flex-md-row">
-
         <div>
             <nav class="navbar navbar-expand-md navbar-light d-flex flex-md-column">
                 <a href="<?php echo base_url() ?>/index.php/usuarioController">
@@ -87,111 +87,139 @@
                         </li>
                     </ul>
                 </div>
-
             </nav>
         </div>
 
-
         <main class="container informacion ps-0 ps-md-5 flex-grow-1">
-            <?= form_open('cuentaController/mostrarCuentas') ?>
-            <label class="form-label">Buscar:</label>
-            <div class="mb-3 form-floating">
-                <select class="form-select" aria-label="Select Forma" name="selectForma" id="selectForma">
-                    <option value="numero">Numero</option>
-                </select>
-                <label class="form-label" for="selectForma">Buscar por:</label>
+            <div class="container tituloTwo">
+                <h3>Menú Cuenta</h3>
             </div>
-            <div class="mb-3">
-                <input type="text" class="form-control" id="inputValor" name="inputValor">
-            </div>
-            <button type="submit" class="btn btn-primary">Buscar</button>
-            <?php form_close() ?>
-            <form>
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Numero</th>
-                            <th scope="col">Tipo</th>
-                            <th scope="col">Fecha Creacion</th>
-                            <th scope="col">Tipo moneda</th>
-                            <th scope="col">Monto</th>
-                            <th scope="col">Titular</th>
-                            <th scope="col">Banco</th>
-                            <?php if ($_SESSION['tipo_usuario'] == 0) { ?>
-                                <th scope="col">Modificar</th>
-                                <th scope="col">Eliminar</th>
-                            <?php } ?>
-                        </tr>
-                    </thead>
-                    <tbody class="table-group-divider">
-                        <tr>
-                            <?php for ($i = 0; $i < sizeof($cuentas); $i++) { ?>
-                                <th scope="row">
-                                    <?php echo $i + 1 ?>
-                                </th>
-                                <td>
-                                    <?php echo $cuentas[$i]['numero'] ?>
-                                </td>
-                                <td>
-                                    <?php
-                                    if ($cuentas[$i]['tipo_cuenta'] == 1) {
-                                        echo "Caja de Ahorro";
-                                    }
-                                    if ($cuentas[$i]['tipo_cuenta'] == 2) {
-                                        echo "Cuenta Sueldo";
-                                    }
-                                    if ($cuentas[$i]['tipo_cuenta'] == 3) {
-                                        echo "Cuenta Corriente";
-                                    }
-                                    if ($cuentas[$i]['tipo_cuenta'] == 4) {
-                                        echo "Cuenta Universal Gratuita";
-                                    }
-                                    ?>
-                                </td>
-                                <td>
-                                    <?php echo $cuentas[$i]['fecha_start'] ?>
-                                </td>
-                                <td>
-                                    <?php echo $cuentas[$i]['tipo_moneda'] ?>
-                                </td>
-                                <td>
-                                    <?php echo $cuentas[$i]['monto'] ?>
-                                </td>
-                                <td>
-                                    <?php echo $cuentas[$i]['id_titular'] ?>
-                                </td>
-                                <td>
-                                    <?php echo $cuentas[$i]['id_banco'] ?>
-                                </td>
+            <?= form_open('cuentaController/mostrar') ?>
+            <div class="justify-content-center ">
+                <div class="container mt-5">
+                    <div class="row">
+                        <div class="col-4 mb-3 form-floating">
+                            <select class="form-select" aria-label="Select Forma" name="selectForma" id="selectForma">
+                                <option value="numero">Número</option>
+                                <option value="tipo_cuenta">Tipo de cuenta</option>
+                            </select>
+                            <label class="form-label" for="selectForma">Buscar por:</label>
+                        </div>
+                        <div class="col-8 mb-1 form-floating" id="valores">
+                            <input type="text" class="form-control" id="inputValor" name="inputValor" placeholder="valor">
+                            <label for="inputValor" class="form-label p-3">Valor</label>
+                        </div>
+                        <div class="col-8 mb-1 form-floating " id="selection">
+                            <select class="form-select" aria-label="Select Tipo" name="inputValor" id="inputValor">
+                                <option value="1" selected>Caja de Ahorros</option>
+                                <option value="2">Cuenta Sueldo / Cuenta de Seguridad Social</option>
+                                <option value="3">Cuenta Corriente</option>
+                                <option value="4">Cuenta Universal Gratuita</option>
+                            </select>
+                            <label for="inputValor" class="form-label">Tipo:</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-outline-dark botoncito">Buscar</button>
+                    <?php form_close() ?>
+                    <table class="table table-striped tablita">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Número</th>
+                                <th scope="col">Tipo</th>
+                                <th scope="col">Fecha Creacion</th>
+                                <th scope="col">Tipo moneda</th>
+                                <th scope="col">Monto</th>
+                                <th scope="col">Titular</th>
+                                <th scope="col">Banco</th>
+                                <th scope="col">Numero Sucursal</th>
                                 <?php if ($_SESSION['tipo_usuario'] == 0) { ?>
-                                    <td>
-                                        <a href="http://localhost/comunidadBancariaCI/index.php/cuentaController/update/<?php echo $cuentas[$i]['id_cuenta'] ?>">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-                                            </svg>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <a href="http://localhost/comunidadBancariaCI/index.php/cuentaController/delete/<?php echo $cuentas[$i]['id_cuenta'] ?>">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
-                                                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
-                                            </svg>
-                                        </a>
-                                    </td>
+                                    <th scope="col">Modificar</th>
+                                    <th scope="col">Eliminar</th>
                                 <?php } ?>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            <?php for ($i = 0; $i < sizeof($cuentas); $i++) { ?>
+                                <tr>
+                                    <th scope="row">
+                                        <?php echo $i + 1 ?>
+                                    </th>
+                                    <td>
+                                        <?php echo $cuentas[$i]['numero'] ?>
+                                    </td>
+                                    <td>
+                                        <?php
+                                        if ($cuentas[$i]['tipo_cuenta'] == 1) {
+                                            echo "Caja de Ahorro";
+                                        }
+                                        if ($cuentas[$i]['tipo_cuenta'] == 2) {
+                                            echo "Cuenta Sueldo";
+                                        }
+                                        if ($cuentas[$i]['tipo_cuenta'] == 3) {
+                                            echo "Cuenta Corriente";
+                                        }
+                                        if ($cuentas[$i]['tipo_cuenta'] == 4) {
+                                            echo "Cuenta Universal Gratuita";
+                                        }
+                                        ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $cuentas[$i]['fecha_start'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $cuentas[$i]['tipo_moneda'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $cuentas[$i]['monto'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $cuentas[$i]['id_titular'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $cuentas[$i]['id_banco'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $cuentas[$i]['numero_sucursal'] ?>
+                                    </td>
+                                    <?php if ($_SESSION['tipo_usuario'] == 0) { ?>
+                                        <td>
+                                            <a href="http://localhost/comunidadBancariaCI/index.php/cuentaController/update/<?php echo $cuentas[$i]['id_cuenta'] ?>">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                                </svg>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="http://localhost/comunidadBancariaCI/index.php/cuentaController/delete/<?php echo $cuentas[$i]['id_cuenta'] ?>">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                                    <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                                </svg>
+                                            </a>
+                                        </td>
+                                    <?php } ?>
+                                </tr>
                             <?php } ?>
-                        </tr>
-                    </tbody>
-                </table>
-            </form>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="container d-flex justify-content-center">
+                <div class="container  divBotoncitoCenter ">
+                    <div class="d-grid mt-3 ">
+                        <a href="<?php echo base_url() ?>/index.php/cuentaController/volver" type="button" class="btn btn-outline-dark botoncito">Volver</a>
+                    </div>
+                </div>
+            </div>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
         </main>
     </div>
 </body>
 
+<script src="<?php echo base_url() ?>/app/Views/cuentaView/mostrarCuenta.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </html>

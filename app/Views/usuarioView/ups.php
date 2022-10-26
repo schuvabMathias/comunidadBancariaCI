@@ -19,6 +19,7 @@
 
     <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/styleSideBar.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/homePage.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/generalStyle.css">
 
     <title>Comunidad Bancaria</title>
 </head>
@@ -46,7 +47,7 @@
                                     <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
                                     <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
                                 </svg>
-                                No way home
+                                Ingresar
                             </a>
                             <!-- este de arriba se cambia a Hola, NombreUsuario! -->
                         </li>
@@ -55,7 +56,7 @@
                             <a href="<?php echo base_url() ?>/index.php/usuarioController/ups" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 16 16">
                                     <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
                                     <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
-                                </svg> Harry Potter</a>
+                                </svg> Registrarse</a>
                         </li>
                     </ul>
                 </div>
@@ -64,15 +65,15 @@
 
 
         <main class="container informacion ps-0 ps-md-5 flex-grow-1">
-            <div class="container titulo">
+            <div class="container tituloTwo">
                 <h3>Upssss, lo sentimos!!!</h3>
             </div>
-            <p class="mt-3 h4"> Aun estamos implementando esta opcion, no nos presiones!
-                Pero intenta entrar con un usuario ya cargado en la base de datos!
+            <p class="mt-4 h3"> Aún estamos implementando esta opción, no nos presiones!
+                </br>Pero intentá entrar con un usuario ya registrado!
                 Presiona volver para continuar.
             </p>
-            <div class="d-grid mt-3">
-                <a type="button" class="btn btn-lg btn-primary" href="<?php echo base_url() ?>/index.php/homeController">Volver</a>
+            <div class="d-grid mt-4 mb-4">
+                <a type="button" class="btn btn-lg btn-outline-dark botoncito" href="<?php echo base_url() ?>/index.php/homeController">Volver</a>
             </div>
         </main>
 

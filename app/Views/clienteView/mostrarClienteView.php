@@ -18,7 +18,8 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/styleSideBar.css">
-    <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/cuentaView/crearCuenta.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/generalStyle.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/tablitaStyle.css">
 
     <title>Comunidad Bancaria</title>
 </head>
@@ -93,69 +94,86 @@
 
 
         <main class="container informacion ps-0 ps-md-5 flex-grow-1">
+            <div class="container tituloTwo">
+                <h3>Menú Cliente</h3>
+            </div>
             <?= form_open('clienteController/mostrar') ?>
-            <label class="form-label">Buscar:</label>
-            <div class="mb-3 form-floating">
-                <select class="form-select" aria-label="Select Forma" name="selectForma" id="selectForma">
-                    <option value="dni">Documento</option>
-                    <option value="cuit_cuil">CUIT / CUIL</option>
-                    <option value="NomyApe">Nombre y Apellido</option>
-                </select>
-                <label class="form-label" for="selectForma">Buscar por:</label>
-            </div>
-            <div class="mb-3">
-                <input type="text" class="form-control" id="inputValor" name="inputValor">
-            </div>
-            <button type="submit" class="btn btn-primary">Buscar</button>
-            <?php form_close() ?>
-            <form>
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Documento</th>
-                            <th scope="col">Telefono</th>
-                            <th scope="col">Direccion</th>
-                            <th scope="col">Cuit / Cuil</th>
-                            <?php if ($_SESSION['tipo_usuario'] == 0) { ?>
-                                <th scope="col">Modificar</th>
-                                <th scope="col">Eliminar</th>
+
+            <div class="justify-content-center ">
+                <div class="container mt-5">
+                    <div class="row">
+                        <div class="col-4 mb-3 form-floating">
+                            <select class="form-select" aria-label="Select Forma" name="selectForma" id="selectForma">
+                                <option value="dni">Documento</option>
+                                <option value="cuit_cuil">CUIT / CUIL</option>
+                                <option value="nombre_apellido">Nombre y Apellido</option>
+                            </select>
+                            <label class="form-label" for="selectForma">Buscar por:</label>
+                        </div>
+                        <div class="col-8 mb-1 form-floating">
+                            <input type="text" class="form-control" id="inputValor" name="inputValor" placeholder="valor">
+                            <label for="inputValor" class="form-label p-3">Valor</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Buscar</button>
+                    <?php form_close() ?>
+                    <form>
+                        <table class="table table-striped tablita">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Documento</th>
+                                    <th scope="col">Teléfono</th>
+                                    <th scope="col">Dirección</th>
+                                    <th scope="col">Cuit / Cuil</th>
+                                    <?php if ($_SESSION['tipo_usuario'] == 0) { ?>
+                                        <th scope="col">Modificar</th>
+                                        <th scope="col">Eliminar</th>
+                                    <?php } ?>
+                                </tr>
+                            </thead>
+                            <tbody class="table-group-divider">
+                                <?php for ($i = 0; $i < sizeof($clientes); $i++) { ?>
+                                    <tr>
+                                        <th scope="row"><?php echo $i + 1 ?></th>
+                                        <td><?php echo $clientes[$i]['nombre_apellido'] ?></td>
+                                        <td><?php echo $clientes[$i]['dni'] ?></td>
+                                        <td><?php echo $clientes[$i]['telefono'] ?></td>
+                                        <td><?php echo $clientes[$i]['direccion'] ?></td>
+                                        <td><?php echo $clientes[$i]['cuit_cuil'] ?></td>
+                                        <?php if ($_SESSION['tipo_usuario'] == 0) { ?>
+                                            <td>
+                                                <a href="http://localhost/comunidadBancariaCI/index.php/clienteController/update/<?php echo $clientes[$i]['dni'] ?>">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="http://localhost/comunidadBancariaCI/index.php/clienteController/delete/<?php echo $clientes[$i]['id_cliente'] ?>">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                    </tr>
+                                <?php } ?>
                             <?php } ?>
-                        </tr>
-                    </thead>
-                    <tbody class="table-group-divider">
-                        <?php for ($i = 0; $i < sizeof($clientes); $i++) { ?>
-                            <tr>
-                                <th scope="row"><?php echo $i + 1 ?></th>
-                                <td><?php echo $clientes[$i]['nombre_apellido'] ?></td>
-                                <td><?php echo $clientes[$i]['dni'] ?></td>
-                                <td><?php echo $clientes[$i]['telefono'] ?></td>
-                                <td><?php echo $clientes[$i]['direccion'] ?></td>
-                                <td><?php echo $clientes[$i]['cuit_cuil'] ?></td>
-                                <?php if ($_SESSION['tipo_usuario'] == 0) { ?>
-                                    <td>
-                                        <a href="http://localhost/comunidadBancariaCI/index.php/clienteController/update/<?php echo $clientes[$i]['dni'] ?>">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-                                            </svg>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <a href="http://localhost/comunidadBancariaCI/index.php/clienteController/delete/<?php echo $clientes[$i]['id_cliente'] ?>">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
-                                                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
-                                            </svg>
-                                        </a>
-                                    </td>
-                            </tr>
-                        <?php } ?>
-                    <?php } ?>
-                    </tbody>
-                </table>
-            </form>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+            <div class="container d-flex justify-content-center">
+                <div class="container  divBotoncitoCenter ">
+                    <div class="d-grid mt-3 ">
+                        <a href="<?php echo base_url() ?>/index.php/clienteController/volver" type="button" class="btn btn-outline-dark botoncito">Volver</a>
+                    </div>
+                </div>
+            </div>
 
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
         </main>

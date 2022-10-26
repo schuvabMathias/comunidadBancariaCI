@@ -10,7 +10,6 @@
 
     <script src="https://kit.fontawesome.com/705c9e6d0f.js" crossorigin="anonymous"></script>
 
-
     <link rel="shortcut icon" href="<?php echo base_url() ?>/app/Views/img/logo-icon.png">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/styleSideBar.css">
-    <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/bancoView/crearBanco.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/generalStyle.css">
 
     <title>Comunidad Bancaria</title>
 </head>
@@ -91,34 +90,55 @@
         </div>
 
         <main class="container informacion ps-0 ps-md-5 flex-grow-1">
-            <h1>Ingreso de banco:</h1>
-            <?php if ($pantalla == 'create') { ?>
-                <?= form_open('bancoController/create') ?>
-            <?php } else { ?>
-                <?= form_open('bancoController/update/' . $id_banco) ?>
-            <?php } ?>
-            <div class="mb-3 form-floating">
-                <input type="text" class="form-control" id="inputNombre" name="inputNombre" value="<?php echo $nombre ?>" placeholder="Numero">
-                <label for="inputNombre" class="form-label">Nombre</label>
-                <?php echo $validation['nombre']; ?>
+            <div class="container tituloTwo">
+                <h3>Menú Cuenta</h3>
             </div>
-            <div class="mb-3 form-floating">
-                <input type="text" class="form-control" id="inputDireccion" name="inputDireccion" value="<?php echo $direccion ?>" placeholder="Dirección">
-                <label for="inputDireccion" class="form-label">Direcci&oacute;n:</label>
-                <?php echo $validation['direccion']; ?>
+            <div class="justify-content-center ">
+                <div class="container mt-5">
+                    <h1>Ingreso de banco:</h1>
+                    <?php if ($pantalla == 'create') { ?>
+                        <?= form_open('bancoController/create') ?>
+                    <?php } else { ?>
+                        <?= form_open('bancoController/update/' . $id_banco) ?>
+                    <?php } ?>
+                    <div class="mb-3 form-floating">
+                        <input type="text" class="form-control" id="inputNombre" name="inputNombre" value="<?php echo $nombre ?>" placeholder="Numero">
+                        <label for="inputNombre" class="form-label">Nombre</label>
+                        <?php echo $validation['nombre']; ?>
+                    </div>
+                    <div class="mb-3 form-floating">
+                        <input type="text" class="form-control" id="inputDireccion" name="inputDireccion" value="<?php echo $direccion ?>" placeholder="Dirección">
+                        <label for="inputDireccion" class="form-label">Direcci&oacute;n:</label>
+                        <?php echo $validation['direccion']; ?>
+                    </div>
+                    <div class="mb-3 form-floating">
+                        <input type="number" class="form-control" id="inputNroSucursal" name="inputNroSucursal" value="<?php echo $numero_sucursal ?>" placeholder="Numero de Sucursal">
+                        <label for="inputNroSucursal" class="form-label">Número de Sucursal:</label>
+                        <?php echo $validation['numero_sucursal']; ?>
+                    </div>
+
+                </div>
             </div>
-            <div class="mb-3 form-floating">
-                <input type="number" class="form-control" id="inputNroSucursal" name="inputNroSucursal" value="<?php echo $numero_sucursal ?>" placeholder="Numero de Sucursal">
-                <label for="inputNroSucursal" class="form-label">Numero de Sucursal:</label>
-                <?php echo $validation['numero_sucursal']; ?>
-            </div>
-            <button type="submit" class="btn btn-primary">Ingresar</button>
-            <?= form_close() ?>
+            <div class="container d-flex justify-content-center">
+                <div class="container  divBotoncitoCenter row">
+                    <div class="col-sm-6 col-6">
+                        <div class="d-grid mt-3 ">
+                            <a href="<?php echo base_url() ?>/index.php/bancoController/volver" type="button" class="btn btn-outline-dark botoncito">Volver</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-6">
+                        <div class="d-grid mt-3">
+                            <button type="submit" id="ingresarButton" class="btn btn-outline-dark botoncito">Ingresar</button>
+                        </div>
+                    </div>
+                </div>
+            </div><?= form_close() ?>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
         </main>
     </div>
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
 
 </html>

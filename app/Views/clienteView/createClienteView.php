@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/styleSideBar.css">
-    <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/cuentaView/crearCuenta.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/generalStyle.css">
 
     <title>Comunidad Bancaria</title>
 </head>
@@ -93,47 +93,68 @@
 
 
         <main class="container informacion ps-0 ps-md-5 flex-grow-1">
-            <h1>Ingreso de cliente:</h1>
-            <?php if ($pantalla == 'create') { ?>
-                <?= form_open('clienteController/create') ?>
-            <?php } else { ?>
-                <?= form_open('clienteController/update/' . $dni) ?>
-            <?php } ?>
-            <div class="mb-3 form-floating">
-                <input type="text" class="form-control" id="inputNomyApe" name="inputNomyApe" value="<?php echo $nombre_apellido ?>" placeholder="Nombre">
-                <label for="inputNomyApe" class="form-label">Nombre y Apellido</label>
-                <?php echo $validation['nombre_apellido']; ?>
-            </div>
-            <div class="mb-3 form-floating">
-                <input type="text" class="form-control" id="inputDireccion" name="inputDireccion" value="<?php echo $direccion ?>" placeholder="Direccion">
-                <label for="inputDireccion" class="form-label">Direcci&oacute;n:</label>
-                <?php echo $validation['direccion']; ?>
-            </div>
-            <div class="mb-3 form-floating">
-                <input type="number" class="form-control" id="inputTelefono" name="inputTelefono" value="<?php echo $telefono ?>" placeholder="Telefono">
-                <label for="inputTelefono" class="form-label">Tel&eacute;fono:</label>
-                <?php echo $validation['telefono']; ?>
+            <div class="container tituloTwo">
+                <h3>Menú Cliente</h3>
             </div>
 
-            <div class="mb-3 form-floating">
-                <input type="date" class="form-control" id="inputFechaNac" name="inputFechaNac" value="<?php echo $fecha_nacimiento ?>" placeholder="Fecha de Nacimiento">
-                <label for="inputFechaNac" class="form-label">Fecha de nacimiento:</label>
-                <?php echo $validation['fecha_nacimiento']; ?>
+            <div class="justify-content-center ">
+                <div class="container mt-5">
+                    <h1>Ingreso de cliente:</h1>
+                    <?php if ($pantalla == 'create') { ?>
+                        <?= form_open('clienteController/create') ?>
+                    <?php } else { ?>
+                        <?= form_open('clienteController/update/' . $dni) ?>
+                    <?php } ?>
+                    <div class="mb-3 form-floating">
+                        <input type="text" class="form-control" id="inputNomyApe" name="inputNomyApe" value="<?php echo $nombre_apellido ?>" placeholder="Nombre">
+                        <label for="inputNomyApe" class="form-label">Nombre y Apellido</label>
+                        <?php echo $validation['nombre_apellido']; ?>
+                    </div>
+                    <div class="mb-3 form-floating">
+                        <input type="text" class="form-control" id="inputDireccion" name="inputDireccion" value="<?php echo $direccion ?>" placeholder="Direccion">
+                        <label for="inputDireccion" class="form-label">Direcci&oacute;n:</label>
+                        <?php echo $validation['direccion']; ?>
+                    </div>
+                    <div class="mb-3 form-floating">
+                        <input type="number" class="form-control" id="inputTelefono" name="inputTelefono" value="<?php echo $telefono ?>" placeholder="Telefono">
+                        <label for="inputTelefono" class="form-label">Tel&eacute;fono:</label>
+                        <?php echo $validation['telefono']; ?>
+                    </div>
+
+                    <div class="mb-3 form-floating">
+                        <input type="date" class="form-control" id="inputFechaNac" name="inputFechaNac" value="<?php echo $fecha_nacimiento ?>" placeholder="Fecha de Nacimiento">
+                        <label for="inputFechaNac" class="form-label">Fecha de nacimiento:</label>
+                        <?php echo $validation['fecha_nacimiento']; ?>
+                    </div>
+                    <div class="mb-3 form-floating">
+                        <input type="number" class="form-control" id="inputDocumento" name="inputDocumento" value="<?php echo $dni ?>" placeholder="Documento">
+                        <label for="inputDocumento" class="form-label">Documento de Identidad:</label>
+                        <?php echo $validation['dni']; ?>
+                    </div>
+                    <div class="mb-3 form-floating">
+                        <input type="number" class="form-control" id="inputCUIT_CUIL" name="inputCUIT_CUIL" value="<?php echo $cuit_cuil ?>" placeholder="Cuit/Cuil">
+                        <label for="inputCUIT_CUIL" class="form-label">CUIT/CUIL:</label>
+                        <?php echo $validation['cuit_cuil']; ?>
+                    </div>
+
+
+                </div>
             </div>
-            <div class="mb-3 form-floating">
-                <input type="number" class="form-control" id="inputDocumento" name="inputDocumento" value="<?php echo $dni ?>" placeholder="Documento">
-                <label for="inputDocumento" class="form-label">Documento de Identidad:</label>
-                <?php echo $validation['dni']; ?>
-            </div>
-            <div class="mb-3 form-floating">
-                <input type="number" class="form-control" id="inputCUIT_CUIL" name="inputCUIT_CUIL" value="<?php echo $cuit_cuil ?>" placeholder="Cuit/Cuil">
-                <label for="inputCUIT_CUIL" class="form-label">CUIT/CUIL:</label>
-                <?php echo $validation['cuit_cuil']; ?>
-            </div>
-            <button type="submit" class="btn btn-primary">Ingresar</button>
-            <?= form_close() ?>
+            <div class="container d-flex justify-content-center">
+                <div class="container  divBotoncitoCenter row">
+                    <div class="col-sm-6 col-6">
+                        <div class="d-grid mt-3 ">
+                            <a href="<?php echo base_url() ?>/index.php/clienteController/volver" type="button" class="btn btn-outline-dark botoncito">Volver</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-6">
+                        <div class="d-grid mt-3">
+                            <button type="submit" class="btn btn-outline-dark botoncito">Ingresar</button>
+                        </div>
+                    </div>
+                </div>
+            </div><?= form_close() ?>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-
         </main>
     </div>
 </body>

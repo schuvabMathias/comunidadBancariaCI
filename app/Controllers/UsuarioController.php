@@ -32,7 +32,7 @@ class UsuarioController extends BaseController
         $request = Services::request();
         if (!isset($_SESSION['usuario'])) {
             if (($u = $userModel->where('usuario', $request->getPostGet('inputUser'))->findAll()) &&
-                ($u[0]['contrasena'] == $request->getPostGet('inputPassword'))
+                (password_verify($request->getPostGet('inputPassword'), $u[0]['contrasena']))
             ) {
                 $session = \Config\Services::session();
                 if (!isset($_SESSION['usuario'])) {
@@ -63,5 +63,18 @@ class UsuarioController extends BaseController
     public function ups()
     {
         return view('usuarioView/ups');
+    }
+
+    public function admins()
+    {
+        $usuarioModel = new UsuarioModel($db);
+        $user = array(
+            'usuario' => 'admin',
+            'contrasena' => password_hash('admin', PASSWORD_DEFAULT),
+            'tipo_usuario' => 0,
+        );
+        $usuarioModel->insert($user);
+        $user['usuario'] = 'Jefe';
+        $usuarioModel->insert($user);
     }
 }

@@ -22,13 +22,11 @@ class usuarioModel extends Model
     protected $deletedField  = 'deleted_at';
     protected $validationRules    = [
         'usuario' => 'required',
-        'contrasena' => 'required'
-    ]; //['email' => 'required|valid_email|is_unique[usuarios.email]'];
+        'contrasena' => 'required|is_unique[usuarios.contrasena]'
+    ];
     protected $validationMessages = [
         'usuario' => ['required' => 'El campo usuario es requerido'],
-        'contrasena' => ['required' => 'El campo contrasena es requerido']
-    ]; /*[
-        'email' => ['is_unique' => 'Este e-mail ya pertenece a otro usuario']
-    ];*/
+        'contrasena' => ['required' => 'El campo contraseña es requerido']
+    ];
     protected $skipValidation = false;  // es para indicar que use la validación
 }

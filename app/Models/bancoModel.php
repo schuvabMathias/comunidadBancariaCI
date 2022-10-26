@@ -20,14 +20,14 @@ class bancoModel extends Model
     protected $updatedField     = 'updated_at';
     protected $deletedField     = 'deleted_at';
     protected $validationRules  = [
-        'nombre' => 'required',
+        'nombre' => 'required|alpha_space',
         'direccion' => 'required',
-        'numero_sucursal' => 'required'
+        'numero_sucursal' => 'required|is_unique[banco.numero_sucursal]'
     ]; //['email' => 'required|valid_email|is_unique[usuarios.email]'];
     protected $validationMessages = [
-        'nombre' => ['required' => 'El campo nombre es requerido'],
-        'direccion' => ['required' => 'El campo direccion es requerido'],
-        'numero_sucursal' => ['required' => 'El campo numero de sucursal es requerido']
+        'nombre' => ['required' => 'El campo nombre es requerido', 'alpha_space' => "Solo debe ingresar letras"],
+        'direccion' => ['required' => 'El campo dirección es requerido'],
+        'numero_sucursal' => ['required' => 'El campo número de sucursal es requerido', 'is_unique' => 'Ya existe otro banco con este número']
     ]; /*[
         'email' => ['is_unique' => 'Este e-mail ya pertenece a otro usuario']
     ];*/

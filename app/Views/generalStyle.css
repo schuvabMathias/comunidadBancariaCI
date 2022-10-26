@@ -1,0 +1,16 @@
+.informacion {
+    padding: 10px;
+}
+
+
+.informacion .form-floating input,
+.informacion .form-floating select {
+    border-radius: 5px;
+}
+
+/* botones */
+
+.botoncito {
+    border-radius: 10px;
+    width: 94%;
+}

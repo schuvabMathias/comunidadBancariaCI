@@ -1,5 +1,5 @@
 #accordion {
-    margin: 10px 0px;
+    margin: 0px 0px;
     text-align: center;
 }
 
@@ -11,7 +11,7 @@
 #accordion .card {
     border-radius: 27px;
     text-align: center;
-    margin-top: 5px;
+    margin-top: 2px;
     border: 1px solid #706757;
 
 }

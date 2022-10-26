@@ -24,10 +24,22 @@ class cuentaModel extends Model
     protected $updatedFiel   = 'updated_at';
     protected $deletedField  = 'deleted_at';
     protected $validationRules = [
-        'numero' => 'required',
+        'numero' => 'required|is_unique[cuenta.numero]',
+        'tipo_cuenta' => 'required',
+        'fecha_start' => 'required',
+        'tipo_moneda' => 'required',
+        'monto' => 'required',
+        'id_titular' => 'required',
+        'id_banco' => 'required'
     ]; //['email' => 'required|valid_email|is_unique[usuarios.email]'];
     protected $validationMessages = [
-        'numero' => ['required' => 'El campo numero es requerido'],
+        'numero' => ['required' => 'El campo número es requerido', 'is_unique' => "El elemento ya existe"],
+        'tipo_cuenta' => ['required' => 'El campo tipo de cuenta es requerido'],
+        'fecha_start' => ['required' => 'El campo fecha de inicio es requerido'],
+        'tipo_moneda' => ['required' => 'El campo tipo de moneda es requerido'],
+        'monto' => ['required' => 'El campo monto es requerido'],
+        'id_titular' => ['required' => 'El campo ID titular es requerido'],
+        'id_banco' => ['required' => 'El campo ID banco es requerido']
     ]; /*[
         'email' => ['is_unique' => 'Este e-mail ya pertenece a otro usuario']
     ];*/

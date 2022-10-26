@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/styleSideBar.css">
-    <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/cuentaView/crearCuenta.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/generalStyle.css">
 
     <title>Comunidad Bancaria</title>
 </head>
@@ -93,16 +93,19 @@
 
 
         <main class="container informacion ps-0 ps-md-5 flex-grow-1">
-            <div class="container titulo">
-                <h3>Menu Cuentas</h3>
-
+            <div class="container tituloTwo">
+                <h3>Menú Cuentas</h3>
             </div>
-            <p class="p-3 mt-3">Por favor seleccione una opcion para continuar</p>
-            <div class="d-grid mt-3">
-                <a type="button" class="btn btn-lg btn-primary" href="<?php echo base_url() ?>/index.php/cuentaController/create">Crear cuenta</a>
-            </div>
-            <div class="d-grid mt-3">
-                <a type="button" class="btn btn-lg btn-dark" href="<?php echo base_url() ?>/index.php/cuentaController/mostrar">Mostrar cuentas</a>
+            <div class=" justify-content-center ">
+                <div class="container mt-5">
+                    <p class="p-3">Por favor, seleccione una opción para continuar</p>
+                    <div class="d-grid mt-3">
+                        <a type="button" class="btn btn-lg btn-primary" href="<?php echo base_url() ?>/index.php/cuentaController/create">Crear cuenta</a>
+                    </div>
+                    <div class="d-grid mt-3">
+                        <a type="button" class="btn btn-lg btn-dark" href="<?php echo base_url() ?>/index.php/cuentaController/mostrar">Mostrar cuentas</a>
+                    </div>
+                </div>
             </div>
         </main>
     </div>

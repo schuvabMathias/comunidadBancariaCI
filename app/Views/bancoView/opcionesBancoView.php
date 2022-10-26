@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/styleSideBar.css">
-    <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/bancoView/crearBanco.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>/app/Views/generalStyle.css">
 
     <title>Comunidad Bancaria</title>
 </head>
@@ -90,22 +90,27 @@
             </nav>
         </div>
 
-
         <main class="container informacion ps-0 ps-md-5 flex-grow-1">
-            <div class="container titulo">
-                <h3>Menu Banco</h3>
-
+            <div class="container tituloTwo">
+                <h3>Menú Bancos</h3>
             </div>
-            <p class="p-3 mt-3">Por favor seleccione una opcion para continuar</p>
-            <?php if ($_SESSION['tipo_usuario'] == 0) { ?>
-                <div class="d-grid mt-3">
-                    <a type="button" class="btn btn-lg btn-primary" href="<?php echo base_url() ?>/index.php/bancoController/create">Crear banco</a>
+            <div class="justify-content-center ">
+                <div class="container mt-5">
+                    <p class="p-3">Por favor, seleccione una opción para continuar</p>
+                    <?php if ($_SESSION['tipo_usuario'] == 0) { ?>
+                        <div class="d-grid mt-3">
+                            <a type="button" class="btn btn-lg btn-primary" href="<?php echo base_url() ?>/index.php/bancoController/create">Crear banco</a>
+                        </div>
+                    <?php } ?>
+                    <div class="d-grid mt-3">
+                        <a type="button" class="btn btn-lg btn-dark" href="<?php echo base_url() ?>/index.php/bancoController/mostrar">Mostrar bancos</a>
+                    </div>
                 </div>
-            <?php } ?>
-            <div class="d-grid mt-3">
-                <a type="button" class="btn btn-lg btn-dark" href="<?php echo base_url() ?>/index.php/bancoController/mostrar">Mostrar bancos</a>
             </div>
         </main>
+
+
+
     </div>
 </body>
 
