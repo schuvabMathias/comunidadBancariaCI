@@ -92,28 +92,28 @@
 
         <main class="container informacion ps-0 ps-md-5 flex-grow-1">
             <h1>Ingreso de banco:</h1>
-            <!-- <?php if ($validation != null) { ?>
-            <?= $validation->listErrors(); ?>
-            <?php } ?>
             <?php if ($pantalla == 'create') { ?>
-            <?= form_open('bancoController/create') ?>
+                <?= form_open('bancoController/create') ?>
             <?php } else { ?>
-            <?= form_open('bancoController/update/' . $id_banco) ?>
-            <?php } ?> -->
+                <?= form_open('bancoController/update/' . $id_banco) ?>
+            <?php } ?>
             <div class="mb-3 form-floating">
                 <input type="text" class="form-control" id="inputNombre" name="inputNombre" value="<?php echo $nombre ?>" placeholder="Numero">
                 <label for="inputNombre" class="form-label">Nombre</label>
+                <?php echo $validation['nombre']; ?>
             </div>
             <div class="mb-3 form-floating">
                 <input type="text" class="form-control" id="inputDireccion" name="inputDireccion" value="<?php echo $direccion ?>" placeholder="Dirección">
                 <label for="inputDireccion" class="form-label">Direcci&oacute;n:</label>
+                <?php echo $validation['direccion']; ?>
             </div>
             <div class="mb-3 form-floating">
                 <input type="number" class="form-control" id="inputNroSucursal" name="inputNroSucursal" value="<?php echo $numero_sucursal ?>" placeholder="Numero de Sucursal">
                 <label for="inputNroSucursal" class="form-label">Numero de Sucursal:</label>
+                <?php echo $validation['numero_sucursal']; ?>
             </div>
             <button type="submit" class="btn btn-primary">Ingresar</button>
-            <!--  <?= form_close() ?> -->
+            <?= form_close() ?>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
         </main>
     </div>

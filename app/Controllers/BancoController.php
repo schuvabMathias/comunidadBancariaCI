@@ -30,9 +30,14 @@ class BancoController extends BaseController
                 'direccion' => "",
                 'numero_sucursal' => "",
             );
+            $validation = array(
+                'nombre' => "",
+                'direccion' => "",
+                'numero_sucursal' => "",
+            );
             if (strtolower($this->request->getMethod()) !== 'post') {
                 $data['pantalla'] = 'create';
-                $data['validation'] = $this->validator;
+                $data['validation'] = $validation;
                 return  view('bancoView\createBancoView', $data);
             }
             $data = array(
@@ -40,15 +45,11 @@ class BancoController extends BaseController
                 'direccion' => $request->getPost('inputDireccion'),
                 'numero_sucursal' => $request->getPost('inputNroSucursal'),
             );
-            //$rules = $bancoModel->getValidationRules();
-            //if (!$this->validate($rules)) {
-            //    $data['pantalla'] = 'create';
-            //    $data['validation'] = $this->validator;
-            //    return  view('bancoView\createBancoView', $data);
-            //}
             if (!$bancoModel->insert($data)) {
-                var_dump($bancoModel->errors());
-                $data['validation'] = $this->validator;
+                foreach ($bancoModel->errors() as $clave => $valor) {
+                    $validation[$clave] = $valor;
+                }
+                $data['validation'] = $validation;
                 $data['pantalla'] = 'create';
                 return  view('bancoView\createBancoView', $data);
             }

@@ -28,7 +28,15 @@ class ClienteController extends BaseController
             $request = \Config\Services::request();
             $usuarioModel = new usuarioModel($db);
             $clienteModel = new clienteModel($db);
-            $dato = array(
+            $data = array(
+                'nombre_apellido' => "",
+                'direccion' => "",
+                'telefono' => "",
+                'fecha_nacimiento' => "",
+                'dni' => "",
+                'cuit_cuil' => "",
+            );
+            $validation = array(
                 'nombre_apellido' => "",
                 'direccion' => "",
                 'telefono' => "",
@@ -37,9 +45,9 @@ class ClienteController extends BaseController
                 'cuit_cuil' => "",
             );
             if (strtolower($this->request->getMethod()) !== 'post') {
-                $dato['pantalla'] = 'create';
-                $dato['validation'] = $this->validator;
-                return  view('clienteView\createClienteView', $dato);
+                $data['pantalla'] = 'create';
+                $data['validation'] = $validation;
+                return  view('clienteView\createClienteView', $data);
             }
             $data = array(
                 'nombre_apellido' => $request->getPost('inputNomyApe'),
@@ -49,11 +57,6 @@ class ClienteController extends BaseController
                 'dni' => $request->getPost('inputDocumento'),
                 'cuit_cuil' => $request->getPost('inputCUIT_CUIL'),
             );
-            //$rules = $clienteModel->getValidationRules();
-            //if (!$this->validate($rules)) {
-            //    $data['validation'] = $this->validator;
-            //    return  view('clienteView\createClienteView', $data);
-            //}
             $user = array(
                 'usuario' => $request->getPost('inputNomyApe'),
                 'contrasena' => $encrypter->encrypt($request->getPost('inputDocumento')),
@@ -65,14 +68,23 @@ class ClienteController extends BaseController
                 if (!$clienteModel->insert($data)) {
                     $user['id_usuario'] = (int)$u[0]["id_usuario"];
                     $usuarioModel->delete($user);
-                    $data['validation'] = $this->validator;
+                    foreach ($clienteModel->errors() as $clave => $valor) {
+                        $validation[$clave] = $valor;
+                    }
+                    $data['validation'] = $validation;
                     unset($data['id_usuario']);
                     $data['pantalla'] = 'create';
                     return  view('clienteView\createClienteView', $data);
                 }
             } else {
-
-                $data['validation'] = $this->validator;
+                $validation['contrasena'] = "";
+                $validation['usuario'] = "";
+                foreach ($usuarioModel->errors() as $clave => $valor) {
+                    $validation[$clave] = $valor;
+                }
+                $validation['nombre_apellido'] = $validation['usuario'];
+                $validation['dni'] = $validation['contrasena'];
+                $data['validation'] = $validation;
                 $data['pantalla'] = 'create';
                 return  view('clienteView\createClienteView', $data);
             }
@@ -108,9 +120,17 @@ class ClienteController extends BaseController
             $clienteModel = new clienteModel($db);
             $cliente = $clienteModel->where('dni', $dni)->findAll();
             $cliente = $cliente[0];
+            $validation = array(
+                'nombre_apellido' => "",
+                'direccion' => "",
+                'telefono' => "",
+                'fecha_nacimiento' => "",
+                'dni' => "",
+                'cuit_cuil' => "",
+            );
             if (strtolower($this->request->getMethod()) !== 'post') {
                 $cliente['pantalla'] = 'update';
-                $cliente['validation'] = $this->validator;
+                $cliente['validation'] = $validation;
                 return  view('clienteView\createClienteView', $cliente);
             }
             $user = array(
@@ -134,7 +154,10 @@ class ClienteController extends BaseController
             );
             $usuarioModel->update((int)$u[0]["id_usuario"], $user);
             if (!$clienteModel->update($cliente['id_cliente'], $data)) {
-                $data['validation'] = $this->validator;
+                foreach ($clienteModel->errors() as $clave => $valor) {
+                    $validation[$clave] = $valor;
+                }
+                $data['validation'] = $validation;
                 unset($data['id_usuario']);
                 $data['pantalla'] = 'update';
                 return  view('clienteView\createClienteView', $data);

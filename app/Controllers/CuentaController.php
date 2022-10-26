@@ -36,37 +36,49 @@ class CuentaController extends BaseController
                 'fecha_start' => "",
                 'tipo_moneda' => "Pesos argentinos",
                 'monto' => (int) 0,
+                'id_titular' => "",
+            );
+            $validation = array(
+                'numero' => "",
+                'tipo_cuenta' => "",
+                'fecha_start' => "",
+                'tipo_moneda' => "",
+                'monto' => "",
+                'id_titular' => "",
+                'id_banco' => "",
             );
             if (strtolower($this->request->getMethod()) !== 'post') {
-                $data['validation'] = Services::validation();
+                $data['validation'] = $validation;
                 $data['bancos'] = $bancos;
                 $data['pantalla'] = 'create';
                 return  view('cuentaView\createCuentaView', $data);
             }
-            $cliente = $clienteModel->where('id_usuario', $_SESSION['id_usuario'])->findAll();
             $data = array(
                 'numero' => $request->getPost('inputNumero'),
                 'tipo_cuenta' => $request->getPost('selectTipo'),
                 'fecha_start' => $request->getPost('inputFechaCreacion'), //aca lo podemos hacer por programa que lo haga solo el dia que la crea el usuario
                 'tipo_moneda' => $request->getPost('inputMoneda'), //aca tmb lo de arriba, o no?
                 'monto' => 0,
-                'id_titular' => $cliente[0]['id_cliente'],
+                'id_titular' => "",
                 'id_banco' => $request->getPost('inputBanco'),
             );
-            // $rules = [
-            //     'nombre_apellido' => 'required',
-            //     'dni' => 'required'
-            // ];
-            // if (!$this->validate($rules)) {
-            //     return  view('clienteView\createClienteView', [
-            //         'validation' => $this->validator,
-            //     ]);
-            // }
+            if ($_SESSION['tipo_usuario'] == 0) {
+                if ($request->getPost('inputTitularDoc') == "") {
+                    $cliente = $clienteModel->where('dni', $request->getPost('inputTitularDoc'))->findAll();
+                    $data['id_titular'] = $cliente[0]['id_cliente'];
+                }
+            }
+            if ($_SESSION['tipo_usuario'] == 1) {
+                $cliente = $clienteModel->where('id_usuario', $_SESSION['id_usuario'])->findAll();
+                $data['id_titular'] = $cliente[0]['id_cliente'];
+            }
             if (!$cuentaModel->insert($data)) {
-                echo var_dump($cuentaModel->errors());
-                return 0;
-                $data['validation'] = $this->validator;
+                foreach ($cuentaModel->errors() as $clave => $valor) {
+                    $validation[$clave] = $valor;
+                }
+                $data['validation'] = $validation;
                 $data['bancos'] = $bancos;
+                $data['id_titular'] = $request->getPost('inputTitular');
                 $data['pantalla'] = 'create';
                 return  view('cuentaView\createCuentaView', $data);
             }
@@ -111,9 +123,18 @@ class CuentaController extends BaseController
             $cuenta = $cuentaModel->where('id_cuenta', $id)->findAll();
             $cliente = $clienteModel->where('id_cliente', $cuenta[0]['id_titular'])->findAll();
             $cuenta = $cuenta[0];
+            $validation = array(
+                'numero' => "",
+                'tipo_cuenta' => "",
+                'fecha_start' => "",
+                'tipo_moneda' => "",
+                'monto' => "",
+                'id_titular' => "",
+                'id_banco' => "",
+            );
             if (strtolower($this->request->getMethod()) !== 'post') {
                 $cuenta['pantalla'] = 'update';
-                $cuenta['validation'] = $this->validator;
+                $cuenta['validation'] = $validation;
                 $cuenta['bancos'] = $bancos;
                 $cuenta['titular'] = $cliente[0]['nombre_apellido'];
                 return  view('cuentaView/createCuentaView', $cuenta);
@@ -128,8 +149,10 @@ class CuentaController extends BaseController
                 'id_banco' => $request->getPost('inputBanco')
             );
             if (!$cuentaModel->update($id, $data)) {
-                var_dump($cuentaModel->errors());
-                $data['validation'] = $this->validator;
+                foreach ($cuentaModel->errors() as $clave => $valor) {
+                    $validation[$clave] = $valor;
+                }
+                $data['validation'] = $validation;
                 $data['pantalla'] = 'update';
                 $cuenta['bancos'] = $bancos;
                 return  view('bancoView\createCuentaView', $data);

@@ -1,0 +1,330 @@
+CRITICAL - 2022-10-26 08:37:29 --> file_get_contents(C:\Apache24\htdocs\comunidadBancariaCI\writable\debugbar/debugbar_1666758237.json): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Debug\Toolbar\Collectors\History.php(80): file_get_contents()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Debug\Toolbar.php(487): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Debug\Toolbar.php(464): CodeIgniter\Debug\Toolbar->format()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Config\Events.php(48): CodeIgniter\Debug\Toolbar->respond()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(308): CodeIgniter\Events\Events::trigger()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-10-26 08:44:34 --> Undefined index: contrasena
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(84): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->create()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-10-26 08:45:54 --> Undefined offset: 0
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(63): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-10-26 08:46:25 --> Undefined offset: 0
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(63): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2022-10-26 08:57:33 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «»
+LINE 3: WHERE &quot;id_usuario&quot; = ''
+                             ^ in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(56): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-26 08:57:33 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «»
+LINE 3: WHERE &quot;id_usuario&quot; = ''
+                             ^
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(56): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-10-26 09:01:14 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «»
+LINE 3: WHERE &quot;id_usuario&quot; = ''
+                             ^ in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(66): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-26 09:01:14 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «»
+LINE 3: WHERE &quot;id_usuario&quot; = ''
+                             ^
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(66): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-10-26 09:03:31 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «»
+LINE 3: WHERE &quot;id_usuario&quot; = ''
+                             ^ in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(66): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-26 09:03:31 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «»
+LINE 3: WHERE &quot;id_usuario&quot; = ''
+                             ^
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(66): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-10-26 09:04:44 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «»
+LINE 3: WHERE &quot;id_usuario&quot; = ''
+                             ^ in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(66): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-26 09:04:44 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «»
+LINE 3: WHERE &quot;id_usuario&quot; = ''
+                             ^
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(66): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-10-26 09:07:31 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «»
+LINE 3: WHERE &quot;id_usuario&quot; = ''
+                             ^ in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(66): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-26 09:07:31 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «»
+LINE 3: WHERE &quot;id_usuario&quot; = ''
+                             ^
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(66): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-10-26 09:09:03 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «»
+LINE 3: WHERE &quot;id_usuario&quot; = ''
+                             ^ in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(66): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-26 09:09:03 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «»
+LINE 3: WHERE &quot;id_usuario&quot; = ''
+                             ^
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(66): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-10-26 09:10:07 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «»
+LINE 3: WHERE &quot;id_usuario&quot; = ''
+                             ^ in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(66): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-26 09:10:07 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «»
+LINE 3: WHERE &quot;id_usuario&quot; = ''
+                             ^
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(66): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-10-26 09:10:15 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «»
+LINE 3: WHERE &quot;id_usuario&quot; = ''
+                             ^ in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(66): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-26 09:10:15 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «»
+LINE 3: WHERE &quot;id_usuario&quot; = ''
+                             ^
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(66): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-10-26 09:11:25 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la columna «usuario»
+LINE 3: WHERE &quot;usuario&quot; = ''
+              ^
+HINT:  Probablemente quiera hacer referencia a la columna «cliente.id_usuario». in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(66): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-26 09:11:25 --> pg_query(): Query failed: ERROR:  no existe la columna «usuario»
+LINE 3: WHERE &quot;usuario&quot; = ''
+              ^
+HINT:  Probablemente quiera hacer referencia a la columna «cliente.id_usuario».
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(66): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
