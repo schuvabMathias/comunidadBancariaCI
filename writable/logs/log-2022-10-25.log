@@ -1,0 +1,196 @@
+CRITICAL - 2022-10-25 20:18:16 --> Unable to find an available OpenSSL encryption handler.
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Encryption\Encryption.php(96): CodeIgniter\Encryption\Exceptions\EncryptionException::forNoHandlerAvailable()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Config\Services.php(213): CodeIgniter\Encryption\Encryption->__construct()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Config\BaseService.php(248): CodeIgniter\Config\Services::encrypter()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\UsuarioController.php(33): CodeIgniter\Config\BaseService::__callStatic()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\UsuarioController->connect()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-10-25 20:18:56 --> Unable to find an available OpenSSL encryption handler.
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Encryption\Encryption.php(96): CodeIgniter\Encryption\Exceptions\EncryptionException::forNoHandlerAvailable()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Config\Services.php(213): CodeIgniter\Encryption\Encryption->__construct()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Config\BaseService.php(248): CodeIgniter\Config\Services::encrypter()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\UsuarioController.php(33): CodeIgniter\Config\BaseService::__callStatic()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\UsuarioController->connect()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-10-25 20:19:02 --> Unable to find an available OpenSSL encryption handler.
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Encryption\Encryption.php(96): CodeIgniter\Encryption\Exceptions\EncryptionException::forNoHandlerAvailable()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Config\Services.php(213): CodeIgniter\Encryption\Encryption->__construct()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Config\BaseService.php(248): CodeIgniter\Config\Services::encrypter()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\UsuarioController.php(33): CodeIgniter\Config\BaseService::__callStatic()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\UsuarioController->connect()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-10-25 20:24:17 --> Unable to find an available OpenSSL encryption handler.
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Encryption\Encryption.php(96): CodeIgniter\Encryption\Exceptions\EncryptionException::forNoHandlerAvailable()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Config\Services.php(213): CodeIgniter\Encryption\Encryption->__construct()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Config\BaseService.php(248): CodeIgniter\Config\Services::encrypter()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\UsuarioController.php(33): CodeIgniter\Config\BaseService::__callStatic()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\UsuarioController->connect()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-10-25 20:24:19 --> Unable to find an available OpenSSL encryption handler.
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Encryption\Encryption.php(96): CodeIgniter\Encryption\Exceptions\EncryptionException::forNoHandlerAvailable()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Config\Services.php(213): CodeIgniter\Encryption\Encryption->__construct()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Config\BaseService.php(248): CodeIgniter\Config\Services::encrypter()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\UsuarioController.php(33): CodeIgniter\Config\BaseService::__callStatic()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\UsuarioController->connect()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-10-25 21:41:16 --> Decrypting: authentication failed.
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Encryption\Handlers\OpenSSLHandler.php(98): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\UsuarioController.php(38): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\UsuarioController->connect()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-10-25 21:42:12 --> Decrypting: authentication failed.
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Encryption\Handlers\OpenSSLHandler.php(98): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\UsuarioController.php(39): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\UsuarioController->connect()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-10-25 21:49:21 --> Undefined index: id-cuenta
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(178): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->mostrar()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-10-25 21:51:01 --> Undefined index: id-cuenta
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(178): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->mostrar()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-10-25 21:52:10 --> Undefined index: id-cuenta
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(179): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->mostrar()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-10-25 21:52:12 --> Undefined index: id-cuenta
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(179): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->mostrar()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-10-25 21:52:15 --> Undefined index: id-cuenta
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(179): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->mostrar()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-10-25 21:53:05 --> Undefined index: id-cliente
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(179): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->mostrar()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2022-10-25 21:53:18 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la columna «titular»
+LINE 3: WHERE &quot;titular&quot; = '13'
+              ^
+HINT:  Probablemente quiera hacer referencia a la columna «cuenta.id_titular». in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(179): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-25 21:53:18 --> pg_query(): Query failed: ERROR:  no existe la columna «titular»
+LINE 3: WHERE &quot;titular&quot; = '13'
+              ^
+HINT:  Probablemente quiera hacer referencia a la columna «cuenta.id_titular».
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(179): CodeIgniter\BaseModel->findAll()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->mostrar()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-25 22:04:39 --> pg_escape_literal(): Failed to escape
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(178): pg_escape_literal()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Query.php(306): CodeIgniter\Database\Postgre\Connection->escape()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Query.php(293): CodeIgniter\Database\Query->matchNamedBinds()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Query.php(150): CodeIgniter\Database\Query->compileBinds()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\Query->getQuery()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(738): CodeIgniter\Model->doInsert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(57): CodeIgniter\Model->insert()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->create()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#13 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#14 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 {main}
+CRITICAL - 2022-10-25 23:05:01 --> Undefined variable: nombre
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Views\clienteView\createClienteView.php(102): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(210): include('C:\\Apache24\\htd...')
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Common.php(1089): CodeIgniter\View\View->render()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(42): view()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->create()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-10-25 23:05:25 --> Undefined variable: numero_sucursal
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Views\clienteView\createClienteView.php(110): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(210): include('C:\\Apache24\\htd...')
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Common.php(1089): CodeIgniter\View\View->render()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(42): view()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->create()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-10-25 23:23:31 --> Undefined variable: ids
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(189): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrarClientesSegunBanco()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-10-25 23:24:01 --> Undefined variable: ids
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(189): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->mostrarClientesSegunBanco()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

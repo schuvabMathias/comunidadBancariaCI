@@ -19,9 +19,7 @@ class CuentaController extends BaseController
 
     public function index()
     {
-        return  view('clienteView\createCuentaView', [
-            'validation' => Services::validation(),
-        ]);
+        return  view('cuentaView\opcionesCuentaView');
     }
 
     public function create()
@@ -118,7 +116,7 @@ class CuentaController extends BaseController
                 $cuenta['validation'] = $this->validator;
                 $cuenta['bancos'] = $bancos;
                 $cuenta['titular'] = $cliente[0]['nombre_apellido'];
-                return  view('cuentaView\createCuentaView', $cuenta);
+                return  view('cuentaView/createCuentaView', $cuenta);
             }
             $data = array(
                 'numero' => $request->getPost('inputNumero'),
@@ -172,11 +170,10 @@ class CuentaController extends BaseController
                     $clienteModel = new clienteModel($db);
                     $cuentaModel = new cuentaModel($db);
                     $valoresUsuario = $usuarioModel->where('usuario', $_SESSION['usuario'])->findAll();
-                    if (sizeof($valoresUsuario) != 0) {
+                    if (sizeof($valoresUsuario) > 0) {
                         $valoresClientes = $clienteModel->where('id_usuario', $valoresUsuario[0]['id_usuario'])->findAll();
-                        if (sizeof($valoresClientes) != 0) {
-                            $valoresCuentas = $cuentaModel->where('titular', $valoresClientes[0]['id-cuenta'])->findAll();
-
+                        if (sizeof($valoresClientes) > 0) {
+                            $valoresCuentas = $cuentaModel->where('id_titular', $valoresClientes[0]['id_cliente'])->findAll();
                             return  view('cuentaView\mostrarCuentaView', [
                                 'validation' => Services::validation(),
                                 'cuentas' => $valoresCuentas,

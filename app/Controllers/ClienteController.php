@@ -16,8 +16,14 @@ class ClienteController extends BaseController
         $session = \Config\Services::session();
     }
 
+    public function index()
+    {
+        return  view('clienteView\opcionesClienteView');
+    }
+
     public function create()
     {
+        $encrypter = \Config\Services::encrypter();
         if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] == 0) {
             $request = \Config\Services::request();
             $usuarioModel = new usuarioModel($db);
@@ -50,14 +56,13 @@ class ClienteController extends BaseController
             //}
             $user = array(
                 'usuario' => $request->getPost('inputNomyApe'),
-                'contrasena' => $request->getPost('inputDocumento'),
+                'contrasena' => $encrypter->encrypt($request->getPost('inputDocumento')),
                 'tipo_usuario' => 1,
             );
             if ($usuarioModel->insert($user)) {
                 $u = $usuarioModel->where('usuario', $request->getPostGet('inputNomyApe'))->findAll();
                 $data['id_usuario'] = (int)$u[0]["id_usuario"];
                 if (!$clienteModel->insert($data)) {
-                    var_dump($clienteModel->errors());
                     $user['id_usuario'] = (int)$u[0]["id_usuario"];
                     $usuarioModel->delete($user);
                     $data['validation'] = $this->validator;
@@ -66,7 +71,7 @@ class ClienteController extends BaseController
                     return  view('clienteView\createClienteView', $data);
                 }
             } else {
-                var_dump($usuarioModel->errors());
+
                 $data['validation'] = $this->validator;
                 $data['pantalla'] = 'create';
                 return  view('clienteView\createClienteView', $data);
@@ -129,7 +134,6 @@ class ClienteController extends BaseController
             );
             $usuarioModel->update((int)$u[0]["id_usuario"], $user);
             if (!$clienteModel->update($cliente['id_cliente'], $data)) {
-                var_dump($clienteModel->errors());
                 $data['validation'] = $this->validator;
                 unset($data['id_usuario']);
                 $data['pantalla'] = 'update';
@@ -179,6 +183,12 @@ class ClienteController extends BaseController
             $clienteModel = new clienteModel($db);
             $cuentaModel = new cuentaModel($db);
             $cuentas = $cuentaModel->select('id_titular')->where('id_banco', $id)->findAll();
+            if (sizeof($cuentas) == 0) {
+                return  view('clienteView\mostrarClienteView', [
+                    'validation' => $this->validator,
+                    'clientes' => [],
+                ]);
+            }
             for ($i = 0; $i < sizeof($cuentas); $i++) {
                 $ids[$i] = $cuentas[$i]['id_titular'];
             }

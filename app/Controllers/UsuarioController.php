@@ -7,8 +7,6 @@ use App\Models\usuarioModel;
 
 class UsuarioController extends BaseController
 {
-    protected $helpers = ['form'];
-
     public function __construct()
     {
         helper('form');
@@ -24,7 +22,7 @@ class UsuarioController extends BaseController
             ];
             return  view("usuarioView/login", $data);
         } else {
-            return view('sideBar/sideBar.php');
+            return view('sideBar/sideBar');
         }
     }
 
@@ -42,7 +40,7 @@ class UsuarioController extends BaseController
                     $session->set('usuario', $request->getPostGet('inputUser'));
                     $session->set('tipo_usuario', $u[0]['tipo_usuario']);
                 }
-                return view('sideBar/sideBar.php');
+                return view('sideBar/sideBar');
             } else {
                 $data = [
                     'error' => TRUE,
@@ -52,7 +50,7 @@ class UsuarioController extends BaseController
                 return view('usuarioView/login', $data);
             }
         } else {
-            return view('sideBar/sideBar.php');
+            return view('sideBar/sideBar');
         }
     }
 
@@ -60,5 +58,10 @@ class UsuarioController extends BaseController
     {
         session_destroy();
         return view('home');
+    }
+
+    public function ups()
+    {
+        return view('usuarioView/ups');
     }
 }

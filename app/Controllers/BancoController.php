@@ -15,6 +15,11 @@ class BancoController extends BaseController
         $session = \Config\Services::session();
     }
 
+    public function index()
+    {
+        return  view('bancoView\opcionesBancoView');
+    }
+
     public function create()
     {
         if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == 0) {
