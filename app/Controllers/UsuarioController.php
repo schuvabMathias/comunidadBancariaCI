@@ -9,6 +9,22 @@ class UsuarioController extends BaseController
 {
     public function __construct()
     {
+        $usuarioModel = new UsuarioModel($db);
+        $usuario = $usuarioModel->where('usuario', 'admin')->findAll();
+        if (sizeof($usuario) == 0) {
+            $user = array(
+                'usuario' => 'admin',
+                'contrasena' => password_hash('admin', PASSWORD_DEFAULT),
+                'tipo_usuario' => 0,
+            );
+            $usuarioModel->insert($user);
+            $user = array(
+                'usuario' => 'Jefe',
+                'contrasena' => password_hash('admin', PASSWORD_DEFAULT),
+                'tipo_usuario' => 0,
+            );
+            $usuarioModel->insert($user);
+        }
         helper('form');
         $session = Services::session();
     }
@@ -68,13 +84,16 @@ class UsuarioController extends BaseController
     public function admins()
     {
         $usuarioModel = new UsuarioModel($db);
-        $user = array(
-            'usuario' => 'admin',
-            'contrasena' => password_hash('admin', PASSWORD_DEFAULT),
-            'tipo_usuario' => 0,
-        );
-        $usuarioModel->insert($user);
-        $user['usuario'] = 'Jefe';
-        $usuarioModel->insert($user);
+        $usuario = $usuarioModel->where('usuario', 'admin')->findAll();
+        if (sizeof($usuario) == 0) {
+            $user = array(
+                'usuario' => 'admin',
+                'contrasena' => password_hash('admin', PASSWORD_DEFAULT),
+                'tipo_usuario' => 0,
+            );
+            $usuarioModel->insert($user);
+            $user['usuario'] = 'Jefe';
+            $usuarioModel->insert($user);
+        }
     }
 }

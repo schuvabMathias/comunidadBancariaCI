@@ -83,8 +83,10 @@ class ClienteController extends BaseController
                     foreach ($usuarioModel->errors() as $clave => $valor) {
                         $validation[$clave] = $valor;
                     }
-                    $validation['nombre_apellido'] = $validation['usuario'];
-                    $validation['dni'] = $validation['contrasena'];
+                    $clienteModel->insert($data);
+                    foreach ($clienteModel->errors() as $clave => $valor) {
+                        $validation[$clave] = $valor;
+                    }
                     $data['validation'] = $validation;
                     $data['pantalla'] = 'create';
                     return  view('clienteView\createClienteView', $data);
@@ -92,8 +94,13 @@ class ClienteController extends BaseController
                 $tipo = array('tipo' => "cliente");
                 return  view('operacionExitosa', $tipo);
             } else {
-                $validation['nombre_apellido'] = "";
-                $validation['dni'] =  "Ya existe un cliente con este documento";
+                foreach ($usuarioModel->errors() as $clave => $valor) {
+                    $validation[$clave] = $valor;
+                }
+                $clienteModel->insert($data);
+                foreach ($clienteModel->errors() as $clave => $valor) {
+                    $validation[$clave] = $valor;
+                }
                 $data['validation'] = $validation;
                 $data['pantalla'] = 'create';
                 return  view('clienteView\createClienteView', $data);
@@ -111,13 +118,15 @@ class ClienteController extends BaseController
             $usuarioModel = new usuarioModel($db);
             $cuentas = $cuentaModel->where('id_titular', $id)->findAll();
             $cliente = $clienteModel->where('id_cliente', $id)->findAll();
-            if (sizeof($cuentas) < 0) {
+            if (sizeof($cuentas) <= 0) {
                 $clienteModel->where('id_cliente', $id)->delete();
                 $usuarioModel->where('usuario', $cliente[0]['id_usuario'])->delete();
                 $tipo = array('tipo' => "cliente");
                 return  view('operacionExitosa', $tipo);
             } else {
+                $message = "Existen cuentas creadas para este cliente";
                 $tipo = array('tipo' => "cliente");
+                $tipo['message'] = $message;
                 return  view('operacionNoExitosa', $tipo);
             }
         } else {
@@ -129,13 +138,13 @@ class ClienteController extends BaseController
         }
     }
 
-    public function update($dni)
+    public function update($id)
     {
         if (isset($_SESSION['tipo_usuario'])) {
             $request = \Config\Services::request();
             $usuarioModel = new usuarioModel($db);
             $clienteModel = new clienteModel($db);
-            $cliente = $clienteModel->where('dni', $dni)->findAll();
+            $cliente = $clienteModel->where('id_cliente', $id)->findAll();
             $cliente = $cliente[0];
             $validation = array(
                 'nombre_apellido' => "",
@@ -147,40 +156,43 @@ class ClienteController extends BaseController
             );
             if (strtolower($this->request->getMethod()) !== 'post') {
                 $cliente['pantalla'] = 'update';
+                $cliente['id_cliente'] = $id;
                 $cliente['validation'] = $validation;
                 return  view('clienteView\createClienteView', $cliente);
             }
-            $user = array(
-                'contrasena' => $dni,
-                'tipo_usuario' => 1,
-            );
-            $u = $usuarioModel->where('contrasena', $dni)->findAll();
+            $u = $usuarioModel->where('id_usuario', $cliente['id_usuario'])->findAll();
             $data = array(
+                'id_cliente' => $cliente['id_cliente'],
                 'nombre_apellido' => $request->getPost('inputNomyApe'),
                 'direccion' => $request->getPost('inputDireccion'),
                 'telefono' => $request->getPost('inputTelefono'),
                 'fecha_nacimiento' => $request->getPost('inputFechaNac'),
                 'dni' => $request->getPost('inputDocumento'),
                 'cuit_cuil' => $request->getPost('inputCUIT_CUIL'),
+                'id_usuario' => (int)$u[0]["id_usuario"],
             );
-            $data['id_usuario'] = (int)$u[0]["id_usuario"];
             $user = array(
+                'id_usuario' => (int)$u[0]["id_usuario"],
                 'usuario' => $request->getPost('inputNomyApe'),
-                'contrasena' => $request->getPost('inputDocumento'),
+                'contrasena' => password_hash($request->getPost('inputDocumento'), PASSWORD_DEFAULT),
                 'tipo_usuario' => 1,
             );
-            $usuarioModel->update((int)$u[0]["id_usuario"], $user);
-            if (!$clienteModel->update($cliente['id_cliente'], $data)) {
-                foreach ($clienteModel->errors() as $clave => $valor) {
-                    $validation[$clave] = $valor;
+            if ($usuarioModel->update((int)$u[0]["id_usuario"], $user)) {
+                if (!$clienteModel->update((int)$cliente['id_cliente'], $data)) {
+                    foreach ($clienteModel->errors() as $clave => $valor) {
+                        $validation[$clave] = $valor;
+                    }
+                    $data['validation'] = $validation;
+                    $data['pantalla'] = 'update';
+                    return  view('clienteView\createClienteView', $data);
                 }
-                $data['validation'] = $validation;
-                unset($data['id_usuario']);
+                $tipo = array('tipo' => "cliente");
+                return  view('operacionExitosa', $tipo);
+            } else {
                 $data['pantalla'] = 'update';
+                $data['id_cliente'] = $id;
                 return  view('clienteView\createClienteView', $data);
             }
-            $tipo = array('tipo' => "cliente");
-            return  view('operacionExitosa', $tipo);
         } else {
             $data = [
                 'user' => "",

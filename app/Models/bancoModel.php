@@ -22,7 +22,7 @@ class bancoModel extends Model
     protected $validationRules  = [
         'nombre' => 'required|alpha_space',
         'direccion' => 'required',
-        'numero_sucursal' => 'required|is_unique[banco.numero_sucursal]'
+        'numero_sucursal' => 'required|is_unique[banco.numero_sucursal,id_banco,{id_banco}]'
     ]; //['email' => 'required|valid_email|is_unique[usuarios.email]'];
     protected $validationMessages = [
         'nombre' => ['required' => 'El campo nombre es requerido', 'alpha_space' => "Solo debe ingresar letras"],

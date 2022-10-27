@@ -76,7 +76,9 @@ class BancoController extends BaseController
                 $tipo = array('tipo' => "banco");
                 return  view('operacionExitosa', $tipo);
             } else {
+                $message = "Existen cuentas para este banco";
                 $tipo = array('tipo' => "banco");
+                $tipo['message'] = $message;
                 return view('operacionNoExitosa', $tipo);
             }
         } else {
@@ -106,6 +108,7 @@ class BancoController extends BaseController
                 return  view('bancoView\createBancoView', $banco);
             }
             $data = array(
+                'id_banco' => $banco['id_banco'],
                 'nombre' => $request->getPost('inputNombre'),
                 'direccion' => $request->getPost('inputDireccion'),
                 'numero_sucursal' => $request->getPost('inputNroSucursal'),

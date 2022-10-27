@@ -15,14 +15,13 @@ class usuarioModel extends Model
         'usuario',
         'tipo_usuario',
         'contrasena',
-
     ]; //Nos permite cambiar los campos que tengan estos nombre. Si no están acá no se podrán manipular
     protected $useTimestamps = false;
     protected $updatedField  = 'updated_at';
     protected $deletedField  = 'deleted_at';
     protected $validationRules    = [
-        'usuario' => 'required',
-        'contrasena' => 'required|is_unique[usuarios.contrasena]'
+        'usuario' => 'required|is_unique[usuarios.contrasena,id_usuario,{id_usuario}]',
+        'contrasena' => 'required|is_unique[usuarios.contrasena,id_usuario,{id_usuario}]'
     ];
     protected $validationMessages = [
         'usuario' => ['required' => 'El campo usuario es requerido'],

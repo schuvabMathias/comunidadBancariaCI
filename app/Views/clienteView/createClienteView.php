@@ -103,7 +103,7 @@
                     <?php if ($pantalla == 'create') { ?>
                         <?= form_open('clienteController/create') ?>
                     <?php } else { ?>
-                        <?= form_open('clienteController/update/' . $dni) ?>
+                        <?= form_open('clienteController/update/' . $id_cliente) ?>
                     <?php } ?>
                     <div class="mb-3 form-floating">
                         <input type="text" class="form-control" id="inputNomyApe" name="inputNomyApe" value="<?php echo $nombre_apellido ?>" placeholder="Nombre">

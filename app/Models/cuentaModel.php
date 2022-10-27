@@ -24,7 +24,7 @@ class cuentaModel extends Model
     protected $updatedFiel   = 'updated_at';
     protected $deletedField  = 'deleted_at';
     protected $validationRules = [
-        'numero' => 'required|is_unique[cuenta.numero]',
+        'numero' => 'required|is_unique[cuenta.numero,id_cuenta,{id_cuenta}]',
         'tipo_cuenta' => 'required',
         'fecha_start' => 'required',
         'tipo_moneda' => 'required',

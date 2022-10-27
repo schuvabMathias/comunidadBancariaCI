@@ -28,8 +28,9 @@ class clienteModel extends Model
         'direccion' => 'required',
         'telefono' => 'required',
         'fecha_nacimiento' => 'required',
-        'dni' => 'required|is_unique[cliente.dni]',
-        'cuit_cuil' => 'required|is_unique[cliente.cuit_cuil]'
+        'dni' => 'required|is_unique[cliente.dni,id_cliente,{id_cliente}]',
+        'cuit_cuil' => 'required|is_unique[cliente.cuit_cuil,id_cliente,{id_cliente}]',
+        'id_usuario' => 'required'
     ];
     protected $validationMessages = [
         'nombre_apellido' => ['required' => 'El campo nombre y apellido es requerido', 'alpha_space' => "Solo debe ingresar letras"],
@@ -37,7 +38,7 @@ class clienteModel extends Model
         'telefono' => ['required' => 'El campo teléfono es requerido'],
         'fecha_nacimiento' => ['required' => 'El campo fecha de nacimiento es requerido'],
         'dni' => ['required' => 'El campo documento es requerido', 'is_unique' => "Ya existe otro cliente con este documento"],
-        'cuit_cuil' => ['required' => 'El campo CUIT/CUIL es requerido', 'is_unique' => "Ya existe otro cliente con este documento"],
+        'cuit_cuil' => ['required' => 'El campo CUIT/CUIL es requerido', 'is_unique' => "Ya existe otro cliente con este CUIT/CUIL"],
     ];
     protected $skipValidation = false;  // es para indicar que use la validación
 }

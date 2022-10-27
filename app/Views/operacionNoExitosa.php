@@ -98,7 +98,7 @@
             </div>
             <div class="justify-content-center ">
                 <div class="container mt-5">
-                    <p>La operación no se pudo realizar...
+                    <p>La operación no se pudo realizar... <?php if (isset($message)) echo $message; ?>
                         <br>Vuelve a intentarlo nuevamente.
                         <br>Presione volver para retornar al menú anterior
                     </p>

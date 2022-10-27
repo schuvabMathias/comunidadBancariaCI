@@ -110,13 +110,13 @@
                             <label for="inputValor" class="form-label p-3">Valor</label>
                         </div>
                         <div class="col-8 mb-1 form-floating " id="selection">
-                            <select class="form-select" aria-label="Select Tipo" name="inputValor" id="inputValor">
+                            <select class="form-select" aria-label="Select Tipo" name="selectValor" id="selectValor">
                                 <option value="1" selected>Caja de Ahorros</option>
                                 <option value="2">Cuenta Sueldo / Cuenta de Seguridad Social</option>
                                 <option value="3">Cuenta Corriente</option>
                                 <option value="4">Cuenta Universal Gratuita</option>
                             </select>
-                            <label for="inputValor" class="form-label">Tipo:</label>
+                            <label for="selectValor" class="form-label">Tipo:</label>
                         </div>
                     </div>
 

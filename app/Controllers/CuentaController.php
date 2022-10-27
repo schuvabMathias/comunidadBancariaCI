@@ -142,6 +142,7 @@ class CuentaController extends BaseController
                 return  view('cuentaView/createCuentaView', $cuenta);
             }
             $data = array(
+                'id_cuenta' => $cuenta['id_cuenta'],
                 'numero' => $request->getPost('inputNumero'),
                 'tipo_cuenta' => $request->getPost('selectTipo'),
                 'fecha_start' => $request->getPost('inputFechaCreacion'), //aca lo podemos hacer por programa que lo haga solo el dia que la crea el usuario
@@ -192,9 +193,13 @@ class CuentaController extends BaseController
                     $data['cuentas'] = $valoresCuentas;
                     return  view('cuentaView\mostrarCuentaView', $data);
                 }
-                $valoresCuentas = $cuentaModel->where($request->getPost('selectForma'), $request->getPost('inputValor'))->findAll();
-                if ($request->getPost('inputValor') == "") {
-                    $valoresCuentas = $cuentaModel->findAll();
+                if ($request->getPost('selectForma') == 'numero') {
+                    $valoresCuentas = $cuentaModel->where($request->getPost('selectForma'), $request->getPost('inputValor'))->findAll();
+                    if ($request->getPost('inputValor') == "") {
+                        $valoresCuentas = $cuentaModel->findAll();
+                    }
+                } else {
+                    $valoresCuentas = $cuentaModel->where($request->getPost('selectForma'), $request->getPost('selectValor'))->findAll();
                 }
                 for ($i = 0; sizeof($valoresCuentas) > $i; $i++) {
                     $valoresClientes = $clienteModel->where('id_cliente', $valoresCuentas[$i]['id_titular'])->findAll();
@@ -235,9 +240,20 @@ class CuentaController extends BaseController
     public function mostrarCuentasSegunCliente($id)
     {
         if (isset($_SESSION['tipo_usuario'])) {
+            $clienteModel = new clienteModel($db);
             $cuentaModel = new cuentaModel($db);
-            $cuentas = $cuentaModel->where('id_titular', $id)->findAll();
-            return  view('clienteView\mostrarCuentaView', ['cuentas' => $cuentas,]);
+            $bancoModel = new bancoModel($db);
+            $cuentaModel = new cuentaModel($db);
+            $valoresCuentas = $cuentaModel->where('id_titular', $id)->findAll();
+            $valoresClientes = $clienteModel->where('id_cliente', $id)->findAll();
+            $valoresCuentas = $cuentaModel->where('id_titular', $valoresClientes[0]['id_cliente'])->findAll();
+            for ($i = 0; sizeof($valoresCuentas) > $i; $i++) {
+                $valoresBanco = $bancoModel->where('id_banco', $valoresCuentas[$i]['id_banco'])->findAll();
+                $valoresCuentas[$i]['id_titular'] = $valoresClientes[0]['nombre_apellido'];
+                $valoresCuentas[$i]['id_banco'] = $valoresBanco[0]['nombre'];
+                $valoresCuentas[$i]['numero_sucursal'] = $valoresBanco[0]['numero_sucursal'];
+            }
+            return  view('cuentaView/mostrarCuentaView', ['cuentas' => $valoresCuentas,]);
         } else {
             $data = [
                 'user' => "",
