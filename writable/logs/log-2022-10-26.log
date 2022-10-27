@@ -1100,6 +1100,7 @@ DETAIL:  La llave (id_usuario)=(3) todavía es referida desde la tabla «cliente
 #11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
 #12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
 #13 {main}
+<<<<<<< HEAD
 CRITICAL - 2022-10-26 18:45:22 --> Array to string conversion
 #0 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(200): CodeIgniter\Debug\Exceptions->errorHandler()
 #1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->mostrar()
@@ -1156,10 +1157,22 @@ CRITICAL - 2022-10-26 19:12:36 --> Undefined variable: id_cliente
 #3 C:\Apache24\htdocs\comunidadBancariaCI\system\Common.php(1089): CodeIgniter\View\View->render()
 #4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(182): view()
 #5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->update()
+=======
+ERROR - 2022-10-26 17:34:59 --> Error connecting to the database: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+CRITICAL - 2022-10-26 17:34:59 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\UsuarioController.php(34): CodeIgniter\BaseModel->findAll()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\UsuarioController->connect()
+>>>>>>> 1fb050041929a8ff55a8297b9e4d343194e2a5ba
 #6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
 #7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
 #8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 {main}
+<<<<<<< HEAD
 CRITICAL - 2022-10-26 19:14:13 --> Undefined variable: id_cliente
 #0 C:\Apache24\htdocs\comunidadBancariaCI\app\Views\clienteView\createClienteView.php(106): CodeIgniter\Debug\Exceptions->errorHandler()
 #1 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(210): include('C:\\Apache24\\htd...')
@@ -1500,3 +1513,124 @@ CRITICAL - 2022-10-26 21:16:16 --> Undefined index: numero_sucursal
 #7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
 #8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 {main}
+=======
+ERROR - 2022-10-26 17:43:11 --> Error connecting to the database: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+CRITICAL - 2022-10-26 17:43:11 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Validation\Validation.php(292): CodeIgniter\Validation\Rules->is_unique()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(1347): CodeIgniter\Validation\Validation->run()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(707): CodeIgniter\BaseModel->validate()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\UsuarioController.php(20): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(809): App\Controllers\UsuarioController->__construct()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2022-10-26 17:43:15 --> Error connecting to the database: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+CRITICAL - 2022-10-26 17:43:15 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Validation\Validation.php(292): CodeIgniter\Validation\Rules->is_unique()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(1347): CodeIgniter\Validation\Validation->run()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(707): CodeIgniter\BaseModel->validate()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\UsuarioController.php(20): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(809): App\Controllers\UsuarioController->__construct()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2022-10-26 17:43:19 --> Error connecting to the database: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+CRITICAL - 2022-10-26 17:43:19 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Validation\Validation.php(292): CodeIgniter\Validation\Rules->is_unique()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(1347): CodeIgniter\Validation\Validation->run()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(707): CodeIgniter\BaseModel->validate()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\UsuarioController.php(20): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(809): App\Controllers\UsuarioController->__construct()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2022-10-26 17:43:52 --> Error connecting to the database: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+CRITICAL - 2022-10-26 17:43:52 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Validation\Validation.php(292): CodeIgniter\Validation\Rules->is_unique()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(1347): CodeIgniter\Validation\Validation->run()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(707): CodeIgniter\BaseModel->validate()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\UsuarioController.php(20): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(809): App\Controllers\UsuarioController->__construct()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2022-10-26 17:45:54 --> Error connecting to the database: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+CRITICAL - 2022-10-26 17:45:54 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Validation\Validation.php(292): CodeIgniter\Validation\Rules->is_unique()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(1347): CodeIgniter\Validation\Validation->run()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(707): CodeIgniter\BaseModel->validate()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\UsuarioController.php(20): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(809): App\Controllers\UsuarioController->__construct()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2022-10-26 17:45:59 --> Error connecting to the database: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+CRITICAL - 2022-10-26 17:45:59 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Validation\Validation.php(292): CodeIgniter\Validation\Rules->is_unique()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(1347): CodeIgniter\Validation\Validation->run()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(707): CodeIgniter\BaseModel->validate()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\UsuarioController.php(20): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(809): App\Controllers\UsuarioController->__construct()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2022-10-26 17:46:28 --> Error connecting to the database: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  no existe la base de datos �ComunidadBancaria_BD�
+CRITICAL - 2022-10-26 17:46:28 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  no existe la base de datos �ComunidadBancaria_BD�
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Validation\Validation.php(292): CodeIgniter\Validation\Rules->is_unique()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(1347): CodeIgniter\Validation\Validation->run()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(707): CodeIgniter\BaseModel->validate()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\UsuarioController.php(20): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(809): App\Controllers\UsuarioController->__construct()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+>>>>>>> 1fb050041929a8ff55a8297b9e4d343194e2a5ba
