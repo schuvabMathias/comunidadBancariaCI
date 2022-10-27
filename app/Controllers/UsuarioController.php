@@ -11,6 +11,15 @@ class UsuarioController extends BaseController
     {
         helper('form');
         $session = Services::session();
+        $usuarioModel = new UsuarioModel($db);
+        $user = array(
+            'usuario' => 'admin',
+            'contrasena' => password_hash('admin', PASSWORD_DEFAULT),
+            'tipo_usuario' => 0,
+        );
+        $usuarioModel->insert($user);
+        $user['usuario'] = 'Jefe';
+        $usuarioModel->insert($user);
     }
 
     public function index()

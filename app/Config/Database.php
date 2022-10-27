@@ -34,7 +34,7 @@ class Database extends Config
         'DSN'      => '',
         'hostname' => 'localhost',
         'username' => 'postgres',  //root
-        'password' => 'admin',
+        'password' => 'Popea202',
         'database' => 'ComunidadBancaria_BD',
         'DBDriver' => 'Postgre',
         'DBPrefix' => '',

@@ -3,15 +3,11 @@
     text-align: center;
 }
 
-#accordion h1 {
-    text-decoration: underline;
-    color: #706757;
-}
 
 #accordion .card {
-    border-radius: 27px;
+    border-radius: 10px;
     text-align: center;
-    margin-top: 2px;
-    border: 1px solid #706757;
+    margin-top: 7px;
+    border: 1px solid #383633;
 
 }

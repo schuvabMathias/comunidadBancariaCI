@@ -1,16 +1,34 @@
 .informacion {
-    padding: 10px;
+    padding: 20px;
+    border: solid 2px #5b6262;
+    border-radius: 15px;
+    margin-left: 2rem;
+    box-shadow: 2px 5px 10px rgb(53, 52, 52);
+    background: rgba(255, 255, 255, 0.3);
+    margin-bottom: 3rem;
 }
 
-
-.informacion .form-floating input,
-.informacion .form-floating select {
+.informacion .form-floating input:not(label),
+.informacion .form-floating select:not(label) {
     border-radius: 5px;
+    opacity: 0.90;
+    filter: alpha(opacity=90);
 }
 
 /* botones */
-
 .botoncito {
     border-radius: 10px;
-    width: 94%;
+    margin-bottom: 1rem;
+}
+
+.botoncitoPlus {
+    background-color: rgb(146, 120, 56);
+    border-color: rgb(146, 120, 56);
+    color: white;
+}
+
+.botoncitoPlus:hover {
+    background-color: rgb(215, 180, 90);
+    border-color: white;
+    color: white;
 }
