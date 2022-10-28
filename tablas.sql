@@ -1,11 +1,11 @@
 --------------------------------------------------------------------------------------------------
 -- Table: public.tipocuenta
 
-DROP TABLE public.cuenta;
-DROP TABLE public.cliente;
-DROP TABLE public.banco;
-DROP TABLE public.usuarios;
-DROP TABLE public.tipocuenta;
+-- DROP TABLE public.cuenta;
+-- DROP TABLE public.cliente;
+-- DROP TABLE public.banco;
+-- DROP TABLE public.usuarios;
+-- DROP TABLE public.tipocuenta;
 
 CREATE TABLE public.tipocuenta
 (

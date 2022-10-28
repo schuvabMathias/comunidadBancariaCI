@@ -99,33 +99,37 @@
                 <?= form_open('cuentaController/mostrar') ?>
                 <div class="justify-content-center ">
                     <div class="container mt-4">
-                        <div class="row">
-                            <div class="col-3 mb-3 form-floating">
-                                <select class="form-select" aria-label="Select Forma" name="selectForma" id="selectForma">
-                                    <option value="numero">Número</option>
-                                    <option value="tipo_cuenta">Tipo de cuenta</option>
-                                </select>
-                                <label class="form-label" for="selectForma">Buscar por:</label>
-                            </div>
-                            <div class="col-7 mb-1 form-floating" id="valores">
-                                <input type="text" class="form-control" id="inputValor" name="inputValor" placeholder="valor">
-                                <label for="inputValor" class="form-label p-3">Valor</label>
-                            </div>
-                            <div class="col-7 mb-1 form-floating " id="selection">
-                                <select class="form-select" aria-label="Select Tipo" name="inputValor" id="inputValor">
-                                    <option value="1" selected>Caja de Ahorros</option>
-                                    <option value="2">Cuenta Sueldo / Cuenta de Seguridad Social</option>
-                                    <option value="3">Cuenta Corriente</option>
-                                    <option value="4">Cuenta Universal Gratuita</option>
-                                </select>
-                                <label for="inputValor" class="form-label">Tipo:</label>
-                            </div>
-                            <div class="col-sm-2 col-2">
-                                <div class="d-grid mt-0 ">
-                                    <button type="submit" style="padding: 17px;" class="btn btn-dark botoncito">Buscar</button>
+                        <?php if ($_SESSION['tipo_usuario'] == 0) { ?>
+                            <div class="row">
+                                <div class="col-3 mb-3 form-floating">
+                                    <select class="form-select" aria-label="Select Forma" name="selectForma" id="selectForma">
+                                        <option value="numero">Número</option>
+                                        <option value="tipo_cuenta">Tipo de cuenta</option>
+                                    </select>
+                                    <label class="form-label" for="selectForma">Buscar por:</label>
+                                </div>
+                                <div class="col-7 mb-1 form-floating" id="valores">
+                                    <input type="text" class="form-control" id="inputValor" name="inputValor" placeholder="valor">
+                                    <label for="inputValor" class="form-label p-3">Valor</label>
+                                </div>
+                                <div class="col-7 mb-1 form-floating " id="selection">
+                                    <select class="form-select" aria-label="Select Tipo" name="inputValor" id="inputValor">
+                                        <option value="1" selected>Caja de Ahorros</option>
+                                        <option value="2">Cuenta Sueldo / Cuenta de Seguridad Social</option>
+                                        <option value="3">Cuenta Corriente</option>
+                                        <option value="4">Cuenta Universal Gratuita</option>
+                                    </select>
+                                    <label for="inputValor" class="form-label">Tipo:</label>
+                                </div>
+
+
+                                <div class="col-sm-2 col-2">
+                                    <div class="d-grid mt-0 ">
+                                        <button type="submit" style="padding: 17px;" class="btn btn-dark botoncito">Buscar</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        <?php } ?>
                         <?php form_close() ?>
                         <table class="table table-striped tablita">
                             <thead>

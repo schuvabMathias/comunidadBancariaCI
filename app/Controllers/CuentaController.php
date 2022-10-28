@@ -211,8 +211,8 @@ class CuentaController extends BaseController
                 $data['cuentas'] = $valoresCuentas;
                 return  view('cuentaView\mostrarCuentaView', $data);
             } else {
+                $valoresUsuario = $usuarioModel->where('usuario', $_SESSION['usuario'])->findAll();
                 if (strtolower($this->request->getMethod()) !== 'post') {
-                    $valoresUsuario = $usuarioModel->where('usuario', $_SESSION['usuario'])->findAll();
                     if (sizeof($valoresUsuario) > 0) {
                         $valoresClientes = $clienteModel->where('id_usuario', $valoresUsuario[0]['id_usuario'])->findAll();
                         if (sizeof($valoresClientes) > 0) {
@@ -227,6 +227,16 @@ class CuentaController extends BaseController
                         }
                     }
                 }
+                $valoresClientes = $clienteModel->where('id_usuario', $valoresUsuario[0]['id_usuario'])->findAll();
+                $valoresCuentas = $cuentaModel->where($request->getPost('selectForma'), $request->getPost('inputValor'))->where('id_titular', $valoresClientes[0]['id_cliente'])->findAll();
+                for ($i = 0; sizeof($valoresCuentas) > $i; $i++) {
+                    $valoresBanco = $bancoModel->where('id_banco', $valoresCuentas[$i]['id_banco'])->findAll();
+                    $valoresCuentas[$i]['id_titular'] = $valoresClientes[0]['nombre_apellido'];
+                    $valoresCuentas[$i]['id_banco'] = $valoresBanco[0]['nombre'];
+                    $valoresCuentas[$i]['numero_sucursal'] = $valoresBanco[0]['numero_sucursal'];
+                }
+                $data['cuentas'] = $valoresCuentas;
+                return  view('cuentaView\mostrarCuentaView', $data);
             }
         } else {
             $data = [
