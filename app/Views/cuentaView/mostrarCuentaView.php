@@ -102,19 +102,20 @@
                         <?php if ($_SESSION['tipo_usuario'] == 0) { ?>
                             <div class="row">
                                 <div class="col-3 mb-3 form-floating">
-                                    <select class="form-select" aria-label="Select Forma" name="selectForma" id="selectForma">
+                                    <select class="form-select" value="Por defecto" aria-label="Select Forma" name="selectForma" id="selectForma">
+                                        <option value="numero">Por defecto</option>
                                         <option value="numero">Número</option>
                                         <option value="tipo_cuenta">Tipo de cuenta</option>
                                     </select>
                                     <label class="form-label" for="selectForma">Buscar por:</label>
                                 </div>
                                 <div class="col-7 mb-1 form-floating" id="valores">
-                                    <input type="text" class="form-control" id="inputValor" name="inputValor" placeholder="valor">
+                                    <input type="text" class="form-control" id="inputValorNum" name="inputValorNum" placeholder="Valor">
                                     <label for="inputValor" class="form-label p-3">Valor</label>
                                 </div>
                                 <div class="col-7 mb-1 form-floating " id="selection">
                                     <select class="form-select" aria-label="Select Tipo" name="inputValor" id="inputValor">
-                                        <option value="1" selected>Caja de Ahorros</option>
+                                        <option value="1">Caja de Ahorros</option>
                                         <option value="2">Cuenta Sueldo / Cuenta de Seguridad Social</option>
                                         <option value="3">Cuenta Corriente</option>
                                         <option value="4">Cuenta Universal Gratuita</option>
@@ -219,7 +220,13 @@
                 <div class="container d-flex justify-content-center">
                     <div class="container  divBotoncitoCenter ">
                         <div class="d-grid mt-3 ">
-                            <a href="<?php echo base_url() ?>/index.php/cuentaController/volver" type="button" class="btn btn-outline-dark botoncito">Volver</a>
+                            <a href="<?php
+                                        if (isset($condicion)) {
+                                            echo base_url() . "/index.php/clienteController/mostrar";
+                                        } else {
+                                            echo base_url() . "/index.php/cuentaController/volver";
+                                        } ?>
+                             " type="button" class="btn btn-outline-dark botoncito">Volver</a>
                         </div>
                     </div>
                 </div>

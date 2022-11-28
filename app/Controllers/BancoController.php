@@ -52,9 +52,10 @@ class BancoController extends BaseController
                 }
                 $data['validation'] = $validation;
                 $data['pantalla'] = 'create';
-                return  view('bancoView\createBancoView', $data);
+                return view('bancoView\createBancoView', $data);
             }
             $tipo = array('tipo' => "banco");
+            $tipo['pantalla'] = "create";
             return  view('operacionExitosa', $tipo);
         } else {
             $data = [
@@ -74,10 +75,12 @@ class BancoController extends BaseController
             if (sizeof($cuentas) <= 0) {
                 $bancoModel->where('id_banco', $id)->delete();
                 $tipo = array('tipo' => "banco");
+                $tipo['pantalla'] = "delete";
                 return  view('operacionExitosa', $tipo);
             } else {
                 $message = "Existen cuentas para este banco";
                 $tipo = array('tipo' => "banco");
+                $tipo['pantalla'] = "delete";
                 $tipo['message'] = $message;
                 return view('operacionNoExitosa', $tipo);
             }
@@ -122,13 +125,14 @@ class BancoController extends BaseController
                 return  view('bancoView\createBancoView', $data);
             }
             $tipo = array('tipo' => "banco");
+            $tipo['pantalla'] = "update";
             return  view('operacionExitosa', $tipo);
         } else {
             $data = [
                 'user' => "",
                 'password' => ""
             ];
-            return   view("usuarioView/login", $data);
+            return view("usuarioView/login", $data);
         }
     }
 

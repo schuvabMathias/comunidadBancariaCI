@@ -92,6 +92,7 @@ class ClienteController extends BaseController
                     return  view('clienteView\createClienteView', $data);
                 }
                 $tipo = array('tipo' => "cliente");
+                $tipo['pantalla'] = "create";
                 return  view('operacionExitosa', $tipo);
             } else {
                 foreach ($usuarioModel->errors() as $clave => $valor) {
@@ -122,10 +123,12 @@ class ClienteController extends BaseController
                 $clienteModel->where('id_cliente', $id)->delete();
                 $usuarioModel->where('usuario', $cliente[0]['id_usuario'])->delete();
                 $tipo = array('tipo' => "cliente");
+                $tipo['pantalla'] = "delete";;
                 return  view('operacionExitosa', $tipo);
             } else {
                 $message = "Existen cuentas creadas para este cliente";
                 $tipo = array('tipo' => "cliente");
+                $tipo['pantalla'] = "delete";
                 $tipo['message'] = $message;
                 return  view('operacionNoExitosa', $tipo);
             }
@@ -187,6 +190,7 @@ class ClienteController extends BaseController
                     return  view('clienteView\createClienteView', $data);
                 }
                 $tipo = array('tipo' => "cliente");
+                $tipo['pantalla'] = "update";
                 return  view('operacionExitosa', $tipo);
             } else {
                 $data['pantalla'] = 'update';
@@ -237,7 +241,7 @@ class ClienteController extends BaseController
             $cuentas = $cuentaModel->select('id_titular')->where('id_banco', $id)->findAll();
             if (sizeof($cuentas) == 0) {
                 return  view('clienteView\mostrarClienteView', [
-                    'clientes' => [],
+                    'clientes' => [], 'condicion' => 'banco'
                 ]);
             }
             for ($i = 0; $i < sizeof($cuentas); $i++) {
@@ -245,7 +249,7 @@ class ClienteController extends BaseController
             }
             $clientes = $clienteModel->whereIn('id_cliente', $ids)->findAll();
             return  view('clienteView\mostrarClienteView', [
-                'clientes' => $clientes,
+                'clientes' => $clientes, 'condicion' => 'banco'
             ]);
         } else {
             $data = [

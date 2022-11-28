@@ -124,12 +124,18 @@
                     <div class="container  divBotoncitoCenter row">
                         <div class="col-sm-6 col-6">
                             <div class="d-grid mt-3 ">
-                                <a href="<?php echo base_url() ?>/index.php/bancoController/volver" type="button" class="btn btn-outline-dark botoncito">Volver</a>
+                                <a href="<?php
+                                            if ($pantalla == 'update') {
+                                                echo base_url() . "/index.php/bancoController/mostrar";
+                                            } else {
+                                                echo base_url() . "/index.php/bancoController/volver";
+                                            }
+                                            ?>" type="button" class="btn btn-outline-dark botoncito">Volver</a>
                             </div>
                         </div>
                         <div class="col-sm-6 col-6">
                             <div class="d-grid mt-3">
-                                <button type="submit" id="ingresarButton" class="btn btn-outline-dark botoncito">Ingresar</button>
+                                <button type="submit" id="ingresarButton" class="btn btn-outline-dark botoncito">Crear</button>
                             </div>
                         </div>
                     </div>
