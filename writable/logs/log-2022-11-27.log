@@ -1,0 +1,207 @@
+ERROR - 2022-11-27 16:05:55 --> Error connecting to the database: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+CRITICAL - 2022-11-27 16:05:55 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\UsuarioController.php(13): CodeIgniter\BaseModel->findAll()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(809): App\Controllers\UsuarioController->__construct()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-11-27 16:06:37 --> Error connecting to the database: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+CRITICAL - 2022-11-27 16:06:37 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\UsuarioController.php(13): CodeIgniter\BaseModel->findAll()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(809): App\Controllers\UsuarioController->__construct()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-11-27 16:08:01 --> Error connecting to the database: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+CRITICAL - 2022-11-27 16:08:01 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\UsuarioController.php(13): CodeIgniter\BaseModel->findAll()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(809): App\Controllers\UsuarioController->__construct()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-11-27 16:08:05 --> Error connecting to the database: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+CRITICAL - 2022-11-27 16:08:05 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\UsuarioController.php(13): CodeIgniter\BaseModel->findAll()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(809): App\Controllers\UsuarioController->__construct()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-11-27 16:08:11 --> Error connecting to the database: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+CRITICAL - 2022-11-27 16:08:11 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+#0 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\UsuarioController.php(13): CodeIgniter\BaseModel->findAll()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(809): App\Controllers\UsuarioController->__construct()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-11-27 16:38:49 --> Undefined offset: 0
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(148): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->update()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-11-27 17:41:44 --> Undefined variable: bancos
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Views\bancoView\mostrarBancoView.php(141): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(210): include('C:\\Apache24\\htd...')
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Common.php(1089): CodeIgniter\View\View->render()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\BancoController.php(183): view()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\BancoController->volver()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-11-27 17:41:59 --> Undefined variable: bancos
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Views\bancoView\mostrarBancoView.php(141): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(210): include('C:\\Apache24\\htd...')
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Common.php(1089): CodeIgniter\View\View->render()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\BancoController.php(183): view()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\BancoController->volver()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-11-27 18:15:48 --> Undefined offset: 0
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(148): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->update()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-11-27 18:15:56 --> Undefined offset: 0
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\ClienteController.php(148): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\ClienteController->update()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-11-27 18:20:39 --> Undefined variable: pantalla
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Views\cuentaView\mostrarCuentaView.php(223): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(210): include('C:\\Apache24\\htd...')
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Common.php(1089): CodeIgniter\View\View->render()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(194): view()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->mostrar()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-11-27 18:21:34 --> Undefined variable: pantalla
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Views\cuentaView\mostrarCuentaView.php(223): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(210): include('C:\\Apache24\\htd...')
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Common.php(1089): CodeIgniter\View\View->render()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(194): view()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->mostrar()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-11-27 18:22:49 --> ErrorException: pg_query(): Query failed: ERROR:  inserción o actualización en la tabla «cuenta» viola la llave foránea «tipoCuenta»
+DETAIL:  La llave (tipo_cuenta)=(1) no está presente en la tabla «tipocuenta». in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(738): CodeIgniter\Model->doInsert()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(75): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2022-11-27 18:22:49 --> pg_query(): Query failed: ERROR:  inserción o actualización en la tabla «cuenta» viola la llave foránea «tipoCuenta»
+DETAIL:  La llave (tipo_cuenta)=(1) no está presente en la tabla «tipocuenta».
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(738): CodeIgniter\Model->doInsert()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(75): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2022-11-27 18:23:08 --> ErrorException: pg_query(): Query failed: ERROR:  inserción o actualización en la tabla «cuenta» viola la llave foránea «tipoCuenta»
+DETAIL:  La llave (tipo_cuenta)=(1) no está presente en la tabla «tipocuenta». in C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php:135
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(738): CodeIgniter\Model->doInsert()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(75): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2022-11-27 18:23:08 --> pg_query(): Query failed: ERROR:  inserción o actualización en la tabla «cuenta» viola la llave foránea «tipoCuenta»
+DETAIL:  La llave (tipo_cuenta)=(1) no está presente en la tabla «tipocuenta».
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\Postgre\Connection.php(135): pg_query()
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(670): CodeIgniter\Database\Postgre\Connection->execute()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\BaseModel.php(738): CodeIgniter\Model->doInsert()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\Model.php(625): CodeIgniter\BaseModel->insert()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\CuentaController.php(75): CodeIgniter\Model->insert()
+#9 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\CuentaController->create()
+#10 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#11 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2022-11-27 18:39:39 --> Undefined variable: tipo
+#0 C:\Apache24\htdocs\comunidadBancariaCI\app\Views\operacionExitosa.php(111): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(210): include('C:\\Apache24\\htd...')
+#2 C:\Apache24\htdocs\comunidadBancariaCI\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Apache24\htdocs\comunidadBancariaCI\system\Common.php(1089): CodeIgniter\View\View->render()
+#4 C:\Apache24\htdocs\comunidadBancariaCI\app\Controllers\BancoController.php(59): view()
+#5 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(832): App\Controllers\BancoController->create()
+#6 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 C:\Apache24\htdocs\comunidadBancariaCI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Apache24\htdocs\comunidadBancariaCI\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

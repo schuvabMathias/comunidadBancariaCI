@@ -100,9 +100,11 @@
                 <div class="justify-content-center ">
                     <div class="container mt-4">
                         <p class="p-3">Por favor, seleccione una opción para continuar</p>
-                        <div class="d-grid mt-3">
-                            <a type="button" class="btn btn-lg botoncitoPlus" href="<?php echo base_url() ?>/index.php/cuentaController/create">Crear cuenta</a>
-                        </div>
+                        <?php if ($_SESSION['tipo_usuario'] == 0) { ?>
+                            <div class="d-grid mt-3">
+                                <a type="button" class="btn btn-lg botoncitoPlus" href="<?php echo base_url() ?>/index.php/cuentaController/create">Crear cuenta</a>
+                            </div>
+                        <?php } ?>
                         <div class="d-grid mt-3">
                             <a type="button" class="btn btn-lg botoncitoPlus" href="<?php echo base_url() ?>/index.php/cuentaController/mostrar">Mostrar cuentas</a>
                         </div>

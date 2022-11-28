@@ -99,7 +99,7 @@
                 </div>
                 <div class="justify-content-center ">
                     <div class="container mt-5">
-                        <p>La operación se realizo con exito!
+                        <p>La operación se realizo con éxito!
                             <br>Presione volver para retornar al menú anterior
                         </p>
 
@@ -109,12 +109,24 @@
                     <div class="container  divBotoncitoCenter row">
                         <div class="d-grid mt-3 ">
                             <a href="<?php if ($tipo == "banco") {
-                                            echo base_url() . "/index.php/bancoController/volver";
-                                        } else {
-                                            if ($tipo = "cliente") {
-                                                echo base_url() . "/index.php/clienteController/volver";
+                                            if ($pantalla == 'update') {
+                                                echo base_url() . "/index.php/bancoController/mostrar";
                                             } else {
-                                                echo base_url() . "/index.php/cuentaController/volver";
+                                                echo base_url() . "/index.php/bancoController/volver";
+                                            }
+                                        } else {
+                                            if ($tipo == "cliente") {
+                                                if ($pantalla == 'update') {
+                                                    echo base_url() . "/index.php/clienteController/mostrar";
+                                                } else {
+                                                    echo base_url() . "/index.php/clienteController/volver";
+                                                }
+                                            } else {
+                                                if ($pantalla == 'update') {
+                                                    echo base_url() . "/index.php/cuentaController/mostrar";
+                                                } else {
+                                                    echo base_url() . "/index.php/cuentaController/volver";
+                                                }
                                             }
                                         } ?>" type="button" class="btn btn-outline-dark botoncito">Volver</a>
                         </div>

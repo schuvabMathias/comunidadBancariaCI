@@ -38,7 +38,7 @@ class cuentaModel extends Model
         'fecha_start' => ['required' => 'El campo fecha de inicio es requerido'],
         'tipo_moneda' => ['required' => 'El campo tipo de moneda es requerido'],
         'monto' => ['required' => 'El campo monto es requerido'],
-        'id_titular' => ['required' => 'El campo ID titular es requerido'],
+        'id_titular' => ['required' => 'El campo documento titular es requerido'],
         'id_banco' => ['required' => 'El campo ID banco es requerido']
     ]; /*[
         'email' => ['is_unique' => 'Este e-mail ya pertenece a otro usuario']

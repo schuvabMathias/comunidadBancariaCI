@@ -7,7 +7,7 @@ use App\Models\usuarioModel;
 use App\Models\bancoModel;
 use App\Models\clienteModel;
 use App\Models\cuentaModel;
-
+use CodeIgniter\HTTP\Request;
 
 class CuentaController extends BaseController
 {
@@ -84,16 +84,17 @@ class CuentaController extends BaseController
                     $data['id_titular'] = $request->getPost('inputTitularDoc');
                 }
                 $data['pantalla'] = 'create';
-                return  view('cuentaView\createCuentaView', $data);
+                return view('cuentaView\createCuentaView', $data);
             }
-            $tipo = array('tipo' => "cuenta");
-            return  view('operacionExitosa', $tipo);
+            $tipo['tipo'] = "cuenta";
+            $tipo['pantalla'] = "create";
+            return view('operacionExitosa', $tipo);
         } else {
             $data = [
                 'user' => "",
                 'password' => ""
             ];
-            return   view("usuarioView/login", $data);
+            return view("usuarioView/login", $data);
         }
     }
 
@@ -102,7 +103,8 @@ class CuentaController extends BaseController
         if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == 0) {
             $cuentaModel = new cuentaModel($db);
             $cuentaModel->where('id_cuenta', $id)->delete();
-            $tipo = array('tipo' => "cuenta");
+            $tipo['tipo'] = "cuenta";
+            $tipo['pantalla'] = "delete";
             return  view('operacionExitosa', $tipo);
         } else {
             $data = [
@@ -160,7 +162,8 @@ class CuentaController extends BaseController
                 $cuenta['bancos'] = $bancos;
                 return  view('bancoView\createCuentaView', $data);
             }
-            $tipo = array('tipo' => "cuenta");
+            $tipo['tipo'] = "cuenta";
+            $tipo['pantalla'] = "update";
             return  view('operacionExitosa', $tipo);
         } else {
             $data = [
@@ -194,12 +197,12 @@ class CuentaController extends BaseController
                     return  view('cuentaView\mostrarCuentaView', $data);
                 }
                 if ($request->getPost('selectForma') == 'numero') {
-                    $valoresCuentas = $cuentaModel->where($request->getPost('selectForma'), $request->getPost('inputValor'))->findAll();
-                    if ($request->getPost('inputValor') == "") {
+                    $valoresCuentas = $cuentaModel->where($request->getPost('selectForma'), $request->getPost('inputValorNum'))->findAll();
+                    if ($request->getPost('inputValorNum') == "") {
                         $valoresCuentas = $cuentaModel->findAll();
                     }
                 } else {
-                    $valoresCuentas = $cuentaModel->where($request->getPost('selectForma'), $request->getPost('selectValor'))->findAll();
+                    $valoresCuentas = $cuentaModel->where($request->getPost('selectForma'), $request->getPost('inputValor'))->findAll();
                 }
                 for ($i = 0; sizeof($valoresCuentas) > $i; $i++) {
                     $valoresClientes = $clienteModel->where('id_cliente', $valoresCuentas[$i]['id_titular'])->findAll();
@@ -263,7 +266,7 @@ class CuentaController extends BaseController
                 $valoresCuentas[$i]['id_banco'] = $valoresBanco[0]['nombre'];
                 $valoresCuentas[$i]['numero_sucursal'] = $valoresBanco[0]['numero_sucursal'];
             }
-            return  view('cuentaView/mostrarCuentaView', ['cuentas' => $valoresCuentas,]);
+            return  view('cuentaView/mostrarCuentaView', ['cuentas' => $valoresCuentas, 'condicion' => 'cliente']);
         } else {
             $data = [
                 'user' => "",
